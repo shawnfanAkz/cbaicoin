@@ -1,6 +1,6 @@
-# `CI AI COIN.conf` Configuration File
+# `CB AI COIN.conf` Configuration File
 
-The configuration file is used by `CI AI COINd`, `CI AI COIN-qt` and `CI AI COIN-cli`.
+The configuration file is used by `CB AI COINd`, `CB AI COIN-qt` and `CB AI COIN-cli`.
 
 All command-line options (except for `-?`, `-help`, `-version` and `-conf`) may be specified in a configuration file, and all configuration file options (except for `includeconf`) may also be specified on the command line. Command-line options override values set in the configuration file and configuration file options override values set in the GUI.
 
@@ -47,16 +47,16 @@ rpcport=4000
 
 ## Configuration File Path
 
-The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `CI AI COIN.conf` and it is located in the CI AI COIN data directory, but both the CI AI COIN data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
+The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `CB AI COIN.conf` and it is located in the CB AI COIN data directory, but both the CB AI COIN data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
 
-The `includeconf=<file>` option in the `CI AI COIN.conf` file can be used to include additional configuration files.
+The `includeconf=<file>` option in the `CB AI COIN.conf` file can be used to include additional configuration files.
 
 ### Default configuration file locations
 
 Operating System | Data Directory | Example Path
 -- | -- | --
-Windows | `%APPDATA%\CI AI COIN\` | `C:\Users\username\AppData\Roaming\CI AI COIN\CI AI COIN.conf`
-Linux | `$HOME/.CI AI COIN/` | `/home/username/.CI AI COIN/CI AI COIN.conf`
-macOS | `$HOME/Library/Application Support/CI AI COIN/` | `/Users/username/Library/Application Support/CI AI COIN/CI AI COIN.conf`
+Windows | `%APPDATA%\CB AI COIN\` | `C:\Users\username\AppData\Roaming\CB AI COIN\CB AI COIN.conf`
+Linux | `$HOME/.CB AI COIN/` | `/home/username/.CB AI COIN/CB AI COIN.conf`
+macOS | `$HOME/Library/Application Support/CB AI COIN/` | `/Users/username/Library/Application Support/CB AI COIN/CB AI COIN.conf`
 
-You can find an example CI AI COIN.conf file in [share/examples/CI AI COIN.conf](../share/examples/CI AI COIN.conf).
+You can find an example CB AI COIN.conf file in [share/examples/CB AI COIN.conf](../share/examples/CB AI COIN.conf).

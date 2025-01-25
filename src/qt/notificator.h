@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +6,7 @@
 #define BITCOIN_QT_NOTIFICATOR_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
 #include <QIcon>

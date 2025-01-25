@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018 The CI AI COIN Core developers
+// Copyright (c) 2014-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +6,7 @@
 #define BITCOIN_COMPAT_ENDIAN_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
 #include <compat/byteswap.h>
@@ -22,7 +22,7 @@
 #ifndef HAVE_CONFIG_H
 // While not technically a supported configuration, defaulting to defining these
 // DECLs when we were compiled without autotools makes it easier for other build
-// systems to build things like libCI AI COINconsensus for strange targets.
+// systems to build things like libCB AI COINconsensus for strange targets.
 #ifdef htobe16
 #define HAVE_DECL_HTOBE16 1
 #endif

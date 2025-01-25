@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2019 The CI AI COIN Core developers
+# Copyright (c) 2019 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -19,7 +19,7 @@ from test_framework.mininode import (
     P2PInterface,
     mininode_lock,
 )
-from test_framework.test_framework import CI AI COINTestFramework
+from test_framework.test_framework import CB AI COINTestFramework
 from test_framework.util import (
     assert_equal,
     wait_until,
@@ -52,7 +52,7 @@ NUM_INBOUND = 10
 MAX_GETDATA_INBOUND_WAIT = GETDATA_TX_INTERVAL + MAX_GETDATA_RANDOM_DELAY + INBOUND_PEER_TX_DELAY
 
 
-class TxDownloadTest(CI AI COINTestFramework):
+class TxDownloadTest(CB AI COINTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = False
         self.num_nodes = 2

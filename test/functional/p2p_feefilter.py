@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2016-2019 The CI AI COIN Core developers
+# Copyright (c) 2016-2019 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test processing of feefilter messages."""
@@ -9,7 +9,7 @@ import time
 
 from test_framework.messages import msg_feefilter
 from test_framework.mininode import mininode_lock, P2PInterface
-from test_framework.test_framework import CI AI COINTestFramework
+from test_framework.test_framework import CB AI COINTestFramework
 
 
 def hashToHex(hash):
@@ -38,7 +38,7 @@ class TestP2PConn(P2PInterface):
         with mininode_lock:
             self.txinvs = []
 
-class FeeFilterTest(CI AI COINTestFramework):
+class FeeFilterTest(CB AI COINTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         # We lower the various required feerates for this test

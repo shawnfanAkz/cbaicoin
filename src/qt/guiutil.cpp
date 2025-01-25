@@ -1,11 +1,11 @@
-// Copyright (c) 2011-2019 The CI AI COIN Core developers
+// Copyright (c) 2011-2019 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/guiutil.h>
 
-#include <qt/CI AI COINaddressvalidator.h>
-#include <qt/CI AI COINunits.h>
+#include <qt/CB AI COINaddressvalidator.h>
+#include <qt/CB AI COINunits.h>
 #include <qt/qvalidatedlineedit.h>
 #include <qt/walletmodel.h>
 
@@ -105,16 +105,16 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
     widget->setFont(fixedPitchFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a CI AI COIN address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a CB AI COIN address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
-    widget->setValidator(new CI AI COINAddressEntryValidator(parent));
-    widget->setCheckValidator(new CI AI COINAddressCheckValidator(parent));
+    widget->setValidator(new CB AI COINAddressEntryValidator(parent));
+    widget->setCheckValidator(new CB AI COINAddressCheckValidator(parent));
 }
 
-bool parseCI AI COINURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseCB AI COINURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no CI AI COIN: URI
-    if(!uri.isValid() || uri.scheme() != QString("CI AI COIN"))
+    // return if URI is not valid or is no CB AI COIN: URI
+    if(!uri.isValid() || uri.scheme() != QString("CB AI COIN"))
         return false;
 
     SendCoinsRecipient rv;
@@ -150,7 +150,7 @@ bool parseCI AI COINURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!CI AI COINUnits::parse(CI AI COINUnits::CICX, i->second, &rv.amount))
+                if(!CB AI COINUnits::parse(CB AI COINUnits::CICX, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -168,22 +168,22 @@ bool parseCI AI COINURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseCI AI COINURI(QString uri, SendCoinsRecipient *out)
+bool parseCB AI COINURI(QString uri, SendCoinsRecipient *out)
 {
     QUrl uriInstance(uri);
-    return parseCI AI COINURI(uriInstance, out);
+    return parseCB AI COINURI(uriInstance, out);
 }
 
-QString formatCI AI COINURI(const SendCoinsRecipient &info)
+QString formatCB AI COINURI(const SendCoinsRecipient &info)
 {
     bool bech_32 = info.address.startsWith(QString::fromStdString(Params().Bech32HRP() + "1"));
 
-    QString ret = QString("CI AI COIN:%1").arg(bech_32 ? info.address.toUpper() : info.address);
+    QString ret = QString("CB AI COIN:%1").arg(bech_32 ? info.address.toUpper() : info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(CI AI COINUnits::format(CI AI COINUnits::CICX, info.amount, false, CI AI COINUnits::separatorNever));
+        ret += QString("?amount=%1").arg(CB AI COINUnits::format(CB AI COINUnits::CICX, info.amount, false, CB AI COINUnits::separatorNever));
         paramCount++;
     }
 
@@ -384,7 +384,7 @@ void openDebugLogfile()
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathDebug)));
 }
 
-bool openCI AI COINConf()
+bool openCB AI COINConf()
 {
     fs::path pathConfig = GetConfigFile(gArgs.GetArg("-conf", BITCOIN_CONF_FILENAME));
 
@@ -396,7 +396,7 @@ bool openCI AI COINConf()
 
     configFile.close();
 
-    /* Open CI AI COIN.conf with the associated application */
+    /* Open CB AI COIN.conf with the associated application */
     bool res = QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 #ifdef Q_OS_MAC
     // Workaround for macOS-specific behavior; see #15409.
@@ -552,15 +552,15 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "CI AI COIN.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "CB AI COIN.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "CI AI COIN (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("CI AI COIN (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "CB AI COIN (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("CB AI COIN (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for CI AI COIN*.lnk
+    // check for CB AI COIN*.lnk
     return fs::exists(StartupShortcutPath());
 }
 
@@ -635,8 +635,8 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "CI AI COIN.desktop";
-    return GetAutostartDir() / strprintf("CI AI COIN-%s.desktop", chain);
+        return GetAutostartDir() / "CB AI COIN.desktop";
+    return GetAutostartDir() / strprintf("CB AI COIN-%s.desktop", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -676,13 +676,13 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         if (!optionFile.good())
             return false;
         std::string chain = gArgs.GetChainName();
-        // Write a CI AI COIN.desktop file to the autostart directory:
+        // Write a CB AI COIN.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=CI AI COIN\n";
+            optionFile << "Name=CB AI COIN\n";
         else
-            optionFile << strprintf("Name=CI AI COIN (%s)\n", chain);
+            optionFile << strprintf("Name=CB AI COIN (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -chain=%s\n", chain);
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -701,7 +701,7 @@ LSSharedFileListItemRef findStartupItemInList(CFArrayRef listSnapshot, LSSharedF
         return nullptr;
     }
 
-    // loop through the list of startup items and try to find the CI AI COIN app
+    // loop through the list of startup items and try to find the CB AI COIN app
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
         UInt32 resolutionFlags = kLSSharedFileListNoUserInteraction | kLSSharedFileListDoNotMountVolumes;
@@ -732,15 +732,15 @@ LSSharedFileListItemRef findStartupItemInList(CFArrayRef listSnapshot, LSSharedF
 
 bool GetStartOnSystemStartup()
 {
-    CFURLRef CI AI COINAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
-    if (CI AI COINAppUrl == nullptr) {
+    CFURLRef CB AI COINAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    if (CB AI COINAppUrl == nullptr) {
         return false;
     }
 
     LSSharedFileListRef loginItems = LSSharedFileListCreate(nullptr, kLSSharedFileListSessionLoginItems, nullptr);
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(loginItems, nullptr);
-    bool res = (findStartupItemInList(listSnapshot, loginItems, CI AI COINAppUrl) != nullptr);
-    CFRelease(CI AI COINAppUrl);
+    bool res = (findStartupItemInList(listSnapshot, loginItems, CB AI COINAppUrl) != nullptr);
+    CFRelease(CB AI COINAppUrl);
     CFRelease(loginItems);
     CFRelease(listSnapshot);
     return res;
@@ -748,25 +748,25 @@ bool GetStartOnSystemStartup()
 
 bool SetStartOnSystemStartup(bool fAutoStart)
 {
-    CFURLRef CI AI COINAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
-    if (CI AI COINAppUrl == nullptr) {
+    CFURLRef CB AI COINAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    if (CB AI COINAppUrl == nullptr) {
         return false;
     }
 
     LSSharedFileListRef loginItems = LSSharedFileListCreate(nullptr, kLSSharedFileListSessionLoginItems, nullptr);
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(loginItems, nullptr);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(listSnapshot, loginItems, CI AI COINAppUrl);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(listSnapshot, loginItems, CB AI COINAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add CI AI COIN app to startup item list
-        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, nullptr, nullptr, CI AI COINAppUrl, nullptr, nullptr);
+        // add CB AI COIN app to startup item list
+        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, nullptr, nullptr, CB AI COINAppUrl, nullptr, nullptr);
     }
     else if(!fAutoStart && foundItem) {
         // remove item
         LSSharedFileListItemRemove(loginItems, foundItem);
     }
 
-    CFRelease(CI AI COINAppUrl);
+    CFRelease(CB AI COINAppUrl);
     CFRelease(loginItems);
     CFRelease(listSnapshot);
     return true;

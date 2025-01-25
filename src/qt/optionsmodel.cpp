@@ -1,14 +1,14 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
 #include <qt/optionsmodel.h>
 
-#include <qt/CI AI COINunits.h>
+#include <qt/CB AI COINunits.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
 
@@ -68,7 +68,7 @@ void OptionsModel::Init(bool resetSettings)
 
     // Display
     if (!settings.contains("nDisplayUnit"))
-        settings.setValue("nDisplayUnit", CI AI COINUnits::CICX);
+        settings.setValue("nDisplayUnit", CB AI COINUnits::CICX);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
 
     if (!settings.contains("strThirdPartyTxUrls"))
@@ -505,7 +505,7 @@ void OptionsModel::checkAndMigrate()
     if (settingsVersion < CLIENT_VERSION)
     {
         // -dbcache was bumped from 100 to 300 in 0.13
-        // see https://github.com/CI AI COIN/CI AI COIN/pull/8273
+        // see https://github.com/CB AI COIN/CB AI COIN/pull/8273
         // force people to upgrade to the new value if they are using 100MB
         if (settingsVersion < 130000 && settings.contains("nDatabaseCache") && settings.value("nDatabaseCache").toLongLong() == 100)
             settings.setValue("nDatabaseCache", (qint64)nDefaultDbCache);

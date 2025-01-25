@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2018 The CI AI COIN Core developers
+// Copyright (c) 2009-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 #if defined(BUILD_BITCOIN_INTERNAL) && defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
   #if defined(_WIN32)
     #if defined(DLL_EXPORT)
       #if defined(HAVE_FUNC_ATTRIBUTE_DLLEXPORT)
@@ -35,44 +35,44 @@ extern "C" {
 
 #define BITCOINCONSENSUS_API_VER 1
 
-typedef enum CI AI COINconsensus_error_t
+typedef enum CB AI COINconsensus_error_t
 {
-    CI AI COINconsensus_ERR_OK = 0,
-    CI AI COINconsensus_ERR_TX_INDEX,
-    CI AI COINconsensus_ERR_TX_SIZE_MISMATCH,
-    CI AI COINconsensus_ERR_TX_DESERIALIZE,
-    CI AI COINconsensus_ERR_AMOUNT_REQUIRED,
-    CI AI COINconsensus_ERR_INVALID_FLAGS,
-} CI AI COINconsensus_error;
+    CB AI COINconsensus_ERR_OK = 0,
+    CB AI COINconsensus_ERR_TX_INDEX,
+    CB AI COINconsensus_ERR_TX_SIZE_MISMATCH,
+    CB AI COINconsensus_ERR_TX_DESERIALIZE,
+    CB AI COINconsensus_ERR_AMOUNT_REQUIRED,
+    CB AI COINconsensus_ERR_INVALID_FLAGS,
+} CB AI COINconsensus_error;
 
 /** Script verification flags */
 enum
 {
-    CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_NONE                = 0,
-    CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_P2SH                = (1U << 0), // evaluate P2SH (BIP16) subscripts
-    CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_DERSIG              = (1U << 2), // enforce strict DER (BIP66) compliance
-    CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY           = (1U << 4), // enforce NULLDUMMY (BIP147)
-    CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY = (1U << 9), // enable CHECKLOCKTIMEVERIFY (BIP65)
-    CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY = (1U << 10), // enable CHECKSEQUENCEVERIFY (BIP112)
-    CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_WITNESS             = (1U << 11), // enable WITNESS (BIP141)
-    CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_ALL                 = CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_P2SH | CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_DERSIG |
-                                                               CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY | CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY |
-                                                               CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY | CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_WITNESS
+    CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_NONE                = 0,
+    CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_P2SH                = (1U << 0), // evaluate P2SH (BIP16) subscripts
+    CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_DERSIG              = (1U << 2), // enforce strict DER (BIP66) compliance
+    CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY           = (1U << 4), // enforce NULLDUMMY (BIP147)
+    CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY = (1U << 9), // enable CHECKLOCKTIMEVERIFY (BIP65)
+    CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY = (1U << 10), // enable CHECKSEQUENCEVERIFY (BIP112)
+    CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_WITNESS             = (1U << 11), // enable WITNESS (BIP141)
+    CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_ALL                 = CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_P2SH | CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_DERSIG |
+                                                               CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY | CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY |
+                                                               CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY | CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_WITNESS
 };
 
 /// Returns 1 if the input nIn of the serialized transaction pointed to by
 /// txTo correctly spends the scriptPubKey pointed to by scriptPubKey under
 /// the additional constraints specified by flags.
 /// If not nullptr, err will contain an error/success code for the operation
-EXPORT_SYMBOL int CI AI COINconsensus_verify_script(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen,
+EXPORT_SYMBOL int CB AI COINconsensus_verify_script(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen,
                                                  const unsigned char *txTo        , unsigned int txToLen,
-                                                 unsigned int nIn, unsigned int flags, CI AI COINconsensus_error* err);
+                                                 unsigned int nIn, unsigned int flags, CB AI COINconsensus_error* err);
 
-EXPORT_SYMBOL int CI AI COINconsensus_verify_script_with_amount(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen, int64_t amount,
+EXPORT_SYMBOL int CB AI COINconsensus_verify_script_with_amount(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen, int64_t amount,
                                     const unsigned char *txTo        , unsigned int txToLen,
-                                    unsigned int nIn, unsigned int flags, CI AI COINconsensus_error* err);
+                                    unsigned int nIn, unsigned int flags, CB AI COINconsensus_error* err);
 
-EXPORT_SYMBOL unsigned int CI AI COINconsensus_version();
+EXPORT_SYMBOL unsigned int CB AI COINconsensus_version();
 
 #ifdef __cplusplus
 } // extern "C"

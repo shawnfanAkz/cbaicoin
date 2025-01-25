@@ -1,4 +1,4 @@
-// Copyright (c) 2009-2019 The CI AI COIN Core developers
+// Copyright (c) 2009-2019 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -395,7 +395,7 @@ struct PartiallySignedTransaction
     bool IsNull() const;
 
     /** Merge psbt into this. The two psbts must have the same underlying CTransaction (i.e. the
-      * same actual CI AI COIN transaction.) Returns true if the merge succeeded, false otherwise. */
+      * same actual CB AI COIN transaction.) Returns true if the merge succeeded, false otherwise. */
     NODISCARD bool Merge(const PartiallySignedTransaction& psbt);
     bool IsSane() const;
     bool AddInput(const CTxIn& txin, PSBTInput& psbtin);

@@ -104,7 +104,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Võrguga sünkroniseerimine...</translation>
@@ -130,8 +130,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -265,8 +265,8 @@
         <translation>Tere tulemast</translation>
     </message>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN</translation>
     </message>
     <message>
         <source>Error</source>
@@ -758,10 +758,10 @@
     </message>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     <message>
-        <source>CI AI COIN Core</source>
-        <translation>CI AI COIN Core</translation>
+        <source>CB AI COIN Core</source>
+        <translation>CB AI COIN Core</translation>
     </message>
     <message>
         <source>Information</source>

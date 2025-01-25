@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2019 The CI AI COIN Core developers
+# Copyright (c) 2017-2019 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the RPC call related to the uptime command.
@@ -9,10 +9,10 @@ Test corresponds to code in rpc/server.cpp.
 
 import time
 
-from test_framework.test_framework import CI AI COINTestFramework
+from test_framework.test_framework import CB AI COINTestFramework
 
 
-class UptimeTest(CI AI COINTestFramework):
+class UptimeTest(CB AI COINTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True

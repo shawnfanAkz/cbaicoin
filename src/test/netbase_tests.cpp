@@ -1,4 +1,4 @@
-// Copyright (c) 2012-2019 The CI AI COIN Core developers
+// Copyright (c) 2012-2019 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -84,10 +84,10 @@ bool static TestSplitHost(std::string test, std::string host, int port)
 
 BOOST_AUTO_TEST_CASE(netbase_splithost)
 {
-    BOOST_CHECK(TestSplitHost("www.CI AI COINcore.org", "www.CI AI COINcore.org", -1));
-    BOOST_CHECK(TestSplitHost("[www.CI AI COINcore.org]", "www.CI AI COINcore.org", -1));
-    BOOST_CHECK(TestSplitHost("www.CI AI COINcore.org:80", "www.CI AI COINcore.org", 80));
-    BOOST_CHECK(TestSplitHost("[www.CI AI COINcore.org]:80", "www.CI AI COINcore.org", 80));
+    BOOST_CHECK(TestSplitHost("www.CB AI COINcore.org", "www.CB AI COINcore.org", -1));
+    BOOST_CHECK(TestSplitHost("[www.CB AI COINcore.org]", "www.CB AI COINcore.org", -1));
+    BOOST_CHECK(TestSplitHost("www.CB AI COINcore.org:80", "www.CB AI COINcore.org", 80));
+    BOOST_CHECK(TestSplitHost("[www.CB AI COINcore.org]:80", "www.CB AI COINcore.org", 80));
     BOOST_CHECK(TestSplitHost("127.0.0.1", "127.0.0.1", -1));
     BOOST_CHECK(TestSplitHost("127.0.0.1:8333", "127.0.0.1", 8333));
     BOOST_CHECK(TestSplitHost("[127.0.0.1]", "127.0.0.1", -1));

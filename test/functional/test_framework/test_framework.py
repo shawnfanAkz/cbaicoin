@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2019 The CI AI COIN Core developers
+# Copyright (c) 2014-2019 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Base class for RPC testing."""
@@ -43,7 +43,7 @@ TEST_EXIT_PASSED = 0
 TEST_EXIT_FAILED = 1
 TEST_EXIT_SKIPPED = 77
 
-TMPDIR_PREFIX = "CI AI COIN_func_test_"
+TMPDIR_PREFIX = "CB AI COIN_func_test_"
 
 
 class SkipTest(Exception):
@@ -53,30 +53,30 @@ class SkipTest(Exception):
         self.message = message
 
 
-class CI AI COINTestMetaClass(type):
-    """Metaclass for CI AI COINTestFramework.
+class CB AI COINTestMetaClass(type):
+    """Metaclass for CB AI COINTestFramework.
 
-    Ensures that any attempt to register a subclass of `CI AI COINTestFramework`
+    Ensures that any attempt to register a subclass of `CB AI COINTestFramework`
     adheres to a standard whereby the subclass overrides `set_test_params` and
     `run_test` but DOES NOT override either `__init__` or `main`. If any of
     those standards are violated, a ``TypeError`` is raised."""
 
     def __new__(cls, clsname, bases, dct):
-        if not clsname == 'CI AI COINTestFramework':
+        if not clsname == 'CB AI COINTestFramework':
             if not ('run_test' in dct and 'set_test_params' in dct):
-                raise TypeError("CI AI COINTestFramework subclasses must override "
+                raise TypeError("CB AI COINTestFramework subclasses must override "
                                 "'run_test' and 'set_test_params'")
             if '__init__' in dct or 'main' in dct:
-                raise TypeError("CI AI COINTestFramework subclasses may not override "
+                raise TypeError("CB AI COINTestFramework subclasses may not override "
                                 "'__init__' or 'main'")
 
         return super().__new__(cls, clsname, bases, dct)
 
 
-class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
-    """Base class for a CI AI COIN test script.
+class CB AI COINTestFramework(metaclass=CB AI COINTestMetaClass):
+    """Base class for a CB AI COIN test script.
 
-    Individual CI AI COIN test scripts should subclass this class and override the set_test_params() and run_test() methods.
+    Individual CB AI COIN test scripts should subclass this class and override the set_test_params() and run_test() methods.
 
     Individual tests can also override the following methods to customize the test setup:
 
@@ -107,9 +107,9 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
 
         parser = argparse.ArgumentParser(usage="%(prog)s [options]")
         parser.add_argument("--nocleanup", dest="nocleanup", default=False, action="store_true",
-                            help="Leave CI AI COINds and test.* datadir on exit or error")
+                            help="Leave CB AI COINds and test.* datadir on exit or error")
         parser.add_argument("--noshutdown", dest="noshutdown", default=False, action="store_true",
-                            help="Don't stop CI AI COINds after the test execution")
+                            help="Don't stop CB AI COINds after the test execution")
         parser.add_argument("--cachedir", dest="cachedir", default=os.path.abspath(os.path.dirname(os.path.realpath(__file__)) + "/../../cache"),
                             help="Directory for caching pregenerated datadirs (default: %(default)s)")
         parser.add_argument("--tmpdir", dest="tmpdir", help="Root directory for datadirs")
@@ -127,7 +127,7 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
         parser.add_argument("--pdbonfailure", dest="pdbonfailure", default=False, action="store_true",
                             help="Attach a python debugger if test fails")
         parser.add_argument("--usecli", dest="usecli", default=False, action="store_true",
-                            help="use CI AI COIN-cli instead of RPC for all commands")
+                            help="use CB AI COIN-cli instead of RPC for all commands")
         parser.add_argument("--perf", dest="perf", default=False, action="store_true",
                             help="profile running nodes with perf for the duration of the test")
         parser.add_argument("--randomseed", type=int,
@@ -144,8 +144,8 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
         config = configparser.ConfigParser()
         config.read_file(open(self.options.configfile))
         self.config = config
-        self.options.CI AI COINd = os.getenv("BITCOIND", default=config["environment"]["BUILDDIR"] + '/src/CI AI COINd' + config["environment"]["EXEEXT"])
-        self.options.CI AI COINcli = os.getenv("BITCOINCLI", default=config["environment"]["BUILDDIR"] + '/src/CI AI COIN-cli' + config["environment"]["EXEEXT"])
+        self.options.CB AI COINd = os.getenv("BITCOIND", default=config["environment"]["BUILDDIR"] + '/src/CB AI COINd' + config["environment"]["EXEEXT"])
+        self.options.CB AI COINcli = os.getenv("BITCOINCLI", default=config["environment"]["BUILDDIR"] + '/src/CB AI COIN-cli' + config["environment"]["EXEEXT"])
 
         os.environ['PATH'] = os.pathsep.join([
             os.path.join(config['environment']['BUILDDIR'], 'src'),
@@ -220,7 +220,7 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
         else:
             for node in self.nodes:
                 node.cleanup_on_exit = False
-            self.log.info("Note: CI AI COINds were not stopped and may still be running")
+            self.log.info("Note: CB AI COINds were not stopped and may still be running")
 
         should_clean_up = (
             not self.options.nocleanup and
@@ -345,7 +345,7 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
         if extra_args is None:
             extra_args = [[]] * num_nodes
         if binary is None:
-            binary = [self.options.CI AI COINd] * num_nodes
+            binary = [self.options.CB AI COINd] * num_nodes
         assert_equal(len(extra_confs), num_nodes)
         assert_equal(len(extra_args), num_nodes)
         assert_equal(len(binary), num_nodes)
@@ -356,8 +356,8 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
                 chain=self.chain,
                 rpchost=rpchost,
                 timewait=self.rpc_timeout,
-                CI AI COINd=binary[i],
-                CI AI COIN_cli=self.options.CI AI COINcli,
+                CB AI COINd=binary[i],
+                CB AI COIN_cli=self.options.CB AI COINcli,
                 coverage_dir=self.options.coveragedir,
                 cwd=self.options.tmpdir,
                 extra_conf=extra_confs[i],
@@ -367,7 +367,7 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
             ))
 
     def start_node(self, i, *args, **kwargs):
-        """Start a CI AI COINd"""
+        """Start a CB AI COINd"""
 
         node = self.nodes[i]
 
@@ -378,7 +378,7 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
             coverage.write_all_rpc_commands(self.options.coveragedir, node.rpc)
 
     def start_nodes(self, extra_args=None, *args, **kwargs):
-        """Start multiple CI AI COINds"""
+        """Start multiple CB AI COINds"""
 
         if extra_args is None:
             extra_args = [None] * self.num_nodes
@@ -398,12 +398,12 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
                 coverage.write_all_rpc_commands(self.options.coveragedir, node.rpc)
 
     def stop_node(self, i, expected_stderr='', wait=0):
-        """Stop a CI AI COINd test node"""
+        """Stop a CB AI COINd test node"""
         self.nodes[i].stop_node(expected_stderr, wait=wait)
         self.nodes[i].wait_until_stopped()
 
     def stop_nodes(self, wait=0):
-        """Stop multiple CI AI COINd test nodes"""
+        """Stop multiple CB AI COINd test nodes"""
         for node in self.nodes:
             # Issue RPC to stop nodes
             node.stop_node(wait=wait)
@@ -460,7 +460,7 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
         # User can provide log level as a number or string (eg DEBUG). loglevel was caught as a string, so try to convert it to an int
         ll = int(self.options.loglevel) if self.options.loglevel.isdigit() else self.options.loglevel.upper()
         ch.setLevel(ll)
-        # Format logs the same as CI AI COINd's debug.log with microprecision (so log files can be concatenated and sorted)
+        # Format logs the same as CB AI COINd's debug.log with microprecision (so log files can be concatenated and sorted)
         formatter = logging.Formatter(fmt='%(asctime)s.%(msecs)03d000Z %(name)s (%(levelname)s): %(message)s', datefmt='%Y-%m-%dT%H:%M:%S')
         formatter.converter = time.gmtime
         fh.setFormatter(formatter)
@@ -470,7 +470,7 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
         self.log.addHandler(ch)
 
         if self.options.trace_rpc:
-            rpc_logger = logging.getLogger("CI AI COINRPC")
+            rpc_logger = logging.getLogger("CB AI COINRPC")
             rpc_logger.setLevel(logging.DEBUG)
             rpc_handler = logging.StreamHandler(sys.stdout)
             rpc_handler.setLevel(logging.DEBUG)
@@ -499,8 +499,8 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
                     extra_args=['-disablewallet'],
                     rpchost=None,
                     timewait=self.rpc_timeout,
-                    CI AI COINd=self.options.CI AI COINd,
-                    CI AI COIN_cli=self.options.CI AI COINcli,
+                    CB AI COINd=self.options.CB AI COINd,
+                    CB AI COIN_cli=self.options.CB AI COINcli,
                     coverage_dir=None,
                     cwd=self.options.tmpdir,
                 ))
@@ -539,7 +539,7 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
             self.log.debug("Copy cache directory {} to node {}".format(cache_node_dir, i))
             to_dir = get_datadir_path(self.options.tmpdir, i)
             shutil.copytree(cache_node_dir, to_dir)
-            initialize_datadir(self.options.tmpdir, i, self.chain)  # Overwrite port/rpcport in CI AI COIN.conf
+            initialize_datadir(self.options.tmpdir, i, self.chain)  # Overwrite port/rpcport in CB AI COIN.conf
 
     def _initialize_chain_clean(self):
         """Initialize empty blockchain for use by the test.
@@ -556,10 +556,10 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
         except ImportError:
             raise SkipTest("python3-zmq module not available.")
 
-    def skip_if_no_CI AI COINd_zmq(self):
-        """Skip the running test if CI AI COINd has not been compiled with zmq support."""
+    def skip_if_no_CB AI COINd_zmq(self):
+        """Skip the running test if CB AI COINd has not been compiled with zmq support."""
         if not self.is_zmq_compiled():
-            raise SkipTest("CI AI COINd has not been built with zmq enabled.")
+            raise SkipTest("CB AI COINd has not been built with zmq enabled.")
 
     def skip_if_no_wallet(self):
         """Skip the running test if wallet has not been compiled."""
@@ -567,12 +567,12 @@ class CI AI COINTestFramework(metaclass=CI AI COINTestMetaClass):
             raise SkipTest("wallet has not been compiled.")
 
     def skip_if_no_cli(self):
-        """Skip the running test if CI AI COIN-cli has not been compiled."""
+        """Skip the running test if CB AI COIN-cli has not been compiled."""
         if not self.is_cli_compiled():
-            raise SkipTest("CI AI COIN-cli has not been compiled.")
+            raise SkipTest("CB AI COIN-cli has not been compiled.")
 
     def is_cli_compiled(self):
-        """Checks whether CI AI COIN-cli was compiled."""
+        """Checks whether CB AI COIN-cli was compiled."""
         return self.config["components"].getboolean("ENABLE_CLI")
 
     def is_wallet_compiled(self):

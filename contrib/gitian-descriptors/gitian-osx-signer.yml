@@ -1,5 +1,5 @@
 ---
-name: "CI AI COIN-dmg-signer"
+name: "CB AI COIN-dmg-signer"
 distro: "ubuntu"
 suites:
 - "bionic"
@@ -8,10 +8,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/CI AI COIN-core/CI AI COIN-detached-sigs.git"
+- "url": "https://github.com/CB AI COIN-core/CB AI COIN-detached-sigs.git"
   "dir": "signature"
 files:
-- "CI AI COIN-osx-unsigned.tar.gz"
+- "CB AI COIN-osx-unsigned.tar.gz"
 script: |
   set -e -o pipefail
 
@@ -30,8 +30,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=CI AI COIN-osx-unsigned.tar.gz
-  SIGNED=CI AI COIN-osx-signed.dmg
+  UNSIGNED=CB AI COIN-osx-unsigned.tar.gz
+  SIGNED=CB AI COIN-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

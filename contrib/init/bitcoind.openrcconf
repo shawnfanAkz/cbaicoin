@@ -1,31 +1,31 @@
-# /etc/conf.d/CI AI COINd: config file for /etc/init.d/CI AI COINd
+# /etc/conf.d/CB AI COINd: config file for /etc/init.d/CB AI COINd
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/CI AI COIN/CI AI COIN.conf"
+#BITCOIND_CONFIGFILE="/etc/CB AI COIN/CB AI COIN.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/CI AI COINd"
+#BITCOIND_PIDDIR="/var/run/CB AI COINd"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/CI AI COINd.pid"
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/CB AI COINd.pid"
 
-# Where to write CI AI COINd data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/CI AI COINd"
+# Where to write CB AI COINd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/CB AI COINd"
 
-# User and group to own CI AI COINd process
-#BITCOIND_USER="CI AI COIN"
-#BITCOIND_GROUP="CI AI COIN"
+# User and group to own CB AI COINd process
+#BITCOIND_USER="CB AI COIN"
+#BITCOIND_GROUP="CB AI COIN"
 
-# Path to CI AI COINd executable
-#BITCOIND_BIN="/usr/bin/CI AI COINd"
+# Path to CB AI COINd executable
+#BITCOIND_BIN="/usr/bin/CB AI COINd"
 
-# Nice value to run CI AI COINd under
+# Nice value to run CB AI COINd under
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
 #BITCOIND_OPTS=""
 
-# The timeout in seconds OpenRC will wait for CI AI COINd to terminate
+# The timeout in seconds OpenRC will wait for CB AI COINd to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule

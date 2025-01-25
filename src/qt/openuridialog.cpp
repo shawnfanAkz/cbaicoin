@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,7 +15,7 @@ OpenURIDialog::OpenURIDialog(QWidget *parent) :
     ui(new Ui::OpenURIDialog)
 {
     ui->setupUi(this);
-    ui->uriEdit->setPlaceholderText("CI AI COIN:");
+    ui->uriEdit->setPlaceholderText("CB AI COIN:");
 }
 
 OpenURIDialog::~OpenURIDialog()
@@ -31,7 +31,7 @@ QString OpenURIDialog::getURI()
 void OpenURIDialog::accept()
 {
     SendCoinsRecipient rcp;
-    if(GUIUtil::parseCI AI COINURI(getURI(), &rcp))
+    if(GUIUtil::parseCB AI COINURI(getURI(), &rcp))
     {
         /* Only accept value URIs */
         QDialog::accept();

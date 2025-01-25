@@ -1,4 +1,4 @@
-// Copyright (c) 2018 The CI AI COIN Core developers
+// Copyright (c) 2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,8 +6,8 @@
 
 #include <chainparams.h>
 #include <key.h>
-#include <qt/CI AI COIN.h>
-#include <qt/CI AI COINgui.h>
+#include <qt/CB AI COIN.h>
+#include <qt/CB AI COINgui.h>
 #include <qt/networkstyle.h>
 #include <qt/rpcconsole.h>
 #include <shutdown.h>
@@ -16,7 +16,7 @@
 #include <validation.h>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
 #include <QAction>
@@ -47,7 +47,7 @@ void TestRpcCommand(RPCConsole* console)
 }
 } // namespace
 
-//! Entry point for CI AI COINApplication tests.
+//! Entry point for CB AI COINApplication tests.
 void AppTests::appTests()
 {
 #ifdef Q_OS_MAC
@@ -57,7 +57,7 @@ void AppTests::appTests()
         // and fails to handle returned nulls
         // (https://bugreports.qt.io/browse/QTBUG-49686).
         QWARN("Skipping AppTests on mac build with 'minimal' platform set due to Qt bugs. To run AppTests, invoke "
-              "with 'QT_QPA_PLATFORM=cocoa test_CI AI COIN-qt' on mac, or else use a linux or windows build.");
+              "with 'QT_QPA_PLATFORM=cocoa test_CB AI COIN-qt' on mac, or else use a linux or windows build.");
         return;
     }
 #endif
@@ -71,7 +71,7 @@ void AppTests::appTests()
     QScopedPointer<const NetworkStyle> style(NetworkStyle::instantiate(Params().NetworkIDString()));
     m_app.setupPlatformStyle();
     m_app.createWindow(style.data());
-    connect(&m_app, &CI AI COINApplication::windowShown, this, &AppTests::guiTests);
+    connect(&m_app, &CB AI COINApplication::windowShown, this, &AppTests::guiTests);
     expectCallback("guiTests");
     m_app.baseInitialize();
     m_app.requestInitialize();
@@ -84,11 +84,11 @@ void AppTests::appTests()
     UnloadBlockIndex();
 }
 
-//! Entry point for CI AI COINGUI tests.
-void AppTests::guiTests(CI AI COINGUI* window)
+//! Entry point for CB AI COINGUI tests.
+void AppTests::guiTests(CB AI COINGUI* window)
 {
     HandleCallback callback{"guiTests", *this};
-    connect(window, &CI AI COINGUI::consoleShown, this, &AppTests::consoleTests);
+    connect(window, &CB AI COINGUI::consoleShown, this, &AppTests::consoleTests);
     expectCallback("consoleTests");
     QAction* action = window->findChild<QAction*>("openRPCConsoleAction");
     action->activate(QAction::Trigger);

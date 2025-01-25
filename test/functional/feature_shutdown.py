@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) 2018 The CI AI COIN Core developers
+# Copyright (c) 2018 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test CI AI COINd shutdown."""
+"""Test CB AI COINd shutdown."""
 
-from test_framework.test_framework import CI AI COINTestFramework
+from test_framework.test_framework import CB AI COINTestFramework
 from test_framework.util import assert_equal, get_rpc_proxy, wait_until
 from threading import Thread
 
@@ -12,7 +12,7 @@ def test_long_call(node):
     block = node.waitfornewblock()
     assert_equal(block['height'], 0)
 
-class ShutdownTest(CI AI COINTestFramework):
+class ShutdownTest(CB AI COINTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True

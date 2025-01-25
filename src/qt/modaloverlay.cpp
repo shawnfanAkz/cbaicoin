@@ -1,4 +1,4 @@
-// Copyright (c) 2016-2018 The CI AI COIN Core developers
+// Copyright (c) 2016-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -31,7 +31,7 @@ userClosed(false)
     setVisible(false);
     if (!enable_wallet) {
         ui->infoText->setVisible(false);
-        ui->infoTextStrong->setText(tr("CI AI COIN Core is currently syncing.  It will download headers and blocks from peers and validate them until reaching the tip of the block chain."));
+        ui->infoTextStrong->setText(tr("CB AI COIN Core is currently syncing.  It will download headers and blocks from peers and validate them until reaching the tip of the block chain."));
     }
 }
 

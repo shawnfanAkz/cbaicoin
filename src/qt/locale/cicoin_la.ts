@@ -56,7 +56,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signa &amp;nuntium...</translation>
@@ -118,8 +118,8 @@
         <translation>Recreans indicem frustorum in disco...</translation>
     </message>
     <message>
-        <source>Send coins to a CI AI COIN address</source>
-        <translation>Mitte nummos ad inscriptionem CI AI COIN</translation>
+        <source>Send coins to a CB AI COIN address</source>
+        <translation>Mitte nummos ad inscriptionem CB AI COIN</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -162,12 +162,12 @@
         <translation>Cifra claves privatas quae cassidili tui sunt</translation>
     </message>
     <message>
-        <source>Sign messages with your CI AI COIN addresses to prove you own them</source>
-        <translation>Signa nuntios cum tuis inscriptionibus CI AI COIN ut demonstres te eas possidere</translation>
+        <source>Sign messages with your CB AI COIN addresses to prove you own them</source>
+        <translation>Signa nuntios cum tuis inscriptionibus CB AI COIN ut demonstres te eas possidere</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CI AI COIN addresses</source>
-        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus CI AI COIN</translation>
+        <source>Verify messages to ensure they were signed with specified CB AI COIN addresses</source>
+        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus CB AI COIN</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -299,8 +299,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN</translation>
     </message>
     <message>
         <source>Error</source>
@@ -351,8 +351,8 @@
         <translation>Cassidile</translation>
     </message>
     <message>
-        <source>Automatically open the CI AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Aperi per se portam clientis CI AI COIN in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+        <source>Automatically open the CB AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Aperi per se portam clientis CB AI COIN in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -434,8 +434,8 @@
         <translation>Schema</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CI AI COIN network after a connection is established, but this process has not completed yet.</source>
-        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete CI AI COIN postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CB AI COIN network after a connection is established, but this process has not completed yet.</source>
+        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete CB AI COIN postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
     </message>
     <message>
         <source>Immature:</source>
@@ -697,8 +697,8 @@
         <translation>Copia signationem in latibulum systematis</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CI AI COIN address</source>
-        <translation>Signa nuntium ut demonstres hanc inscriptionem CI AI COIN a te possessa esse</translation>
+        <source>Sign the message to prove you own this CB AI COIN address</source>
+        <translation>Signa nuntium ut demonstres hanc inscriptionem CB AI COIN a te possessa esse</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -717,8 +717,8 @@
         <translation>&amp;Verifica Nuntium</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CI AI COIN address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione CI AI COIN</translation>
+        <source>Verify the message to ensure it was signed with the specified CB AI COIN address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione CB AI COIN</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -804,7 +804,7 @@
     </message>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     <message>
         <source>Corrupted block database detected</source>
         <translation>Corruptum databasum frustorum invenitur</translation>

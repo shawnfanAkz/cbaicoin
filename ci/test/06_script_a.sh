@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018 The CI AI COIN Core developers
+# Copyright (c) 2018 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,7 +35,7 @@ DOCKER_EXEC make distdir VERSION=$HOST
 END_FOLD
 
 set +o errexit
-cd "CI AI COIN-$HOST" || (echo "could not enter distdir CI AI COIN-$HOST"; exit 1)
+cd "CB AI COIN-$HOST" || (echo "could not enter distdir CB AI COIN-$HOST"; exit 1)
 set -o errexit
 
 BEGIN_FOLD configure

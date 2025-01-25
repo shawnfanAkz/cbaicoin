@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,18 +15,18 @@ QT_BEGIN_NAMESPACE
 class QValueComboBox;
 QT_END_NAMESPACE
 
-/** Widget for entering CI AI COIN amounts.
+/** Widget for entering CB AI COIN amounts.
   */
-class CI AI COINAmountField: public QWidget
+class CB AI COINAmountField: public QWidget
 {
     Q_OBJECT
 
     // ugly hack: for some unknown reason CAmount (instead of qint64) does not work here as expected
-    // discussion: https://github.com/CI AI COIN/CI AI COIN/pull/5117
+    // discussion: https://github.com/CB AI COIN/CB AI COIN/pull/5117
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY valueChanged USER true)
 
 public:
-    explicit CI AI COINAmountField(QWidget *parent = nullptr);
+    explicit CB AI COINAmountField(QWidget *parent = nullptr);
 
     CAmount value(bool *value=nullptr) const;
     void setValue(const CAmount& value);

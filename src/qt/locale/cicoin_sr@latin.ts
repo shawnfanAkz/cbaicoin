@@ -62,8 +62,8 @@
         <translation>Adresa na koju se prima</translation>
     </message>
     <message>
-        <source>These are your CI AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ovo su Vaše CI AI COIN adrese na koju se vrše uplate. Uvek proverite iznos i prijemnu adresu pre slanja novčića.</translation>
+        <source>These are your CB AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ovo su Vaše CB AI COIN adrese na koju se vrše uplate. Uvek proverite iznos i prijemnu adresu pre slanja novčića.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -156,7 +156,7 @@
         <translation>Potvrdite šifrovanje novčanika</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CI AI COINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CB AI COINS&lt;/b&gt;!</source>
         <translation>Upozorenje: Ako šifrujete svoj novčanik, i potom izgubite svoju pristupnu frazu &lt;b&gt;IZGUBIĆETE SVE SVOJE BITKOINE&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -216,7 +216,7 @@
     </message>
 </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Potpišite &amp;poruka...</translation>
@@ -310,8 +310,8 @@
         <translation>Ponovo obeležavam blokove na disku...</translation>
     </message>
     <message>
-        <source>Send coins to a CI AI COIN address</source>
-        <translation>Pošalji novčiće na CI AI COIN adresu</translation>
+        <source>Send coins to a CB AI COIN address</source>
+        <translation>Pošalji novčiće na CB AI COIN adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -354,12 +354,12 @@
         <translation>Enkriptuj privatne ključeve novčanika</translation>
     </message>
     <message>
-        <source>Sign messages with your CI AI COIN addresses to prove you own them</source>
-        <translation>Potpišite poruke sa svojim CI AI COIN adresama da biste dokazali njihovo vlasništvo</translation>
+        <source>Sign messages with your CB AI COIN addresses to prove you own them</source>
+        <translation>Potpišite poruke sa svojim CB AI COIN adresama da biste dokazali njihovo vlasništvo</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CI AI COIN addresses</source>
-        <translation>Proverite poruke da biste utvrdili sa kojim CI AI COIN adresama su potpisane</translation>
+        <source>Verify messages to ensure they were signed with specified CB AI COIN addresses</source>
+        <translation>Proverite poruke da biste utvrdili sa kojim CB AI COIN adresama su potpisane</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -378,8 +378,8 @@
         <translation>Alatke za tabove</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and CI AI COIN: URIs)</source>
-        <translation>Zatražite plaćanje (generiše QR kodove i CI AI COIN: URI-e)</translation>
+        <source>Request payments (generates QR codes and CB AI COIN: URIs)</source>
+        <translation>Zatražite plaćanje (generiše QR kodove i CB AI COIN: URI-e)</translation>
     </message>
     <message>
         <source>Error</source>
@@ -489,8 +489,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN</translation>
     </message>
     <message>
         <source>Error</source>
@@ -702,7 +702,7 @@
     </message>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     <message>
         <source>Insufficient funds</source>
         <translation>Nedovoljno sredstava</translation>

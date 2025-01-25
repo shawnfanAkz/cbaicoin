@@ -120,7 +120,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
         <source>Error</source>
         <translation>نقص</translation>
@@ -344,7 +344,7 @@
     </message>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     <message>
         <source>Insufficient funds</source>
         <translation>ناکافی فنڈز</translation>

@@ -1,23 +1,23 @@
-CI AI COIN version 0.7.1 is now available from:
-  http://sourceforge.net/projects/CI AI COIN/files/CI AI COIN/CI AI COIN-0.7.1/
+CB AI COIN version 0.7.1 is now available from:
+  http://sourceforge.net/projects/CB AI COIN/files/CB AI COIN/CB AI COIN-0.7.1/
 
 This is a bug-fix minor release.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/CI AI COIN/CI AI COIN/issues
+  https://github.com/CB AI COIN/CB AI COIN/issues
 
 Project source code is hosted at github; you can get
 source-only tarballs/zipballs directly from there:
-  https://github.com/CI AI COIN/CI AI COIN/tarball/v0.7.1  # .tar.gz
-  https://github.com/CI AI COIN/CI AI COIN/zipball/v0.7.1  # .zip
+  https://github.com/CB AI COIN/CB AI COIN/tarball/v0.7.1  # .tar.gz
+  https://github.com/CB AI COIN/CB AI COIN/zipball/v0.7.1  # .zip
 
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
 up-to-date.  Just type:
-  sudo apt-add-repository ppa:CI AI COIN/CI AI COIN
+  sudo apt-add-repository ppa:CB AI COIN/CB AI COIN
   sudo apt-get update
-in your terminal, then install the CI AI COIN-qt package:
-  sudo apt-get install CI AI COIN-qt
+in your terminal, then install the CB AI COIN-qt package:
+  sudo apt-get install CB AI COIN-qt
 
 KNOWN ISSUES
 ------------
@@ -30,7 +30,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/CI AI COIN-Qt (on Mac) or CI AI COINd/CI AI COIN-qt (on Linux).
+/Applications/CB AI COIN-Qt (on Mac) or CB AI COINd/CB AI COIN-qt (on Linux).
 
 If you were running on Linux with a version that might have been compiled
 with a different version of Berkeley DB (for example, if you were using an
@@ -75,7 +75,7 @@ Dependency changes
 Bug fixes
 ---------
 
-* Clicking on a CI AI COIN: URI on Windows should now launch CI AI COIN-Qt properly.
+* Clicking on a CB AI COIN: URI on Windows should now launch CB AI COIN-Qt properly.
 
 * When running -testnet, use RPC port 18332 by default.
 

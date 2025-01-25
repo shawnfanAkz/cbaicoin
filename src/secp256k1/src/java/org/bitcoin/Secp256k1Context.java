@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.CI AI COIN;
+package org.CB AI COIN;
 
 /**
  * This class holds the context reference used in native methods 

@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "CI AI COIN"
-            VALUE "FileDescription",    "CI AI COINd (CI AI COIN node with a JSON-RPC server)"
+            VALUE "CompanyName",        "CB AI COIN"
+            VALUE "FileDescription",    "CB AI COINd (CB AI COIN node with a JSON-RPC server)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "CI AI COINd"
+            VALUE "InternalName",       "CB AI COINd"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "CI AI COINd.exe"
-            VALUE "ProductName",        "CI AI COINd"
+            VALUE "OriginalFilename",   "CB AI COINd.exe"
+            VALUE "ProductName",        "CB AI COINd"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

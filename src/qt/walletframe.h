@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2019 The CI AI COIN Core developers
+// Copyright (c) 2011-2019 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +8,7 @@
 #include <QFrame>
 #include <QMap>
 
-class CI AI COINGUI;
+class CB AI COINGUI;
 class ClientModel;
 class PlatformStyle;
 class SendCoinsRecipient;
@@ -21,9 +21,9 @@ QT_END_NAMESPACE
 
 /**
  * A container for embedding all wallet-related
- * controls into CI AI COINGUI. The purpose of this class is to allow future
+ * controls into CB AI COINGUI. The purpose of this class is to allow future
  * refinements of the wallet controls with minimal need for further
- * modifications to CI AI COINGUI, thus greatly simplifying merges while
+ * modifications to CB AI COINGUI, thus greatly simplifying merges while
  * reducing the risk of breaking top-level stuff.
  */
 class WalletFrame : public QFrame
@@ -31,7 +31,7 @@ class WalletFrame : public QFrame
     Q_OBJECT
 
 public:
-    explicit WalletFrame(const PlatformStyle *platformStyle, CI AI COINGUI *_gui = nullptr);
+    explicit WalletFrame(const PlatformStyle *platformStyle, CB AI COINGUI *_gui = nullptr);
     ~WalletFrame();
 
     void setClientModel(ClientModel *clientModel);
@@ -51,7 +51,7 @@ Q_SIGNALS:
 
 private:
     QStackedWidget *walletStack;
-    CI AI COINGUI *gui;
+    CB AI COINGUI *gui;
     ClientModel *clientModel;
     QMap<WalletModel*, WalletView*> mapWalletViews;
 

@@ -1,25 +1,25 @@
-CI AI COIN version 0.6.0 is now available for download at:
-http://sourceforge.net/projects/CI AI COIN/files/CI AI COIN/CI AI COIN-0.6.0/test/
+CB AI COIN version 0.6.0 is now available for download at:
+http://sourceforge.net/projects/CB AI COIN/files/CB AI COIN/CB AI COIN-0.6.0/test/
 
 This release includes more than 20 language localizations.
 More translations are welcome; join the
 project at Transifex to help:
-https://www.transifex.net/projects/p/CI AI COIN/
+https://www.transifex.net/projects/p/CB AI COIN/
 
 Please report bugs using the issue tracker at github:
-https://github.com/CI AI COIN/CI AI COIN/issues
+https://github.com/CB AI COIN/CB AI COIN/issues
 
 Project source code is hosted at github; we are no longer
 distributing .tar.gz files here, you can get them
 directly from github:
-https://github.com/CI AI COIN/CI AI COIN/tarball/v0.6.0  # .tar.gz
-https://github.com/CI AI COIN/CI AI COIN/zipball/v0.6.0  # .zip
+https://github.com/CB AI COIN/CB AI COIN/tarball/v0.6.0  # .tar.gz
+https://github.com/CB AI COIN/CB AI COIN/zipball/v0.6.0  # .zip
 
 For Ubuntu users, there is a ppa maintained by Matt Corallo which
 you can add to your system so that it will automatically keep
-CI AI COIN up-to-date.  Just type
-sudo apt-add-repository ppa:CI AI COIN/CI AI COIN
-in your terminal, then install the CI AI COIN-qt package.
+CB AI COIN up-to-date.  Just type
+sudo apt-add-repository ppa:CB AI COIN/CB AI COIN
+in your terminal, then install the CB AI COIN-qt package.
 
 
 KNOWN ISSUES
@@ -38,30 +38,30 @@ hours).
 
 Backup Wallet menu option.
 
-CI AI COIN-Qt can display and save QR codes for sending
+CB AI COIN-Qt can display and save QR codes for sending
 and receiving addresses.
 
 New context menu on addresses to copy/edit/delete them.
 
 New Sign Message dialog that allows you to prove that you
-own a CI AI COIN address by creating a digital
+own a CB AI COIN address by creating a digital
 signature.
 
 New wallets created with this version will
 use 33-byte 'compressed' public keys instead of
 65-byte public keys, resulting in smaller
-transactions and less traffic on the CI AI COIN
+transactions and less traffic on the CB AI COIN
 network. The shorter keys are already supported
 by the network but wallet.dat files containing
 short keys are not compatible with earlier
-versions of CI AI COIN-Qt/CI AI COINd.
+versions of CB AI COIN-Qt/CB AI COINd.
 
 New command-line argument -blocknotify=<command>
 that will spawn a shell process to run <command> 
 when a new block is accepted.
 
 New command-line argument -splash=0 to disable
-CI AI COIN-Qt's initial splash screen
+CB AI COIN-Qt's initial splash screen
 
 validateaddress JSON-RPC api command output includes
 two new fields for addresses in the wallet:
@@ -104,11 +104,11 @@ attacks were fixed.
 
 NOT YET IMPLEMENTED FEATURES
 
-Support for clicking on CI AI COIN: URIs and
-opening/launching CI AI COIN-Qt is available only on Linux,
+Support for clicking on CB AI COIN: URIs and
+opening/launching CB AI COIN-Qt is available only on Linux,
 and only if you configure your desktop to launch
-CI AI COIN-Qt. All platforms support dragging and dropping
-CI AI COIN: URIs onto the CI AI COIN-Qt window to start
+CB AI COIN-Qt. All platforms support dragging and dropping
+CB AI COIN: URIs onto the CB AI COIN-Qt window to start
 payment.
 
 
@@ -117,7 +117,7 @@ PRELIMINARY SUPPORT FOR MULTISIGNATURE TRANSACTIONS
 This release has preliminary support for multisignature
 transactions-- transactions that require authorization
 from more than one person or device before they
-will be accepted by the CI AI COIN network.
+will be accepted by the CB AI COIN network.
 
 Prior to this release, multisignature transactions
 were considered 'non-standard' and were ignored;
@@ -125,13 +125,13 @@ with this release multisignature transactions are
 considered standard and will start to be relayed
 and accepted into blocks.
 
-It is expected that future releases of CI AI COIN-Qt
+It is expected that future releases of CB AI COIN-Qt
 will support the creation of multisignature transactions,
 once enough of the network has upgraded so relaying
 and validating them is robust.
 
 For this release, creation and testing of multisignature
-transactions is limited to the CI AI COIN test network using
+transactions is limited to the CB AI COIN test network using
 the "addmultisigaddress" JSON-RPC api call.
 
 Short multisignature address support is included in this

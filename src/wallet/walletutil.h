@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2018 The CI AI COIN Core developers
+// Copyright (c) 2017-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -52,7 +52,7 @@ enum WalletFlags : uint64_t {
     //! initialization that should only happen on first run.
     //!
     //! This flag is also a mandatory flag to prevent previous versions of
-    //! CI AI COIN from opening the wallet, thinking it was newly created, and
+    //! CB AI COIN from opening the wallet, thinking it was newly created, and
     //! then improperly reinitializing it.
     WALLET_FLAG_BLANK_WALLET = (1ULL << 33),
 };

@@ -1,10 +1,10 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <qt/CI AI COINamountfield.h>
+#include <qt/CB AI COINamountfield.h>
 
-#include <qt/CI AI COINunits.h>
+#include <qt/CB AI COINunits.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
 #include <qt/qvaluecombobox.h>
@@ -56,7 +56,7 @@ public:
 
         if (valid) {
             val = qBound(m_min_amount, val, m_max_amount);
-            input = CI AI COINUnits::format(currentUnit, val, false, CI AI COINUnits::separatorAlways);
+            input = CB AI COINUnits::format(currentUnit, val, false, CB AI COINUnits::separatorAlways);
             lineEdit()->setText(input);
         }
     }
@@ -68,7 +68,7 @@ public:
 
     void setValue(const CAmount& value)
     {
-        lineEdit()->setText(CI AI COINUnits::format(currentUnit, value, false, CI AI COINUnits::separatorAlways));
+        lineEdit()->setText(CB AI COINUnits::format(currentUnit, value, false, CB AI COINUnits::separatorAlways));
         Q_EMIT valueChanged();
     }
 
@@ -102,7 +102,7 @@ public:
         CAmount val = value(&valid);
 
         currentUnit = unit;
-        lineEdit()->setPlaceholderText(CI AI COINUnits::format(currentUnit, m_min_amount, false, CI AI COINUnits::separatorAlways));
+        lineEdit()->setPlaceholderText(CB AI COINUnits::format(currentUnit, m_min_amount, false, CB AI COINUnits::separatorAlways));
         if(valid)
             setValue(val);
         else
@@ -122,7 +122,7 @@ public:
 
             const QFontMetrics fm(fontMetrics());
             int h = lineEdit()->minimumSizeHint().height();
-            int w = GUIUtil::TextWidth(fm, CI AI COINUnits::format(CI AI COINUnits::CICX, CI AI COINUnits::maxMoney(), false, CI AI COINUnits::separatorAlways));
+            int w = GUIUtil::TextWidth(fm, CB AI COINUnits::format(CB AI COINUnits::CICX, CB AI COINUnits::maxMoney(), false, CB AI COINUnits::separatorAlways));
             w += 2; // cursor blinking space
 
             QStyleOptionSpinBox opt;
@@ -148,12 +148,12 @@ public:
     }
 
 private:
-    int currentUnit{CI AI COINUnits::CICX};
+    int currentUnit{CB AI COINUnits::CICX};
     CAmount singleStep{CAmount(100000)}; // satoshis
     mutable QSize cachedMinimumSizeHint;
     bool m_allow_empty{true};
     CAmount m_min_amount{CAmount(0)};
-    CAmount m_max_amount{CI AI COINUnits::maxMoney()};
+    CAmount m_max_amount{CB AI COINUnits::maxMoney()};
 
     /**
      * Parse a string into a number of base monetary units and
@@ -163,10 +163,10 @@ private:
     CAmount parse(const QString &text, bool *valid_out=nullptr) const
     {
         CAmount val = 0;
-        bool valid = CI AI COINUnits::parse(currentUnit, text, &val);
+        bool valid = CB AI COINUnits::parse(currentUnit, text, &val);
         if(valid)
         {
-            if(val < 0 || val > CI AI COINUnits::maxMoney())
+            if(val < 0 || val > CB AI COINUnits::maxMoney())
                 valid = false;
         }
         if(valid_out)
@@ -213,9 +213,9 @@ Q_SIGNALS:
     void valueChanged();
 };
 
-#include <qt/CI AI COINamountfield.moc>
+#include <qt/CB AI COINamountfield.moc>
 
-CI AI COINAmountField::CI AI COINAmountField(QWidget *parent) :
+CB AI COINAmountField::CB AI COINAmountField(QWidget *parent) :
     QWidget(parent),
     amount(nullptr)
 {
@@ -227,7 +227,7 @@ CI AI COINAmountField::CI AI COINAmountField(QWidget *parent) :
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(amount);
     unit = new QValueComboBox(this);
-    unit->setModel(new CI AI COINUnits(this));
+    unit->setModel(new CB AI COINUnits(this));
     layout->addWidget(unit);
     layout->addStretch(1);
     layout->setContentsMargins(0,0,0,0);
@@ -238,26 +238,26 @@ CI AI COINAmountField::CI AI COINAmountField(QWidget *parent) :
     setFocusProxy(amount);
 
     // If one if the widgets changes, the combined content changes as well
-    connect(amount, &AmountSpinBox::valueChanged, this, &CI AI COINAmountField::valueChanged);
-    connect(unit, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &CI AI COINAmountField::unitChanged);
+    connect(amount, &AmountSpinBox::valueChanged, this, &CB AI COINAmountField::valueChanged);
+    connect(unit, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &CB AI COINAmountField::unitChanged);
 
     // Set default based on configuration
     unitChanged(unit->currentIndex());
 }
 
-void CI AI COINAmountField::clear()
+void CB AI COINAmountField::clear()
 {
     amount->clear();
     unit->setCurrentIndex(0);
 }
 
-void CI AI COINAmountField::setEnabled(bool fEnabled)
+void CB AI COINAmountField::setEnabled(bool fEnabled)
 {
     amount->setEnabled(fEnabled);
     unit->setEnabled(fEnabled);
 }
 
-bool CI AI COINAmountField::validate()
+bool CB AI COINAmountField::validate()
 {
     bool valid = false;
     value(&valid);
@@ -265,7 +265,7 @@ bool CI AI COINAmountField::validate()
     return valid;
 }
 
-void CI AI COINAmountField::setValid(bool valid)
+void CB AI COINAmountField::setValid(bool valid)
 {
     if (valid)
         amount->setStyleSheet("");
@@ -273,7 +273,7 @@ void CI AI COINAmountField::setValid(bool valid)
         amount->setStyleSheet(STYLE_INVALID);
 }
 
-bool CI AI COINAmountField::eventFilter(QObject *object, QEvent *event)
+bool CB AI COINAmountField::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn)
     {
@@ -283,60 +283,60 @@ bool CI AI COINAmountField::eventFilter(QObject *object, QEvent *event)
     return QWidget::eventFilter(object, event);
 }
 
-QWidget *CI AI COINAmountField::setupTabChain(QWidget *prev)
+QWidget *CB AI COINAmountField::setupTabChain(QWidget *prev)
 {
     QWidget::setTabOrder(prev, amount);
     QWidget::setTabOrder(amount, unit);
     return unit;
 }
 
-CAmount CI AI COINAmountField::value(bool *valid_out) const
+CAmount CB AI COINAmountField::value(bool *valid_out) const
 {
     return amount->value(valid_out);
 }
 
-void CI AI COINAmountField::setValue(const CAmount& value)
+void CB AI COINAmountField::setValue(const CAmount& value)
 {
     amount->setValue(value);
 }
 
-void CI AI COINAmountField::SetAllowEmpty(bool allow)
+void CB AI COINAmountField::SetAllowEmpty(bool allow)
 {
     amount->SetAllowEmpty(allow);
 }
 
-void CI AI COINAmountField::SetMinValue(const CAmount& value)
+void CB AI COINAmountField::SetMinValue(const CAmount& value)
 {
     amount->SetMinValue(value);
 }
 
-void CI AI COINAmountField::SetMaxValue(const CAmount& value)
+void CB AI COINAmountField::SetMaxValue(const CAmount& value)
 {
     amount->SetMaxValue(value);
 }
 
-void CI AI COINAmountField::setReadOnly(bool fReadOnly)
+void CB AI COINAmountField::setReadOnly(bool fReadOnly)
 {
     amount->setReadOnly(fReadOnly);
 }
 
-void CI AI COINAmountField::unitChanged(int idx)
+void CB AI COINAmountField::unitChanged(int idx)
 {
     // Use description tooltip for current unit for the combobox
     unit->setToolTip(unit->itemData(idx, Qt::ToolTipRole).toString());
 
     // Determine new unit ID
-    int newUnit = unit->itemData(idx, CI AI COINUnits::UnitRole).toInt();
+    int newUnit = unit->itemData(idx, CB AI COINUnits::UnitRole).toInt();
 
     amount->setDisplayUnit(newUnit);
 }
 
-void CI AI COINAmountField::setDisplayUnit(int newUnit)
+void CB AI COINAmountField::setDisplayUnit(int newUnit)
 {
     unit->setValue(newUnit);
 }
 
-void CI AI COINAmountField::setSingleStep(const CAmount& step)
+void CB AI COINAmountField::setSingleStep(const CAmount& step)
 {
     amount->setSingleStep(step);
 }

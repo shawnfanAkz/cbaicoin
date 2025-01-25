@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2019 The CI AI COIN Core developers
+// Copyright (c) 2009-2019 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -67,7 +67,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "CI AI COIN.conf";
+const char * const BITCOIN_CONF_FILENAME = "CB AI COIN.conf";
 
 ArgsManager gArgs;
 
@@ -217,7 +217,7 @@ public:
         std::pair<bool,std::string> found_result(false, std::string());
 
         // We pass "true" to GetArgHelper in order to return the last
-        // argument value seen from the command line (so "CI AI COINd -foo=bar
+        // argument value seen from the command line (so "CB AI COINd -foo=bar
         // -foo=baz" gives GetArg(am,"foo")=={true,"baz"}
         found_result = GetArgHelper(am.m_override_args, arg, true);
         if (found_result.first) {
@@ -388,7 +388,7 @@ bool ArgsManager::ParseParameters(int argc, const char* const argv[], std::strin
         if (key.substr(0, 5) == "-psn_") continue;
 #endif
 
-        if (key == "-") break; //CI AI COIN-tx using stdin
+        if (key == "-") break; //CB AI COIN-tx using stdin
         std::string val;
         size_t is_index = key.find('=');
         if (is_index != std::string::npos) {
@@ -674,7 +674,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "CI AI COIN";
+    const char* pszModule = "CB AI COIN";
 #endif
     if (pex)
         return strprintf(
@@ -693,13 +693,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\CI AI COIN
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\CI AI COIN
-    // Mac: ~/Library/Application Support/CI AI COIN
-    // Unix: ~/.CI AI COIN
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\CB AI COIN
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\CB AI COIN
+    // Mac: ~/Library/Application Support/CB AI COIN
+    // Unix: ~/.CB AI COIN
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "CI AI COIN";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "CB AI COIN";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -709,10 +709,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/CI AI COIN";
+    return pathRet / "Library/Application Support/CB AI COIN";
 #else
     // Unix
-    return pathRet / ".CI AI COIN";
+    return pathRet / ".CB AI COIN";
 #endif
 #endif
 }
@@ -1207,9 +1207,9 @@ std::string CopyrightHolders(const std::string& strPrefix)
     const auto copyright_devs = strprintf(_(COPYRIGHT_HOLDERS).translated, COPYRIGHT_HOLDERS_SUBSTITUTION);
     std::string strCopyrightHolders = strPrefix + copyright_devs;
 
-    // Make sure CI AI COIN Core copyright is not removed by accident
-    if (copyright_devs.find("CI AI COIN Core") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The CI AI COIN Core developers";
+    // Make sure CB AI COIN Core copyright is not removed by accident
+    if (copyright_devs.find("CB AI COIN Core") == std::string::npos) {
+        strCopyrightHolders += "\n" + strPrefix + "The CB AI COIN Core developers";
     }
     return strCopyrightHolders;
 }

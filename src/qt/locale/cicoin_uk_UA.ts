@@ -120,7 +120,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -234,6 +234,6 @@
     </message>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     </context>
 </TS>

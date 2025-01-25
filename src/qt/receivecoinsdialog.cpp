@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -275,7 +275,7 @@ void ReceiveCoinsDialog::copyURI()
     }
 
     const RecentRequestsTableModel * const submodel = model->getRecentRequestsTableModel();
-    const QString uri = GUIUtil::formatCI AI COINURI(submodel->entry(sel.row()).recipient);
+    const QString uri = GUIUtil::formatCB AI COINURI(submodel->entry(sel.row()).recipient);
     GUIUtil::setClipboard(uri);
 }
 

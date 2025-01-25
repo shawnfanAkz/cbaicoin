@@ -1,53 +1,53 @@
 # It is not recommended to modify this file in-place, because it will
 # be overwritten during package upgrades. If you want to add further
 # options or overwrite existing ones then use
-# $ systemctl edit CI AI COINd.service
+# $ systemctl edit CB AI COINd.service
 # See "man systemd.service" for details.
 
 # Note that almost all daemon options could be specified in
-# /etc/CI AI COIN/CI AI COIN.conf, but keep in mind those explicitly
+# /etc/CB AI COIN/CB AI COIN.conf, but keep in mind those explicitly
 # specified as arguments in ExecStart= will override those in the
 # config file.
 
 [Unit]
-Description=CI AI COIN daemon
+Description=CB AI COIN daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/CI AI COINd -daemon \
-                            -pid=/run/CI AI COINd/CI AI COINd.pid \
-                            -conf=/etc/CI AI COIN/CI AI COIN.conf \
-                            -datadir=/var/lib/CI AI COINd
+ExecStart=/usr/bin/CB AI COINd -daemon \
+                            -pid=/run/CB AI COINd/CB AI COINd.pid \
+                            -conf=/etc/CB AI COIN/CB AI COIN.conf \
+                            -datadir=/var/lib/CB AI COINd
 
 # Make sure the config directory is readable by the service user
 PermissionsStartOnly=true
-ExecStartPre=/bin/chgrp CI AI COIN /etc/CI AI COIN
+ExecStartPre=/bin/chgrp CB AI COIN /etc/CB AI COIN
 
 # Process management
 ####################
 
 Type=forking
-PIDFile=/run/CI AI COINd/CI AI COINd.pid
+PIDFile=/run/CB AI COINd/CB AI COINd.pid
 Restart=on-failure
 TimeoutStopSec=600
 
 # Directory creation and permissions
 ####################################
 
-# Run as CI AI COIN:CI AI COIN
-User=CI AI COIN
-Group=CI AI COIN
+# Run as CB AI COIN:CB AI COIN
+User=CB AI COIN
+Group=CB AI COIN
 
-# /run/CI AI COINd
-RuntimeDirectory=CI AI COINd
+# /run/CB AI COINd
+RuntimeDirectory=CB AI COINd
 RuntimeDirectoryMode=0710
 
-# /etc/CI AI COIN
-ConfigurationDirectory=CI AI COIN
+# /etc/CB AI COIN
+ConfigurationDirectory=CB AI COIN
 ConfigurationDirectoryMode=0710
 
-# /var/lib/CI AI COINd
-StateDirectory=CI AI COINd
+# /var/lib/CB AI COINd
+StateDirectory=CB AI COINd
 StateDirectoryMode=0710
 
 # Hardening measures

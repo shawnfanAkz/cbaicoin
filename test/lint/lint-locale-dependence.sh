@@ -2,8 +2,8 @@
 
 export LC_ALL=C
 KNOWN_VIOLATIONS=(
-    "src/CI AI COIN-tx.cpp.*stoul"
-    "src/CI AI COIN-tx.cpp.*trim_right"
+    "src/CB AI COIN-tx.cpp.*stoul"
+    "src/CB AI COIN-tx.cpp.*trim_right"
     "src/dbwrapper.cpp.*stoul"
     "src/dbwrapper.cpp:.*vsnprintf"
     "src/httprpc.cpp.*trim"

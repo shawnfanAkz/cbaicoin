@@ -62,12 +62,12 @@
         <translation>Empfangsadressen</translation>
     </message>
     <message>
-        <source>These are your CI AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dies sind Ihre CI AI COIN-Adressen zum Senden von Zahlungen. Überprüfen Sie immer die Menge und die Empfangsadresse, bevor Sie CI AI COINs senden.</translation>
+        <source>These are your CB AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dies sind Ihre CB AI COIN-Adressen zum Senden von Zahlungen. Überprüfen Sie immer die Menge und die Empfangsadresse, bevor Sie CB AI COINs senden.</translation>
     </message>
     <message>
-        <source>These are your CI AI COIN addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dies sind Ihre CI AI COIN-Adressen für den Empfang von Zahlungen. Es wird empfohlen, für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
+        <source>These are your CB AI COIN addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dies sind Ihre CB AI COIN-Adressen für den Empfang von Zahlungen. Es wird empfohlen, für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Brieftaschenverschlüsselung bestätigen</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CI AI COINS&lt;/b&gt;!</source>
-        <translation>Achtung: Wenn Sie Ihre Wallet verschlüsseln und das Passwort verlieren, gehen &lt;b&gt;alle Ihre CI AI COINs verloren&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CB AI COINS&lt;/b&gt;!</source>
+        <translation>Achtung: Wenn Sie Ihre Wallet verschlüsseln und das Passwort verlieren, gehen &lt;b&gt;alle Ihre CB AI COINs verloren&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -228,7 +228,7 @@
     </message>
 </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Über das Netzwerk abgleichen</translation>
@@ -330,8 +330,8 @@
         <translation>Reindexiere Blöcke auf dem Datenträger...</translation>
     </message>
     <message>
-        <source>Send coins to a CI AI COIN address</source>
-        <translation>Coins an eine CI AI COIN-Adresse senden</translation>
+        <source>Send coins to a CB AI COIN address</source>
+        <translation>Coins an eine CB AI COIN-Adresse senden</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -354,8 +354,8 @@
         <translation>Nachricht &amp;bestätigen</translation>
     </message>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -382,12 +382,12 @@
         <translation>Verschlüssele die Private Keys, die zu deiner Brieftasche gehören</translation>
     </message>
     <message>
-        <source>Sign messages with your CI AI COIN addresses to prove you own them</source>
-        <translation>Nachrichten mit Ihrer CI AI COIN-Adresse signieren, um zu beweisen, dass sie Ihnen gehören</translation>
+        <source>Sign messages with your CB AI COIN addresses to prove you own them</source>
+        <translation>Nachrichten mit Ihrer CB AI COIN-Adresse signieren, um zu beweisen, dass sie Ihnen gehören</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CI AI COIN addresses</source>
-        <translation>Überprüfen Sie Nachrichten, um sicherzustellen, dass sie mit den angegebenen CI AI COIN-Adressen signiert wurden</translation>
+        <source>Verify messages to ensure they were signed with specified CB AI COIN addresses</source>
+        <translation>Überprüfen Sie Nachrichten, um sicherzustellen, dass sie mit den angegebenen CB AI COIN-Adressen signiert wurden</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -468,8 +468,8 @@
         <translation>Überweisung empfangen</translation>
     </message>
     <message>
-        <source>A fatal error occurred. CI AI COIN can no longer continue safely and will quit.</source>
-        <translation>Ein schwerwiegender Fehler ist aufgetreten. CI AI COIN kann nicht mehr sicher fortfahren und beendet sich.</translation>
+        <source>A fatal error occurred. CB AI COIN can no longer continue safely and will quit.</source>
+        <translation>Ein schwerwiegender Fehler ist aufgetreten. CB AI COIN kann nicht mehr sicher fortfahren und beendet sich.</translation>
     </message>
 </context>
 <context>
@@ -595,8 +595,8 @@
         <translation>Willkommen</translation>
     </message>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN</translation>
     </message>
     <message>
         <source>Error</source>
@@ -648,8 +648,8 @@
         <translation>Betrag</translation>
     </message>
     <message>
-        <source>Enter a CI AI COIN address (e.g. %1)</source>
-        <translation>CI AI COIN Adresse eingeben (z.B. %1)</translation>
+        <source>Enter a CB AI COIN address (e.g. %1)</source>
+        <translation>CB AI COIN Adresse eingeben (z.B. %1)</translation>
     </message>
     <message>
         <source>N/A</source>
@@ -872,7 +872,7 @@
     </message>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     <message>
         <source>Information</source>
         <translation>Information</translation>

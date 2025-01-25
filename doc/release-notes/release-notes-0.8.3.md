@@ -1,11 +1,11 @@
-CI AI COIN-Qt version 0.8.3 is now available from:
-  http://sourceforge.net/projects/CI AI COIN/files/CI AI COIN/CI AI COIN-0.8.3/
+CB AI COIN-Qt version 0.8.3 is now available from:
+  http://sourceforge.net/projects/CB AI COIN/files/CB AI COIN/CB AI COIN-0.8.3/
 
 This is a maintenance release to fix a denial-of-service attack that
 can cause nodes to crash.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/CI AI COIN/CI AI COIN/issues
+  https://github.com/CB AI COIN/CB AI COIN/issues
 
 0.8.3 Release notes
 

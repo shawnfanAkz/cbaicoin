@@ -66,12 +66,12 @@
         <translation>Indirizzi riceventi</translation>
     </message>
     <message>
-        <source>These are your CI AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono i suoi indirizzi CI AI COIN per ricevere i pagamenti. Controlla sempre l'importo e gli indirizzi prima di inviare i coins.</translation>
+        <source>These are your CB AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Questi sono i suoi indirizzi CB AI COIN per ricevere i pagamenti. Controlla sempre l'importo e gli indirizzi prima di inviare i coins.</translation>
     </message>
     <message>
-        <source>These are your CI AI COIN addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono i tuoi indirizzi CI AI COIN per ricevere i pagamenti. Si raccomanda di usare un nuovo indirizzo per ogni transazione.</translation>
+        <source>These are your CB AI COIN addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Questi sono i tuoi indirizzi CB AI COIN per ricevere i pagamenti. Si raccomanda di usare un nuovo indirizzo per ogni transazione.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,8 +172,8 @@
         <translation>Conferma criptaggio portafoglio</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CI AI COINS&lt;/b&gt;!</source>
-        <translation>Attenzione: Se cripti il tuo portafoglio e perdi la password, &lt;b&gt;PERDERAI TUTTI I TUOI CI AI COIN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CB AI COINS&lt;/b&gt;!</source>
+        <translation>Attenzione: Se cripti il tuo portafoglio e perdi la password, &lt;b&gt;PERDERAI TUTTI I TUOI CB AI COIN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -184,8 +184,8 @@
         <translation>Portafoglio criptato</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CI AI COINs from being stolen by malware infecting your computer.</source>
-        <translation>%1 ora si chiuderà per concludere il processo di criptaggio. Ricorda che criptare il tuo portafoglio non può definitivamente proteggere i tuoi CI AI COIN da furti tramite malware che infetta il tuo computer.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CB AI COINs from being stolen by malware infecting your computer.</source>
+        <translation>%1 ora si chiuderà per concludere il processo di criptaggio. Ricorda che criptare il tuo portafoglio non può definitivamente proteggere i tuoi CB AI COIN da furti tramite malware che infetta il tuo computer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -236,7 +236,7 @@
     </message>
 </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firma &amp;messaggio...</translation>
@@ -350,8 +350,8 @@
         <translation>Reindicizzazione dei blocchi sul disco...</translation>
     </message>
     <message>
-        <source>Send coins to a CI AI COIN address</source>
-        <translation>Invia monete ad un indirizzo CI AI COIN...</translation>
+        <source>Send coins to a CB AI COIN address</source>
+        <translation>Invia monete ad un indirizzo CB AI COIN...</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -374,8 +374,8 @@
         <translation>Verifica messaggio...</translation>
     </message>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -402,12 +402,12 @@
         <translation>Cripta le chiavi private che appartengono al tuo portafoglio</translation>
     </message>
     <message>
-        <source>Sign messages with your CI AI COIN addresses to prove you own them</source>
-        <translation>Firma messaggi con i tuoi indirizzi CI AI COIN per provare che li possiedi</translation>
+        <source>Sign messages with your CB AI COIN addresses to prove you own them</source>
+        <translation>Firma messaggi con i tuoi indirizzi CB AI COIN per provare che li possiedi</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CI AI COIN addresses</source>
-        <translation>Verifica messaggi per accertarti che siano firmati dagli indirizzi CI AI COIN specificati</translation>
+        <source>Verify messages to ensure they were signed with specified CB AI COIN addresses</source>
+        <translation>Verifica messaggi per accertarti che siano firmati dagli indirizzi CB AI COIN specificati</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -426,8 +426,8 @@
         <translation>Barra degli strumenti</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and CI AI COIN: URIs)</source>
-        <translation>Richiedi pagamenti (genera codici QR e CI AI COIN: URI)</translation>
+        <source>Request payments (generates QR codes and CB AI COIN: URIs)</source>
+        <translation>Richiedi pagamenti (genera codici QR e CB AI COIN: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -438,8 +438,8 @@
         <translation>Mostra la lista degli indirizzi di ricezione usati e le relative etichette</translation>
     </message>
     <message>
-        <source>Open a CI AI COIN: URI or payment request</source>
-        <translation>Apri un CI AI COIN: URI o una richiesta di pagamento</translation>
+        <source>Open a CB AI COIN: URI or payment request</source>
+        <translation>Apri un CB AI COIN: URI o una richiesta di pagamento</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -482,8 +482,8 @@
         <translation>Aggiornato</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible CI AI COIN command-line options</source>
-        <translation>Mostra il %1 messaggio d'aiuto per ottenere una lista con le possibili opzioni per la riga di comando di CI AI COIN</translation>
+        <source>Show the %1 help message to get a list with possible CB AI COIN command-line options</source>
+        <translation>Mostra il %1 messaggio d'aiuto per ottenere una lista con le possibili opzioni per la riga di comando di CB AI COIN</translation>
     </message>
     <message>
         <source>Date: %1
@@ -524,8 +524,8 @@
         <translation>Transazione in arrivo</translation>
     </message>
     <message>
-        <source>A fatal error occurred. CI AI COIN can no longer continue safely and will quit.</source>
-        <translation>Si è verificato un errore fatale. CI AI COIN non può continuare in maniera sicura e sarà chiuso.</translation>
+        <source>A fatal error occurred. CB AI COIN can no longer continue safely and will quit.</source>
+        <translation>Si è verificato un errore fatale. CB AI COIN non può continuare in maniera sicura e sarà chiuso.</translation>
     </message>
 </context>
 <context>
@@ -698,8 +698,8 @@
         <translation>Modifica l'indirizzo di invio</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid CI AI COIN address.</source>
-        <translation>L'indirizzo inserito "%1" non è un indirizzo CI AI COIN valido.</translation>
+        <source>The entered address "%1" is not a valid CB AI COIN address.</source>
+        <translation>L'indirizzo inserito "%1" non è un indirizzo CB AI COIN valido.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -755,8 +755,8 @@
         <translation>Benvenuto</translation>
     </message>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -770,12 +770,12 @@
 <context>
     <name>ModalOverlay</name>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the CI AI COIN network, as detailed below.</source>
-        <translation>Le transazioni recenti potrebbero non essere ancora visibili, e quindi il saldo del wallet potrebbe essere incorretto. Questa informazione verra' corretta non appena il tuo wallet ha finito di sincronizzarsi con la rete CI AI COIN, come specificato di seguito.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the CB AI COIN network, as detailed below.</source>
+        <translation>Le transazioni recenti potrebbero non essere ancora visibili, e quindi il saldo del wallet potrebbe essere incorretto. Questa informazione verra' corretta non appena il tuo wallet ha finito di sincronizzarsi con la rete CB AI COIN, come specificato di seguito.</translation>
     </message>
     <message>
-        <source>Attempting to spend CI AI COINs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Tentare di spendere CI AI COIN che sono affetti da transazioni non ancora mostrate, non verra' accettato dal network.</translation>
+        <source>Attempting to spend CB AI COINs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Tentare di spendere CB AI COIN che sono affetti da transazioni non ancora mostrate, non verra' accettato dal network.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1064,7 +1064,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     <message>
         <source>Information</source>
         <translation>Informazione</translation>

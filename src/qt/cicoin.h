@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2016 The CI AI COIN Core developers
+// Copyright (c) 2011-2016 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,13 +6,13 @@
 #define BITCOIN_QT_BITCOIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
 #include <QApplication>
 #include <memory>
 
-class CI AI COINGUI;
+class CB AI COINGUI;
 class ClientModel;
 class NetworkStyle;
 class OptionsModel;
@@ -26,14 +26,14 @@ class Handler;
 class Node;
 } // namespace interfaces
 
-/** Class encapsulating CI AI COIN Core startup and shutdown.
+/** Class encapsulating CB AI COIN Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
-class CI AI COINCore: public QObject
+class CB AI COINCore: public QObject
 {
     Q_OBJECT
 public:
-    explicit CI AI COINCore(interfaces::Node& node);
+    explicit CB AI COINCore(interfaces::Node& node);
 
 public Q_SLOTS:
     void initialize();
@@ -51,13 +51,13 @@ private:
     interfaces::Node& m_node;
 };
 
-/** Main CI AI COIN application object */
-class CI AI COINApplication: public QApplication
+/** Main CB AI COIN application object */
+class CB AI COINApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit CI AI COINApplication(interfaces::Node& node);
-    ~CI AI COINApplication();
+    explicit CB AI COINApplication(interfaces::Node& node);
+    ~CB AI COINApplication();
 
 #ifdef ENABLE_WALLET
     /// Create payment server
@@ -84,7 +84,7 @@ public:
     /// Get process return value
     int getReturnValue() const { return returnValue; }
 
-    /// Get window identifier of QMainWindow (CI AI COINGUI)
+    /// Get window identifier of QMainWindow (CB AI COINGUI)
     WId getMainWinId() const;
 
     /// Setup platform style
@@ -100,14 +100,14 @@ Q_SIGNALS:
     void requestedInitialize();
     void requestedShutdown();
     void splashFinished();
-    void windowShown(CI AI COINGUI* window);
+    void windowShown(CB AI COINGUI* window);
 
 private:
     QThread *coreThread;
     interfaces::Node& m_node;
     OptionsModel *optionsModel;
     ClientModel *clientModel;
-    CI AI COINGUI *window;
+    CB AI COINGUI *window;
     QTimer *pollShutdownTimer;
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer{nullptr};

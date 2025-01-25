@@ -1,16 +1,16 @@
-CI AI COIN Core version 0.17.0.1 is now available from:
+CB AI COIN Core version 0.17.0.1 is now available from:
 
-  <https://CI AI COINcore.org/bin/CI AI COIN-core-0.17.0.1/>
+  <https://CB AI COINcore.org/bin/CB AI COIN-core-0.17.0.1/>
 
 This release provides a minor bug fix for 0.17.0.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/CI AI COIN/CI AI COIN/issues>
+  <https://github.com/CB AI COIN/CB AI COIN/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://CI AI COINcore.org/en/list/announcements/join/>
+  <https://CB AI COINcore.org/en/list/announcements/join/>
 
 Notable changes
 ===============

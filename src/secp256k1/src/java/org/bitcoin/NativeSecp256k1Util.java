@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.CI AI COIN;
+package org.CB AI COIN;
 
 public class NativeSecp256k1Util{
 

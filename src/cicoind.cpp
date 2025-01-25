@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2019 The CI AI COIN Core developers
+// Copyright (c) 2009-2019 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
 #include <chainparams.h>
@@ -50,7 +50,7 @@ static bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/CI AI COIN.conf are parsed in qt/CI AI COIN.cpp's main()
+    // If Qt is used, parameters/CB AI COIN.conf are parsed in qt/CB AI COIN.cpp's main()
     SetupServerArgs();
     std::string error;
     if (!gArgs.ParseParameters(argc, argv, error)) {
@@ -67,7 +67,7 @@ static bool AppInit(int argc, char* argv[])
         }
         else
         {
-            strUsage += "\nUsage:  CI AI COINd [options]                     Start " PACKAGE_NAME "\n";
+            strUsage += "\nUsage:  CB AI COINd [options]                     Start " PACKAGE_NAME "\n";
             strUsage += "\n" + gArgs.GetHelpMessage();
         }
 
@@ -93,11 +93,11 @@ static bool AppInit(int argc, char* argv[])
         // Error out when loose non-argument tokens are encountered on command line
         for (int i = 1; i < argc; i++) {
             if (!IsSwitchChar(argv[i][0])) {
-                return InitError(strprintf("Command line contains unexpected token '%s', see CI AI COINd -h for a list of options.\n", argv[i]));
+                return InitError(strprintf("Command line contains unexpected token '%s', see CB AI COINd -h for a list of options.\n", argv[i]));
             }
         }
 
-        // -server defaults to true for CI AI COINd but not for the GUI so do this here
+        // -server defaults to true for CB AI COINd but not for the GUI so do this here
         gArgs.SoftSetBoolArg("-server", true);
         // Set this early so that parameter interactions go to console
         InitLogging();
@@ -170,7 +170,7 @@ int main(int argc, char* argv[])
 #endif
     SetupEnvironment();
 
-    // Connect CI AI COINd signal handlers
+    // Connect CB AI COINd signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE);

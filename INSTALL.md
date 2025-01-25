@@ -1,5 +1,5 @@
-Building CI AI COIN
+Building CB AI COIN
 ================
 
 See doc/build-*.md for instructions on building the various
-elements of the CI AI COIN Core reference implementation of CI AI COIN.
+elements of the CB AI COIN Core reference implementation of CB AI COIN.

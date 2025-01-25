@@ -1,25 +1,25 @@
-CI AI COIN Core version 0.16.2 is now available from:
+CB AI COIN Core version 0.16.2 is now available from:
 
-  <https://CI AI COINcore.org/bin/CI AI COIN-core-0.16.2/>
+  <https://CB AI COINcore.org/bin/CB AI COIN-core-0.16.2/>
 
 This is a new minor version release, with various bugfixes
 as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/CI AI COIN/CI AI COIN/issues>
+  <https://github.com/CB AI COIN/CB AI COIN/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://CI AI COINcore.org/en/list/announcements/join/>
+  <https://CB AI COINcore.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over `/Applications/CI AI COIN-Qt` (on Mac)
-or `CI AI COINd`/`CI AI COIN-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/CB AI COIN-Qt` (on Mac)
+or `CB AI COINd`/`CB AI COIN-qt` (on Linux).
 
 The first time you run version 0.15.0 or newer, your chainstate database will be converted to a
 new format, which will take anywhere from a few minutes to half an hour,
@@ -40,10 +40,10 @@ wallets that were created with older versions are not affected by this.
 Compatibility
 ==============
 
-CI AI COIN Core is extensively tested on multiple operating systems using
+CB AI COIN Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later. Windows XP is not supported.
 
-CI AI COIN Core should also work on most other Unix-like systems but is not
+CB AI COIN Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 0.16.2 change log
@@ -113,4 +113,4 @@ And to those that reported security issues:
 - Braydon Fuller
 - Himanshu Mehta
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/CI AI COIN/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/CB AI COIN/).

@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2019 The CI AI COIN Core developers
+// Copyright (c) 2011-2019 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +6,7 @@
 #define BITCOIN_QT_BITCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
 #include <qt/optionsdialog.h>
@@ -58,18 +58,18 @@ class ClickableProgressBar;
 }
 
 /**
-  CI AI COIN GUI main class. This class represents the main window of the CI AI COIN UI. It communicates with both the client and
+  CB AI COIN GUI main class. This class represents the main window of the CB AI COIN UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class CI AI COINGUI : public QMainWindow
+class CB AI COINGUI : public QMainWindow
 {
     Q_OBJECT
 
 public:
     static const std::string DEFAULT_UIPLATFORM;
 
-    explicit CI AI COINGUI(interfaces::Node& node, const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = nullptr);
-    ~CI AI COINGUI();
+    explicit CB AI COINGUI(interfaces::Node& node, const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = nullptr);
+    ~CB AI COINGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
@@ -81,7 +81,7 @@ public:
 
 #ifdef ENABLE_WALLET
     /** Set the wallet model.
-        The wallet model represents a CI AI COIN wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a CB AI COIN wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     void addWallet(WalletModel* walletModel);

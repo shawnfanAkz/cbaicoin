@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2019 The CI AI COIN Core developers
+# Copyright (c) 2017-2019 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """An example functional test
@@ -22,7 +22,7 @@ from test_framework.mininode import (
     msg_block,
     msg_getdata,
 )
-from test_framework.test_framework import CI AI COINTestFramework
+from test_framework.test_framework import CB AI COINTestFramework
 from test_framework.util import (
     assert_equal,
     connect_nodes,
@@ -64,12 +64,12 @@ def custom_function():
 
     If this function is more generally useful for other tests, consider
     moving it to a module in test_framework."""
-    # self.log.info("running custom_function")  # Oops! Can't run self.log outside the CI AI COINTestFramework
+    # self.log.info("running custom_function")  # Oops! Can't run self.log outside the CB AI COINTestFramework
     pass
 
 
-class ExampleTest(CI AI COINTestFramework):
-    # Each functional test is a subclass of the CI AI COINTestFramework class.
+class ExampleTest(CB AI COINTestFramework):
+    # Each functional test is a subclass of the CB AI COINTestFramework class.
 
     # Override the set_test_params(), skip_test_if_missing_module(), add_options(), setup_chain(), setup_network()
     # and setup_nodes() methods to customize the test setup as required.
@@ -129,7 +129,7 @@ class ExampleTest(CI AI COINTestFramework):
 
         Define it in a method here because you're going to use it repeatedly.
         If you think it's useful in general, consider moving it to the base
-        CI AI COINTestFramework class so other tests can use it."""
+        CB AI COINTestFramework class so other tests can use it."""
 
         self.log.info("Running custom_method")
 

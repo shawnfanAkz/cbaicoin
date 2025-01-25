@@ -19,4 +19,4 @@ FORMS += \
     ../src/qt/forms/createwalletdialog.ui
 
 RESOURCES += \
-    ../src/qt/CI AI COIN.qrc
+    ../src/qt/CB AI COIN.qrc

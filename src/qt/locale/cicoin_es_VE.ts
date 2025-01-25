@@ -66,8 +66,8 @@
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your CI AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones CI AI COIN para enviar pagos. Compruebe siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
+        <source>These are your CB AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones CB AI COIN para enviar pagos. Compruebe siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,8 +160,8 @@
         <translation>Confirme cifrado del monedero</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CI AI COINS&lt;/b&gt;!</source>
-        <translation>Atención: Si cifra su monedero y pierde la contraseña, perderá ¡&lt;b&gt;TODOS SUS CI AI COINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CB AI COINS&lt;/b&gt;!</source>
+        <translation>Atención: Si cifra su monedero y pierde la contraseña, perderá ¡&lt;b&gt;TODOS SUS CB AI COINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -176,7 +176,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje...</translation>
@@ -242,8 +242,8 @@
         <translation>Reindexando bloques en disco...</translation>
     </message>
     <message>
-        <source>Send coins to a CI AI COIN address</source>
-        <translation>Enviar monedas a una dirección CI AI COIN</translation>
+        <source>Send coins to a CB AI COIN address</source>
+        <translation>Enviar monedas a una dirección CB AI COIN</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -286,12 +286,12 @@
         <translation>Cifrar las claves privadas de su monedero</translation>
     </message>
     <message>
-        <source>Sign messages with your CI AI COIN addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones CI AI COIN para demostrar la propiedad</translation>
+        <source>Sign messages with your CB AI COIN addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones CB AI COIN para demostrar la propiedad</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CI AI COIN addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones CI AI COIN concretas</translation>
+        <source>Verify messages to ensure they were signed with specified CB AI COIN addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones CB AI COIN concretas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -310,8 +310,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and CI AI COIN: URIs)</source>
-        <translation>Solicitar pagos (genera codigo QR y URL's de CI AI COIN)</translation>
+        <source>Request payments (generates QR codes and CB AI COIN: URIs)</source>
+        <translation>Solicitar pagos (genera codigo QR y URL's de CB AI COIN)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -322,8 +322,8 @@
         <translation>Muestra la lista de direcciones de recepción y etiquetas</translation>
     </message>
     <message>
-        <source>Open a CI AI COIN: URI or payment request</source>
-        <translation>Abrir un CI AI COIN: URI o petición de pago</translation>
+        <source>Open a CB AI COIN: URI or payment request</source>
+        <translation>Abrir un CB AI COIN: URI o petición de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -567,8 +567,8 @@
         <translation>Utilice un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -647,8 +647,8 @@
         <translation>Experto</translation>
     </message>
     <message>
-        <source>Automatically open the CI AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente CI AI COIN en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the CB AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente CB AI COIN en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -746,8 +746,8 @@
         <translation>Desde</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CI AI COIN network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red CI AI COIN después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CB AI COIN network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red CB AI COIN después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1225,8 +1225,8 @@
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CI AI COIN address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección CI AI COIN</translation>
+        <source>Sign the message to prove you own this CB AI COIN address</source>
+        <translation>Firmar el mensaje para demostrar que se posee esta dirección CB AI COIN</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1245,8 +1245,8 @@
         <translation>&amp;Verificar mensaje</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CI AI COIN address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección CI AI COIN indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified CB AI COIN address</source>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección CB AI COIN indicada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1360,7 +1360,7 @@
     </message>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     <message>
         <source>Corrupted block database detected</source>
         <translation>Corrupción de base de datos de bloques detectada.</translation>

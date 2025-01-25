@@ -52,7 +52,7 @@
         </size>
        </property>
        <property name="pixmap">
-        <pixmap resource="../CI AI COIN.qrc">:/icons/CI AI COIN</pixmap>
+        <pixmap resource="../CB AI COIN.qrc">:/icons/CB AI COIN</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -150,7 +150,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../CI AI COIN.qrc"/>
+  <include location="../CB AI COIN.qrc"/>
  </resources>
  <connections>
   <connection>

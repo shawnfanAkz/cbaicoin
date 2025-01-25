@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2019 The CI AI COIN Core developers
+# Copyright (c) 2015-2019 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test node responses to invalid network messages."""
@@ -10,7 +10,7 @@ import sys
 
 from test_framework import messages
 from test_framework.mininode import P2PDataStore, NetworkThread
-from test_framework.test_framework import CI AI COINTestFramework
+from test_framework.test_framework import CB AI COINTestFramework
 
 
 class msg_unrecognized:
@@ -28,7 +28,7 @@ class msg_unrecognized:
         return "{}(data={})".format(self.command, self.str_data)
 
 
-class InvalidMessagesTest(CI AI COINTestFramework):
+class InvalidMessagesTest(CB AI COINTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True

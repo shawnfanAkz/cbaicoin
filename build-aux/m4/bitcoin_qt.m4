@@ -1,23 +1,23 @@
-dnl Copyright (c) 2013-2016 The CI AI COIN Core developers
+dnl Copyright (c) 2013-2016 The CB AI COIN Core developers
 dnl Distributed under the MIT software license, see the accompanying
 dnl file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 dnl Helper for cases where a qt dependency is not met.
-dnl Output: If qt version is auto, set CI AI COIN_enable_qt to false. Else, exit.
+dnl Output: If qt version is auto, set CB AI COIN_enable_qt to false. Else, exit.
 AC_DEFUN([BITCOIN_QT_FAIL],[
-  if test "x$CI AI COIN_qt_want_version" = xauto && test "x$CI AI COIN_qt_force" != xyes; then
-    if test "x$CI AI COIN_enable_qt" != xno; then
-      AC_MSG_WARN([$1; CI AI COIN-qt frontend will not be built])
+  if test "x$CB AI COIN_qt_want_version" = xauto && test "x$CB AI COIN_qt_force" != xyes; then
+    if test "x$CB AI COIN_enable_qt" != xno; then
+      AC_MSG_WARN([$1; CB AI COIN-qt frontend will not be built])
     fi
-    CI AI COIN_enable_qt=no
-    CI AI COIN_enable_qt_test=no
+    CB AI COIN_enable_qt=no
+    CB AI COIN_enable_qt_test=no
   else
     AC_MSG_ERROR([$1])
   fi
 ])
 
 AC_DEFUN([BITCOIN_QT_CHECK],[
-  if test "x$CI AI COIN_enable_qt" != xno && test "x$CI AI COIN_qt_want_version" != xno; then
+  if test "x$CB AI COIN_enable_qt" != xno && test "x$CB AI COIN_qt_want_version" != xno; then
     true
     $1
   else
@@ -54,15 +54,15 @@ AC_DEFUN([BITCOIN_QT_INIT],[
   dnl enable qt support
   AC_ARG_WITH([gui],
     [AS_HELP_STRING([--with-gui@<:@=no|qt5|auto@:>@],
-    [build CI AI COIN-qt GUI (default=auto)])],
+    [build CB AI COIN-qt GUI (default=auto)])],
     [
-     CI AI COIN_qt_want_version=$withval
-     if test "x$CI AI COIN_qt_want_version" = xyes; then
-       CI AI COIN_qt_force=yes
-       CI AI COIN_qt_want_version=auto
+     CB AI COIN_qt_want_version=$withval
+     if test "x$CB AI COIN_qt_want_version" = xyes; then
+       CB AI COIN_qt_force=yes
+       CB AI COIN_qt_want_version=auto
      fi
     ],
-    [CI AI COIN_qt_want_version=auto])
+    [CB AI COIN_qt_want_version=auto])
 
   AC_ARG_WITH([qt-incdir],[AS_HELP_STRING([--with-qt-incdir=INC_DIR],[specify qt include path (overridden by pkgconfig)])], [qt_include_path=$withval], [])
   AC_ARG_WITH([qt-libdir],[AS_HELP_STRING([--with-qt-libdir=LIB_DIR],[specify qt lib path (overridden by pkgconfig)])], [qt_lib_path=$withval], [])
@@ -85,7 +85,7 @@ dnl Inputs: $2: If $1 is "yes" and --with-gui=auto, which qt version should be
 dnl         tried first.
 dnl Outputs: See _BITCOIN_QT_FIND_LIBS_*
 dnl Outputs: Sets variables for all qt-related tools.
-dnl Outputs: CI AI COIN_enable_qt, CI AI COIN_enable_qt_dbus, CI AI COIN_enable_qt_test
+dnl Outputs: CB AI COIN_enable_qt, CB AI COIN_enable_qt_dbus, CB AI COIN_enable_qt_test
 AC_DEFUN([BITCOIN_QT_CONFIGURE],[
   use_pkgconfig=$1
 
@@ -113,7 +113,7 @@ AC_DEFUN([BITCOIN_QT_CONFIGURE],[
   CPPFLAGS="$QT_INCLUDES $CPPFLAGS"
   CXXFLAGS="$PIC_FLAGS $CXXFLAGS"
   _BITCOIN_QT_IS_STATIC
-  if test "x$CI AI COIN_cv_static_qt" = xyes; then
+  if test "x$CB AI COIN_cv_static_qt" = xyes; then
     _BITCOIN_QT_FIND_STATIC_PLUGINS
     AC_DEFINE(QT_STATICPLUGIN, 1, [Define this symbol if qt plugins are static])
     _BITCOIN_QT_CHECK_STATIC_PLUGINS([Q_IMPORT_PLUGIN(QMinimalIntegrationPlugin)],[-lqminimal])
@@ -210,14 +210,14 @@ AC_DEFUN([BITCOIN_QT_CONFIGURE],[
   dnl enable qt support
   AC_MSG_CHECKING(whether to build ]AC_PACKAGE_NAME[ GUI)
   BITCOIN_QT_CHECK([
-    CI AI COIN_enable_qt=yes
-    CI AI COIN_enable_qt_test=yes
+    CB AI COIN_enable_qt=yes
+    CB AI COIN_enable_qt_test=yes
     if test "x$have_qt_test" = xno; then
-      CI AI COIN_enable_qt_test=no
+      CB AI COIN_enable_qt_test=no
     fi
-    CI AI COIN_enable_qt_dbus=no
+    CB AI COIN_enable_qt_dbus=no
     if test "x$use_dbus" != xno && test "x$have_qt_dbus" = xyes; then
-      CI AI COIN_enable_qt_dbus=yes
+      CB AI COIN_enable_qt_dbus=yes
     fi
     if test "x$use_dbus" = xyes && test "x$have_qt_dbus" = xno; then
       AC_MSG_ERROR([libQtDBus not found. Install libQtDBus or remove --with-qtdbus.])
@@ -226,12 +226,12 @@ AC_DEFUN([BITCOIN_QT_CONFIGURE],[
       AC_MSG_WARN([lupdate is required to update qt translations])
     fi
   ],[
-    CI AI COIN_enable_qt=no
+    CB AI COIN_enable_qt=no
   ])
-  if test x$CI AI COIN_enable_qt = xyes; then
-    AC_MSG_RESULT([$CI AI COIN_enable_qt ($QT_LIB_PREFIX)])
+  if test x$CB AI COIN_enable_qt = xyes; then
+    AC_MSG_RESULT([$CB AI COIN_enable_qt ($QT_LIB_PREFIX)])
   else
-    AC_MSG_RESULT([$CI AI COIN_enable_qt])
+    AC_MSG_RESULT([$CB AI COIN_enable_qt])
   fi
 
   AC_SUBST(QT_PIE_FLAGS)
@@ -252,9 +252,9 @@ dnl ----
 
 dnl Internal. Check included version of Qt against minimum specified in doc/dependencies.md
 dnl Requires: INCLUDES must be populated as necessary.
-dnl Output: CI AI COIN_cv_qt5=yes|no
+dnl Output: CB AI COIN_cv_qt5=yes|no
 AC_DEFUN([_BITCOIN_QT_CHECK_QT5],[
-  AC_CACHE_CHECK(for Qt 5, CI AI COIN_cv_qt5,[
+  AC_CACHE_CHECK(for Qt 5, CB AI COIN_cv_qt5,[
   AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
       #include <QtCore/qconfig.h>
       #ifndef QT_VERSION
@@ -266,15 +266,15 @@ AC_DEFUN([_BITCOIN_QT_CHECK_QT5],[
       choke
       #endif
     ]])],
-    [CI AI COIN_cv_qt5=yes],
-    [CI AI COIN_cv_qt5=no])
+    [CB AI COIN_cv_qt5=yes],
+    [CB AI COIN_cv_qt5=no])
 ])])
 
 dnl Internal. Check if the included version of Qt is greater than Qt58.
 dnl Requires: INCLUDES must be populated as necessary.
-dnl Output: CI AI COIN_cv_qt58=yes|no
+dnl Output: CB AI COIN_cv_qt58=yes|no
 AC_DEFUN([_BITCOIN_QT_CHECK_QT58],[
-  AC_CACHE_CHECK(for > Qt 5.7, CI AI COIN_cv_qt58,[
+  AC_CACHE_CHECK(for > Qt 5.7, CB AI COIN_cv_qt58,[
   AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
       #include <QtCore/qconfig.h>
       #ifndef QT_VERSION
@@ -286,18 +286,18 @@ AC_DEFUN([_BITCOIN_QT_CHECK_QT58],[
       choke
       #endif
     ]])],
-    [CI AI COIN_cv_qt58=yes],
-    [CI AI COIN_cv_qt58=no])
+    [CB AI COIN_cv_qt58=yes],
+    [CB AI COIN_cv_qt58=no])
 ])])
 
 
 dnl Internal. Check if the linked version of Qt was built as static libs.
 dnl Requires: Qt5.
 dnl Requires: INCLUDES and LIBS must be populated as necessary.
-dnl Output: CI AI COIN_cv_static_qt=yes|no
+dnl Output: CB AI COIN_cv_static_qt=yes|no
 dnl Output: Defines QT_STATICPLUGIN if plugins are static.
 AC_DEFUN([_BITCOIN_QT_IS_STATIC],[
-  AC_CACHE_CHECK(for static Qt, CI AI COIN_cv_static_qt,[
+  AC_CACHE_CHECK(for static Qt, CB AI COIN_cv_static_qt,[
     AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
         #include <QtCore/qconfig.h>
         #ifndef QT_VERSION OR QT_VERSION_STR
@@ -309,10 +309,10 @@ AC_DEFUN([_BITCOIN_QT_IS_STATIC],[
         choke
         #endif
       ]])],
-      [CI AI COIN_cv_static_qt=yes],
-      [CI AI COIN_cv_static_qt=no])
+      [CB AI COIN_cv_static_qt=yes],
+      [CB AI COIN_cv_static_qt=no])
     ])
-  if test "x$CI AI COIN_cv_static_qt" = xyes; then
+  if test "x$CB AI COIN_cv_static_qt" = xyes; then
     AC_DEFINE(QT_STATICPLUGIN, 1, [Define this symbol for static Qt plugins])
   fi
 ])
@@ -348,7 +348,7 @@ AC_DEFUN([_BITCOIN_QT_FIND_STATIC_PLUGINS],[
      if test "x$use_pkgconfig" = xyes; then
      : dnl
      m4_ifdef([PKG_CHECK_MODULES],[
-       if test x$CI AI COIN_cv_qt58 = xno; then
+       if test x$CB AI COIN_cv_qt58 = xno; then
          PKG_CHECK_MODULES([QTPLATFORM], [Qt5PlatformSupport], [QT_LIBS="$QTPLATFORM_LIBS $QT_LIBS"])
        else
          PKG_CHECK_MODULES([QTFONTDATABASE], [Qt5FontDatabaseSupport], [QT_LIBS="-lQt5FontDatabaseSupport $QT_LIBS"])
@@ -368,7 +368,7 @@ AC_DEFUN([_BITCOIN_QT_FIND_STATIC_PLUGINS],[
      ])
      else
        if test "x$TARGET_OS" = xwindows; then
-         AC_CACHE_CHECK(for Qt >= 5.6, CI AI COIN_cv_need_platformsupport,[
+         AC_CACHE_CHECK(for Qt >= 5.6, CB AI COIN_cv_need_platformsupport,[
            AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
                #include <QtCore/qconfig.h>
                #ifndef QT_VERSION
@@ -380,11 +380,11 @@ AC_DEFUN([_BITCOIN_QT_FIND_STATIC_PLUGINS],[
                choke
                #endif
              ]])],
-           [CI AI COIN_cv_need_platformsupport=yes],
-           [CI AI COIN_cv_need_platformsupport=no])
+           [CB AI COIN_cv_need_platformsupport=yes],
+           [CB AI COIN_cv_need_platformsupport=no])
          ])
-         if test "x$CI AI COIN_cv_need_platformsupport" = xyes; then
-           if test x$CI AI COIN_cv_qt58 = xno; then
+         if test "x$CB AI COIN_cv_need_platformsupport" = xyes; then
+           if test x$CB AI COIN_cv_qt58 = xno; then
              BITCOIN_QT_CHECK(AC_CHECK_LIB([${QT_LIB_PREFIX}PlatformSupport],[main],,BITCOIN_QT_FAIL(lib$QT_LIB_PREFIXPlatformSupport not found)))
            else
              BITCOIN_QT_CHECK(AC_CHECK_LIB([${QT_LIB_PREFIX}FontDatabaseSupport],[main],,BITCOIN_QT_FAIL(lib$QT_LIB_PREFIXFontDatabaseSupport not found)))
@@ -402,9 +402,9 @@ AC_DEFUN([_BITCOIN_QT_FIND_STATIC_PLUGINS],[
 ])
 
 dnl Internal. Find Qt libraries using pkg-config.
-dnl Inputs: CI AI COIN_qt_want_version (from --with-gui=). The version to check
+dnl Inputs: CB AI COIN_qt_want_version (from --with-gui=). The version to check
 dnl         first.
-dnl Inputs: $1: If CI AI COIN_qt_want_version is "auto", check for this version
+dnl Inputs: $1: If CB AI COIN_qt_want_version is "auto", check for this version
 dnl         first.
 dnl Outputs: All necessary QT_* variables are set.
 dnl Outputs: have_qt_test and have_qt_dbus are set (if applicable) to yes|no.
@@ -432,7 +432,7 @@ AC_DEFUN([_BITCOIN_QT_FIND_LIBS_WITH_PKGCONFIG],[
 
 dnl Internal. Find Qt libraries without using pkg-config. Version is deduced
 dnl from the discovered headers.
-dnl Inputs: CI AI COIN_qt_want_version (from --with-gui=). The version to use.
+dnl Inputs: CB AI COIN_qt_want_version (from --with-gui=). The version to use.
 dnl         If "auto", the version will be discovered by _BITCOIN_QT_CHECK_QT5.
 dnl Outputs: All necessary QT_* variables are set.
 dnl Outputs: have_qt_test and have_qt_dbus are set (if applicable) to yes|no.
@@ -453,7 +453,7 @@ AC_DEFUN([_BITCOIN_QT_FIND_LIBS_WITHOUT_PKGCONFIG],[
   BITCOIN_QT_CHECK([AC_CHECK_HEADER([QLocalSocket],, BITCOIN_QT_FAIL(QtNetwork headers missing))])
 
   BITCOIN_QT_CHECK([
-    if test "x$CI AI COIN_qt_want_version" = xauto; then
+    if test "x$CB AI COIN_qt_want_version" = xauto; then
       _BITCOIN_QT_CHECK_QT5
       _BITCOIN_QT_CHECK_QT58
     fi
@@ -472,7 +472,7 @@ AC_DEFUN([_BITCOIN_QT_FIND_LIBS_WITHOUT_PKGCONFIG],[
   ])
 
   BITCOIN_QT_CHECK(AC_CHECK_LIB([z] ,[main],,AC_MSG_WARN([zlib not found. Assuming qt has it built-in])))
-  if test x$CI AI COIN_cv_qt58 = xno; then
+  if test x$CB AI COIN_cv_qt58 = xno; then
     BITCOIN_QT_CHECK(AC_SEARCH_LIBS([png_error] ,[qtpng png],,AC_MSG_WARN([libpng not found. Assuming qt has it built-in])))
     BITCOIN_QT_CHECK(AC_SEARCH_LIBS([pcre16_exec], [qtpcre pcre16],,AC_MSG_WARN([libpcre16 not found. Assuming qt has it built-in])))
   else

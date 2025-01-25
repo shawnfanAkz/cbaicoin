@@ -64,7 +64,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Потпиши &amp;порака...</translation>
@@ -126,7 +126,7 @@
         <translation>Повторно индексирање на блокови од дискот...</translation>
     </message>
     <message>
-        <source>Send coins to a CI AI COIN address</source>
+        <source>Send coins to a CB AI COIN address</source>
         <translation>Испрати биткоини на Биткоин адреса</translation>
     </message>
     <message>
@@ -289,7 +289,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>CI AI COIN</source>
+        <source>CB AI COIN</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -610,6 +610,6 @@
     </message>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     </context>
 </TS>

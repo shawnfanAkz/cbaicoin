@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018 The CI AI COIN Core developers
+# Copyright (c) 2018 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -14,9 +14,9 @@ EXPECTED_CIRCULAR_DEPENDENCIES=(
     "policy/fees -> txmempool -> policy/fees"
     "qt/addresstablemodel -> qt/walletmodel -> qt/addresstablemodel"
     "qt/bantablemodel -> qt/clientmodel -> qt/bantablemodel"
-    "qt/CI AI COINgui -> qt/utilitydialog -> qt/CI AI COINgui"
-    "qt/CI AI COINgui -> qt/walletframe -> qt/CI AI COINgui"
-    "qt/CI AI COINgui -> qt/walletview -> qt/CI AI COINgui"
+    "qt/CB AI COINgui -> qt/utilitydialog -> qt/CB AI COINgui"
+    "qt/CB AI COINgui -> qt/walletframe -> qt/CB AI COINgui"
+    "qt/CB AI COINgui -> qt/walletview -> qt/CB AI COINgui"
     "qt/clientmodel -> qt/peertablemodel -> qt/clientmodel"
     "qt/paymentserver -> qt/walletmodel -> qt/paymentserver"
     "qt/recentrequeststablemodel -> qt/walletmodel -> qt/recentrequeststablemodel"

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Copyright (c) 2016 The CI AI COIN Core developers
+# Copyright (c) 2016 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 ###   This script attempts to download the signature file SHA256SUMS.asc from
-###   CI AI COINcore.org and CI AI COIN.org and compares them.
+###   CB AI COINcore.org and CB AI COIN.org and compares them.
 ###   It first checks if the signature passes, and then downloads the files specified in
 ###   the file, and checks if the hashes of these files match those that are specified
 ###   in the signature file.
@@ -19,15 +19,15 @@ function clean_up {
    done
 }
 
-WORKINGDIR="/tmp/CI AI COIN_verify_binaries"
+WORKINGDIR="/tmp/CB AI COIN_verify_binaries"
 TMPFILE="hashes.tmp"
 
 SIGNATUREFILENAME="SHA256SUMS.asc"
 RCSUBDIR="test"
-HOST1="https://CI AI COINcore.org"
-HOST2="https://CI AI COIN.org"
+HOST1="https://CB AI COINcore.org"
+HOST2="https://CB AI COIN.org"
 BASEDIR="/bin/"
-VERSIONPREFIX="CI AI COIN-core-"
+VERSIONPREFIX="CB AI COIN-core-"
 RCVERSIONSTRING="rc"
 
 if [ ! -d "$WORKINGDIR" ]; then
@@ -38,7 +38,7 @@ cd "$WORKINGDIR" || exit 1
 
 #test if a version number has been passed as an argument
 if [ -n "$1" ]; then
-   #let's also check if the version number includes the prefix 'CI AI COIN-',
+   #let's also check if the version number includes the prefix 'CB AI COIN-',
    #  and add this prefix if it doesn't
    if [[ $1 == "$VERSIONPREFIX"* ]]; then
       VERSION="$1"
@@ -93,7 +93,7 @@ if ! WGETOUT=$(wget -N "$HOST1$BASEDIR$SIGNATUREFILENAME" 2>&1); then
 fi
 
 if ! WGETOUT=$(wget -N -O "$SIGNATUREFILENAME.2" "$HOST2$BASEDIR$SIGNATUREFILENAME" 2>&1); then
-   echo "CI AI COIN.org failed to provide signature file, but CI AI COINcore.org did?"
+   echo "CB AI COIN.org failed to provide signature file, but CB AI COINcore.org did?"
    echo "wget output:"
    # shellcheck disable=SC2001
    echo "$WGETOUT"|sed 's/^/\t/g'
@@ -103,7 +103,7 @@ fi
 
 SIGFILEDIFFS="$(diff $SIGNATUREFILENAME $SIGNATUREFILENAME.2)"
 if [ "$SIGFILEDIFFS" != "" ]; then
-   echo "CI AI COIN.org and CI AI COINcore.org signature files were not equal?"
+   echo "CB AI COIN.org and CB AI COINcore.org signature files were not equal?"
    clean_up $SIGNATUREFILENAME $SIGNATUREFILENAME.2
    exit 4
 fi
@@ -122,7 +122,7 @@ if [ $RET -ne 0 ]; then
       echo "Bad signature."
    elif [ $RET -eq 2 ]; then
       #or if a gpg error has occurred
-      echo "gpg error. Do you have the CI AI COIN Core binary release signing key installed?"
+      echo "gpg error. Do you have the CB AI COIN Core binary release signing key installed?"
    fi
 
    echo "gpg output:"

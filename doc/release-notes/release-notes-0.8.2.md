@@ -1,11 +1,11 @@
-CI AI COIN-Qt version 0.8.2 is now available from:
-  http://sourceforge.net/projects/CI AI COIN/files/CI AI COIN/CI AI COIN-0.8.2/
+CB AI COIN-Qt version 0.8.2 is now available from:
+  http://sourceforge.net/projects/CB AI COIN/files/CB AI COIN/CB AI COIN-0.8.2/
 
 This is a maintenance release that fixes many bugs and includes
 a few small new features.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/CI AI COIN/CI AI COIN/issues
+  https://github.com/CB AI COIN/CB AI COIN/issues
 
 
 How to Upgrade
@@ -13,7 +13,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/CI AI COIN-Qt (on Mac) or CI AI COINd/CI AI COIN-qt (on Linux).
+/Applications/CB AI COIN-Qt (on Mac) or CB AI COINd/CB AI COIN-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you
 run 0.8.2 your blockchain files will be re-indexed, which will take
@@ -43,7 +43,7 @@ with code that automatically calculates and suggests appropriate fees in the
 0.9 release and note that if you set a fee policy significantly different from
 the rest of the network your transactions may never confirm.
 
-CI AI COIN-Qt changes
+CB AI COIN-Qt changes
 
 * New icon and splash screen
 * Improve reporting of synchronization process
@@ -58,7 +58,7 @@ CI AI COIN-Qt changes
   to current translations
 
 MacOSX:
-* OSX support for click-to-pay (CI AI COIN:) links
+* OSX support for click-to-pay (CB AI COIN:) links
 * Fix GUI disappearing problem on MacOSX (issue #1522)
 
 Linux/Unix:
@@ -97,8 +97,8 @@ Wallet compatibility/rescuing
 
 Known Bugs
 
-* Entering the 'getblocktemplate' or 'getwork' RPC commands into the CI AI COIN-Qt debug
-console will cause CI AI COIN-Qt to crash. Run CI AI COIN-Qt with the -server command-line
+* Entering the 'getblocktemplate' or 'getwork' RPC commands into the CB AI COIN-Qt debug
+console will cause CB AI COIN-Qt to crash. Run CB AI COIN-Qt with the -server command-line
 option to workaround.
 
 Thanks to everybody who contributed to the 0.8.2 release!

@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2018 The CI AI COIN Core developers
+// Copyright (c) 2009-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -524,7 +524,7 @@ public:
     }
 
     /**
-     * Pre-version-0.6, CI AI COIN always counted CHECKMULTISIGs
+     * Pre-version-0.6, CB AI COIN always counted CHECKMULTISIGs
      * as 20 sigops. With pay-to-script-hash, that changed:
      * CHECKMULTISIGs serialized in scriptSigs are
      * counted more accurately, assuming they are of the form

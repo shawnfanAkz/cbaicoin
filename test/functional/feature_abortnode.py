@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
-# Copyright (c) 2019 The CI AI COIN Core developers
+# Copyright (c) 2019 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test CI AI COINd aborts if can't disconnect a block.
+"""Test CB AI COINd aborts if can't disconnect a block.
 
 - Start a single node and generate 3 blocks.
 - Delete the undo data.
 - Mine a fork that requires disconnecting the tip.
-- Verify that CI AI COINd AbortNode's.
+- Verify that CB AI COINd AbortNode's.
 """
 
-from test_framework.test_framework import CI AI COINTestFramework
+from test_framework.test_framework import CB AI COINTestFramework
 from test_framework.util import wait_until, get_datadir_path, connect_nodes
 import os
 
-class AbortNodeTest(CI AI COINTestFramework):
+class AbortNodeTest(CB AI COINTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True

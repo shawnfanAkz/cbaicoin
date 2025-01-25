@@ -1,1 +1,1 @@
-The list of assets used in the CI AI COIN source and their attribution can now be found in [contrib/debian/copyright](../contrib/debian/copyright).
+The list of assets used in the CB AI COIN source and their attribution can now be found in [contrib/debian/copyright](../contrib/debian/copyright).

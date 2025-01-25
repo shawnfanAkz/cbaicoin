@@ -66,8 +66,8 @@
         <translation>Alınan Adresler</translation>
     </message>
     <message>
-        <source>These are your CI AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödeme göndermek için gereken CI AI COIN adreslerinizdir. Para göndermeden önce her zaman miktarı ve alıcı adresi kontrol edin.</translation>
+        <source>These are your CB AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödeme göndermek için gereken CB AI COIN adreslerinizdir. Para göndermeden önce her zaman miktarı ve alıcı adresi kontrol edin.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,8 +160,8 @@
         <translation>Cüzdan Şifrelemesini Onaylayın</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CI AI COINS&lt;/b&gt;!</source>
-        <translation>Uyarı: Eğer cüzdanınızı şifreleyip parolanızı kaybederseniz (unutursanız) , &lt;b&gt;BÜTÜN CI AI COIN'LERINIZI KAYBEDECEKSINIZ&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CB AI COINS&lt;/b&gt;!</source>
+        <translation>Uyarı: Eğer cüzdanınızı şifreleyip parolanızı kaybederseniz (unutursanız) , &lt;b&gt;BÜTÜN CB AI COIN'LERINIZI KAYBEDECEKSINIZ&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -172,8 +172,8 @@
         <translation>Cüzdan Şifrelendi</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your CI AI COINs from being stolen by malware infecting your computer.</source>
-        <translation>Cüzdanınızı şifrelemenin, CI AI COINlerinizin bilgisayara bulaşan kötücül bir yazılım tarafından çalınmaya karşı tamamen koruyamayacağını unutmayınız.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your CB AI COINs from being stolen by malware infecting your computer.</source>
+        <translation>Cüzdanınızı şifrelemenin, CB AI COINlerinizin bilgisayara bulaşan kötücül bir yazılım tarafından çalınmaya karşı tamamen koruyamayacağını unutmayınız.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -224,7 +224,7 @@
     </message>
 </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>İmza &amp;mesaj</translation>
@@ -326,8 +326,8 @@
         <translation>Tünelleme &lt;b&gt;etkin&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a CI AI COIN address</source>
-        <translation>CI AI COIN adresine madeni para gönderin</translation>
+        <source>Send coins to a CB AI COIN address</source>
+        <translation>CB AI COIN adresine madeni para gönderin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -370,12 +370,12 @@
         <translation>Cüzdanınıza ait özel anahtarları şifreleyin</translation>
     </message>
     <message>
-        <source>Sign messages with your CI AI COIN addresses to prove you own them</source>
-        <translation>İletileri adreslerin size ait olduğunu ispatlamak için CI AI COIN adresleri ile imzala</translation>
+        <source>Sign messages with your CB AI COIN addresses to prove you own them</source>
+        <translation>İletileri adreslerin size ait olduğunu ispatlamak için CB AI COIN adresleri ile imzala</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CI AI COIN addresses</source>
-        <translation>Belirtilen CI AI COIN adresleri ile imzalandıklarından emin olmak için iletileri kontrol et</translation>
+        <source>Verify messages to ensure they were signed with specified CB AI COIN addresses</source>
+        <translation>Belirtilen CB AI COIN adresleri ile imzalandıklarından emin olmak için iletileri kontrol et</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -394,8 +394,8 @@
         <translation>Sekme araç çubuğu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and CI AI COIN: URIs)</source>
-        <translation>Ödeme talep et (QR kodu ve CI AI COIN URI'si oluşturur)</translation>
+        <source>Request payments (generates QR codes and CB AI COIN: URIs)</source>
+        <translation>Ödeme talep et (QR kodu ve CB AI COIN URI'si oluşturur)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -406,16 +406,16 @@
         <translation>Kullanılan alış adreslerinin ve etiketlerinin listesini göster</translation>
     </message>
     <message>
-        <source>Open a CI AI COIN: URI or payment request</source>
-        <translation>Bir CI AI COIN: bağlantısı ya da ödeme talebi aç</translation>
+        <source>Open a CB AI COIN: URI or payment request</source>
+        <translation>Bir CB AI COIN: bağlantısı ya da ödeme talebi aç</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Komut satırı ayarları</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to CI AI COIN network</source>
-        <translation><numerusform>CI AI COIN şebekesine %n faal bağlantı</numerusform><numerusform>CI AI COIN ağına %n etkin bağlantı var</numerusform></translation>
+        <source>%n active connection(s) to CB AI COIN network</source>
+        <translation><numerusform>CB AI COIN şebekesine %n faal bağlantı</numerusform><numerusform>CB AI COIN ağına %n etkin bağlantı var</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -474,8 +474,8 @@
         <translation>Cüzdanı Kapat</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible CI AI COIN command-line options</source>
-        <translation>Olası CI AI COIN komut satırı seçeneklerinin listesini görmek için %1 yardım mesajını göster</translation>
+        <source>Show the %1 help message to get a list with possible CB AI COIN command-line options</source>
+        <translation>Olası CB AI COIN komut satırı seçeneklerinin listesini görmek için %1 yardım mesajını göster</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -565,15 +565,15 @@
         <translation>Cüzdan &lt;b&gt;şifrelenmiştir&lt;/b&gt; ve şu anda &lt;b&gt;kilitlidir&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. CI AI COIN can no longer continue safely and will quit.</source>
-        <translation>Ölümcül bir hata oluştu. CI AI COIN yazılımı artık güvenli bir şekilde çalışmaya devam edemediği için kapatılacaktır.</translation>
+        <source>A fatal error occurred. CB AI COIN can no longer continue safely and will quit.</source>
+        <translation>Ölümcül bir hata oluştu. CB AI COIN yazılımı artık güvenli bir şekilde çalışmaya devam edemediği için kapatılacaktır.</translation>
     </message>
 </context>
 <context>
     <name>CoinControlDialog</name>
     <message>
         <source>Coin Selection</source>
-        <translation>CI AI COIN Seçimi</translation>
+        <translation>CB AI COIN Seçimi</translation>
     </message>
     <message>
         <source>Quantity:</source>
@@ -761,8 +761,8 @@
         <translation>Gönderim adresini düzenleyin</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid CI AI COIN address.</source>
-        <translation>Girilen adres "%1" CI AI COIN adresiyle eşleşmiyor.</translation>
+        <source>The entered address "%1" is not a valid CB AI COIN address.</source>
+        <translation>Girilen adres "%1" CB AI COIN adresiyle eşleşmiyor.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -854,8 +854,8 @@
         <translation>Özel bir veri klasörü kullan:</translation>
     </message>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN
 </translation>
     </message>
     <message>
@@ -867,8 +867,8 @@
         <translation>Yaklaşık %1 GB veri bu dizinde depolanacak.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the CI AI COIN block chain.</source>
-        <translation>%1 lik CI AI COIN blok zinciri nin bir kopyasını indirecek ve depolayacak.</translation>
+        <source>%1 will download and store a copy of the CB AI COIN block chain.</source>
+        <translation>%1 lik CB AI COIN blok zinciri nin bir kopyasını indirecek ve depolayacak.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -898,12 +898,12 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the CI AI COIN network, as detailed below.</source>
-        <translation>Son işlemler henüz görünmeyebilir ve bu nedenle cüzdanınızın bakiyesi yanlış olabilir. Bu bilgiler, aşağıda detaylandırıldığı gibi, cüzdanınız CI AI COIN ağı ile senkronizasyonunu tamamladığında doğru olacaktır. </translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the CB AI COIN network, as detailed below.</source>
+        <translation>Son işlemler henüz görünmeyebilir ve bu nedenle cüzdanınızın bakiyesi yanlış olabilir. Bu bilgiler, aşağıda detaylandırıldığı gibi, cüzdanınız CB AI COIN ağı ile senkronizasyonunu tamamladığında doğru olacaktır. </translation>
     </message>
     <message>
-        <source>Attempting to spend CI AI COINs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Henüz görüntülenmeyen işlemlerden etkilenen CI AI COINleri harcama girişiminde bulunmak ağ tarafından kabul edilmeyecektir.</translation>
+        <source>Attempting to spend CB AI COINs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Henüz görüntülenmeyen işlemlerden etkilenen CB AI COINleri harcama girişiminde bulunmak ağ tarafından kabul edilmeyecektir.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1083,8 +1083,8 @@
         <translation>Doğrulanmamış para üstünü &amp;harca</translation>
     </message>
     <message>
-        <source>Automatically open the CI AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönlendiricide CI AI COIN istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
+        <source>Automatically open the CB AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönlendiricide CB AI COIN istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1099,8 +1099,8 @@
         <translation>Gelen bağlantılara izin ver</translation>
     </message>
     <message>
-        <source>Connect to the CI AI COIN network through a SOCKS5 proxy.</source>
-        <translation>CI AI COIN ağına bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
+        <source>Connect to the CB AI COIN network through a SOCKS5 proxy.</source>
+        <translation>CB AI COIN ağına bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1135,8 +1135,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the CI AI COIN network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>CI AI COIN ağına gizli Tor servisleri için ayrı bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
+        <source>Connect to the CB AI COIN network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>CB AI COIN ağına gizli Tor servisleri için ayrı bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1172,7 +1172,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>CI AI COIN gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
+        <translation>CB AI COIN gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1242,7 +1242,7 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CI AI COIN network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CB AI COIN network after a connection is established, but this process has not completed yet.</source>
         <translation>Gösterilen bilgi geçerli olmayabilir. Bağlantı tekrar sağlandıktan sonra cüzdanınız otomatik olarak senkronize olacaktır. Henüz senkronize olma işlemi tamamlanmadı.</translation>
     </message>
     <message>
@@ -1317,16 +1317,16 @@
         <translation>Ödeme isteği hatası</translation>
     </message>
     <message>
-        <source>Cannot start CI AI COIN: click-to-pay handler</source>
-        <translation>CI AI COIN başlatılamadı: tıkla-ve-öde yöneticisi</translation>
+        <source>Cannot start CB AI COIN: click-to-pay handler</source>
+        <translation>CB AI COIN başlatılamadı: tıkla-ve-öde yöneticisi</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>URI yönetimi</translation>
     </message>
     <message>
-        <source>'CI AI COIN://' is not a valid URI. Use 'CI AI COIN:' instead.</source>
-        <translation>'CI AI COIN://' geçerli bir protokol değil. Onun yerine 'CI AI COIN:' kullanınız.</translation>
+        <source>'CB AI COIN://' is not a valid URI. Use 'CB AI COIN:' instead.</source>
+        <translation>'CB AI COIN://' geçerli bir protokol değil. Onun yerine 'CB AI COIN:' kullanınız.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -1337,8 +1337,8 @@
         <translation>Hatalı ödeme adresi %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid CI AI COIN address or malformed URI parameters.</source>
-        <translation>URI ayrıştırılamıyor! Bunun nedeni geçersiz bir CI AI COIN adresi veya hatalı biçimlendirilmiş URI değişkenleri olabilir.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid CB AI COIN address or malformed URI parameters.</source>
+        <translation>URI ayrıştırılamıyor! Bunun nedeni geçersiz bir CB AI COIN adresi veya hatalı biçimlendirilmiş URI değişkenleri olabilir.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1439,8 +1439,8 @@
         <translation>Tutar</translation>
     </message>
     <message>
-        <source>Enter a CI AI COIN address (e.g. %1)</source>
-        <translation>CI AI COIN adresinizi girin (örneğin %1)</translation>
+        <source>Enter a CB AI COIN address (e.g. %1)</source>
+        <translation>CB AI COIN adresinizi girin (örneğin %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1822,7 +1822,7 @@
     </message>
     <message>
         <source>WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramifications of a command.</source>
-        <translation>UYARI: CI AI COIN dolandırıcılarının çok fazla etkin olduğu zamanlarda, dolandırıcılar bazı kullanıcılara buraya komutlar yazmalarını söylerek onların cüzdanlarındaki CI AI COINleri çalmışlardır. Bir komutun sonuçlarını tam olarak anlamadan bu konsolu kullanmayın.</translation>
+        <translation>UYARI: CB AI COIN dolandırıcılarının çok fazla etkin olduğu zamanlarda, dolandırıcılar bazı kullanıcılara buraya komutlar yazmalarını söylerek onların cüzdanlarındaki CB AI COINleri çalmışlardır. Bir komutun sonuçlarını tam olarak anlamadan bu konsolu kullanmayın.</translation>
     </message>
     <message>
         <source>Network activity disabled</source>
@@ -1884,8 +1884,8 @@
         <translation>&amp;Mesaj</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the CI AI COIN network.</source>
-        <translation>Talep açıldığında gösterilecek, isteğinize dayalı, ödeme talebi ile ilişkilendirilecek bir ileti. Not: Bu ileti ödeme ile birlikte CI AI COIN ağı üzerinden gönderilmeyecektir.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the CB AI COIN network.</source>
+        <translation>Talep açıldığında gösterilecek, isteğinize dayalı, ödeme talebi ile ilişkilendirilecek bir ileti. Not: Bu ileti ödeme ile birlikte CB AI COIN ağı üzerinden gönderilmeyecektir.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2257,8 +2257,8 @@
         <translation><numerusform>Tahmini %n blok içinde doğrulamaya başlanacaktır.</numerusform><numerusform>Tahmini %n blok içinde doğrulamaya başlanacaktır.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid CI AI COIN address</source>
-        <translation>Uyarı: Hatalı CI AI COIN adresi</translation>
+        <source>Warning: Invalid CB AI COIN address</source>
+        <translation>Uyarı: Hatalı CB AI COIN adresi</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2300,8 +2300,8 @@
         <translation>Bu, normal bir ödemedir.</translation>
     </message>
     <message>
-        <source>The CI AI COIN address to send the payment to</source>
-        <translation>Ödemenin yollanacağı CI AI COIN adresi</translation>
+        <source>The CB AI COIN address to send the payment to</source>
+        <translation>Ödemenin yollanacağı CB AI COIN adresi</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2320,8 +2320,8 @@
         <translation>Bu ögeyi kaldır</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less CI AI COINs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Ücret yollanan tutardan alınacaktır. Alıcı tutar alanına girdiğinizden daha az CI AI COIN alacaktır. Eğer birden çok alıcı seçiliyse ücret eşit olarak bölünecektir.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less CB AI COINs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Ücret yollanan tutardan alınacaktır. Alıcı tutar alanına girdiğinizden daha az CB AI COIN alacaktır. Eğer birden çok alıcı seçiliyse ücret eşit olarak bölünecektir.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2348,8 +2348,8 @@
         <translation>Kullanılmış adres listesine eklemek için bu adrese bir etiket girin</translation>
     </message>
     <message>
-        <source>A message that was attached to the CI AI COIN: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the CI AI COIN network.</source>
-        <translation>Referans için CI AI COIN: URI'siyle iliştirilmiş işlemle birlikte depolanacak bir ileti. Not: Bu mesaj CI AI COIN ağı üzerinden gönderilmeyecektir.</translation>
+        <source>A message that was attached to the CB AI COIN: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the CB AI COIN network.</source>
+        <translation>Referans için CB AI COIN: URI'siyle iliştirilmiş işlemle birlikte depolanacak bir ileti. Not: Bu mesaj CB AI COIN ağı üzerinden gönderilmeyecektir.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2393,12 +2393,12 @@
         <translation>İleti &amp;imzala</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive CI AI COINs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Adreslerinize yollanan CI AI COINleri alabileceğiniz ispatlamak için adreslerinizle iletiler/anlaşmalar imzalayabilirsiniz. Oltalama saldırılarının kimliğinizi imzanızla elde etmeyi deneyebilecekleri için belirsiz ya da rastgele hiçbir şey imzalamamaya dikkat ediniz. Sadece ayrıntılı açıklaması olan ve tümüne katıldığınız ifadeleri imzalayınız.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive CB AI COINs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Adreslerinize yollanan CB AI COINleri alabileceğiniz ispatlamak için adreslerinizle iletiler/anlaşmalar imzalayabilirsiniz. Oltalama saldırılarının kimliğinizi imzanızla elde etmeyi deneyebilecekleri için belirsiz ya da rastgele hiçbir şey imzalamamaya dikkat ediniz. Sadece ayrıntılı açıklaması olan ve tümüne katıldığınız ifadeleri imzalayınız.</translation>
     </message>
     <message>
-        <source>The CI AI COIN address to sign the message with</source>
-        <translation>İletinin imzalanmasında kullanılacak CI AI COIN adresi</translation>
+        <source>The CB AI COIN address to sign the message with</source>
+        <translation>İletinin imzalanmasında kullanılacak CB AI COIN adresi</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2429,8 +2429,8 @@
         <translation>Güncel imzayı sistem panosuna kopyala</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CI AI COIN address</source>
-        <translation>Bu CI AI COIN adresinin sizin olduğunu ispatlamak için iletiyi imzalayın</translation>
+        <source>Sign the message to prove you own this CB AI COIN address</source>
+        <translation>Bu CB AI COIN adresinin sizin olduğunu ispatlamak için iletiyi imzalayın</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2453,12 +2453,12 @@
         <translation>Alıcının adresini, iletiyi (satır sonları, boşluklar, sekmeler vs. karakterleri tam olarak kopyaladığınızdan emin olunuz) ve imzayı aşağıya giriniz. Bir ortadaki adam saldırısı tarafından kandırılmaya engel olmak için imzadan, imzalı iletinin içeriğini aşan bir anlam çıkarmamaya dikkat ediniz. Bunun sadece imzalayan tarafın adres ile alım yapabildiğini ispatladığını ve herhangi bir işlemin gönderi tarafını kanıtlayamayacağını unutmayınız!</translation>
     </message>
     <message>
-        <source>The CI AI COIN address the message was signed with</source>
-        <translation>İletinin imzalanmasında kullanılan CI AI COIN adresi</translation>
+        <source>The CB AI COIN address the message was signed with</source>
+        <translation>İletinin imzalanmasında kullanılan CB AI COIN adresi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CI AI COIN address</source>
-        <translation>Belirtilen CI AI COIN adresi ile imzalandığını doğrulamak için iletiyi kontrol et</translation>
+        <source>Verify the message to ensure it was signed with the specified CB AI COIN address</source>
+        <translation>Belirtilen CB AI COIN adresi ile imzalandığını doğrulamak için iletiyi kontrol et</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2668,7 +2668,7 @@
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Oluşturulan CI AI COIN'lerin harcanabilmelerinden önce %1 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda, blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu "kabul edilmedi" olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
+        <translation>Oluşturulan CB AI COIN'lerin harcanabilmelerinden önce %1 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda, blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu "kabul edilmedi" olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -3072,7 +3072,7 @@
     </message>
 </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>MIT yazılım lisansı altında dağıtılmıştır, beraberindeki %s ya da %s dosyasına bakınız.</translation>
@@ -3127,7 +3127,7 @@
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Bu kararlı sürümden önceki bir deneme sürümüdür. - risklerini bilerek kullanma sorumluluğu sizdedir - CI AI COIN oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
+        <translation>Bu kararlı sürümden önceki bir deneme sürümüdür. - risklerini bilerek kullanma sorumluluğu sizdedir - CB AI COIN oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
     </message>
     <message>
         <source>Unable to rewind the database to a pre-fork state. You will need to redownload the blockchain</source>
@@ -3376,7 +3376,7 @@
     </message>
     <message>
         <source>The transaction amount is too small to pay the fee</source>
-        <translation>İşlemdeki CI AI COIN tutarı ücreti ödemek için çok düşük</translation>
+        <translation>İşlemdeki CB AI COIN tutarı ücreti ödemek için çok düşük</translation>
     </message>
     <message>
         <source>This is experimental software.</source>

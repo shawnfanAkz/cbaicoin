@@ -1,25 +1,25 @@
-CI AI COIN is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. CI AI COIN uses peer-to-peer technology to operate
+CB AI COIN is an experimental digital currency that enables instant payments to
+anyone, anywhere in the world. CB AI COIN uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. CI AI COIN Core is the name of open source
+out collectively by the network. CB AI COIN Core is the name of open source
 software which enables the use of this currency.
 
-**With the integration of advanced AI capabilities, CI AI COIN can predict market trends, optimize transaction routes, and enhance security protocols, providing users with a smarter and more efficient digital currency experience.**
+**With the integration of advanced AI capabilities, CB AI COIN can predict market trends, optimize transaction routes, and enhance security protocols, providing users with a smarter and more efficient digital currency experience.**
 
-[![pump](https://pump.fun/_next/image?url=%2Flogo.png&w=32&q=75)](https://pump.fun/coin/6h4Bgg3xUUnpr7FfYC8xHAsdbCAwmgf7Ebt4sgZ6pump)
+[![pump](https://pump.fun/_next/image?url=%2Flogo.png&w=32&q=75)](https://pump.fun/)
 
 License
 -------
 
-CI AI COIN Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+CB AI COIN Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
-Development Process
+Development Process 
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable.
-regularly to indicate new official, stable release versions of CI AI COIN Core.
+regularly to indicate new official, stable release versions of CB AI COIN Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
 and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
@@ -62,4 +62,4 @@ Translations are periodically pulled from Transifex and merged into the git repo
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
 
-Translators should also subscribe to the [mailing list](https://groups.google.com/forum/#!forum/CI AI COIN-translators).
+Translators should also subscribe to the [mailing list](https://groups.google.com/forum/#!forum/CB AI COIN-translators).

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018 The CI AI COIN Core developers
+# Copyright (c) 2018 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +8,7 @@ export LC_ALL=C.UTF-8
 
 # Temporarily disable errexit, because Travis macOS fails without error message
 set +o errexit
-cd "build/CI AI COIN-$HOST" || (echo "could not enter distdir build/CI AI COIN-$HOST"; exit 1)
+cd "build/CB AI COIN-$HOST" || (echo "could not enter distdir build/CB AI COIN-$HOST"; exit 1)
 set -o errexit
 
 if [ -n "$QEMU_USER_CMD" ]; then

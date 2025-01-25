@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) 2016-2018 The CI AI COIN Core developers
+# Copyright (c) 2016-2018 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test various net timeouts.
 
-- Create three CI AI COINd nodes:
+- Create three CB AI COINd nodes:
 
     no_verack_node - we never send a verack in response to their version
     no_version_node - we never send a version (only a ping)
@@ -25,14 +25,14 @@ from time import sleep
 
 from test_framework.messages import msg_ping
 from test_framework.mininode import P2PInterface
-from test_framework.test_framework import CI AI COINTestFramework
+from test_framework.test_framework import CB AI COINTestFramework
 
 class TestP2PConn(P2PInterface):
     def on_version(self, message):
         # Don't send a verack in response
         pass
 
-class TimeoutsTest(CI AI COINTestFramework):
+class TimeoutsTest(CB AI COINTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

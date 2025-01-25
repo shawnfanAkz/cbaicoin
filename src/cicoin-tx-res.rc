@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "CI AI COIN"
-            VALUE "FileDescription",    "CI AI COIN-tx (CLI CI AI COIN transaction editor utility)"
+            VALUE "CompanyName",        "CB AI COIN"
+            VALUE "FileDescription",    "CB AI COIN-tx (CLI CB AI COIN transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "CI AI COIN-tx"
+            VALUE "InternalName",       "CB AI COIN-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "CI AI COIN-tx.exe"
-            VALUE "ProductName",        "CI AI COIN-tx"
+            VALUE "OriginalFilename",   "CB AI COIN-tx.exe"
+            VALUE "ProductName",        "CB AI COIN-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

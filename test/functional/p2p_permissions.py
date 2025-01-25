@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2018 The CI AI COIN Core developers
+# Copyright (c) 2015-2018 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test p2p permission message.
@@ -8,14 +8,14 @@ Test that permissions are correctly calculated and applied
 """
 
 from test_framework.test_node import ErrorMatch
-from test_framework.test_framework import CI AI COINTestFramework
+from test_framework.test_framework import CB AI COINTestFramework
 from test_framework.util import (
     assert_equal,
     connect_nodes,
     p2p_port,
 )
 
-class P2PPermissionsTests(CI AI COINTestFramework):
+class P2PPermissionsTests(CB AI COINTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.setup_clean_chain = True
@@ -94,9 +94,9 @@ class P2PPermissionsTests(CI AI COINTestFramework):
                 raise AssertionError("Expected permissions %r is not granted." % p)
 
     def replaceinconfig(self, nodeid, old, new):
-        with open(self.nodes[nodeid].CI AI COINconf, encoding="utf8") as f:
+        with open(self.nodes[nodeid].CB AI COINconf, encoding="utf8") as f:
             newText=f.read().replace(old, new)
-        with open(self.nodes[nodeid].CI AI COINconf, 'w', encoding="utf8") as f:
+        with open(self.nodes[nodeid].CB AI COINconf, 'w', encoding="utf8") as f:
             f.write(newText)
 
 if __name__ == '__main__':

@@ -1,11 +1,11 @@
-// Copyright (c) 2016-2018 The CI AI COIN Core developers
+// Copyright (c) 2016-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bench/bench.h>
 #include <key.h>
 #if defined(HAVE_CONSENSUS_LIB)
-#include <script/CI AI COINconsensus.h>
+#include <script/CB AI COINconsensus.h>
 #endif
 #include <script/script.h>
 #include <script/standard.h>
@@ -61,7 +61,7 @@ static void VerifyScriptBench(benchmark::State& state)
 #if defined(HAVE_CONSENSUS_LIB)
         CDataStream stream(SER_NETWORK, PROTOCOL_VERSION);
         stream << txSpend;
-        int csuccess = CI AI COINconsensus_verify_script_with_amount(
+        int csuccess = CB AI COINconsensus_verify_script_with_amount(
             txCredit.vout[0].scriptPubKey.data(),
             txCredit.vout[0].scriptPubKey.size(),
             txCredit.vout[0].nValue,

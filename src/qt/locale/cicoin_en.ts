@@ -85,12 +85,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your CI AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your CB AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>These are your CI AI COIN addresses for receiving payments. Use the &apos;Create new receiving address&apos; button in the receive tab to create new addresses.</source>
+        <source>These are your CB AI COIN addresses for receiving payments. Use the &apos;Create new receiving address&apos; button in the receive tab to create new addresses.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -211,7 +211,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CI AI COINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CB AI COINS&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -237,7 +237,7 @@
     </message>
     <message>
         <location line="+53"/>
-        <source>Remember that encrypting your wallet cannot fully protect your CI AI COINs from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your CB AI COINs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -323,9 +323,9 @@
     </message>
 </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
-        <location filename="../CI AI COINgui.cpp" line="+316"/>
+        <location filename="../CB AI COINgui.cpp" line="+316"/>
         <source>Sign &amp;message...</source>
         <translation>Sign &amp;message...</translation>
     </message>
@@ -461,8 +461,8 @@
     </message>
     <message>
         <location line="-1021"/>
-        <source>Send coins to a CI AI COIN address</source>
-        <translation>Send coins to a CI AI COIN address</translation>
+        <source>Send coins to a CB AI COIN address</source>
+        <translation>Send coins to a CB AI COIN address</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -516,13 +516,13 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your CI AI COIN addresses to prove you own them</source>
-        <translation>Sign messages with your CI AI COIN addresses to prove you own them</translation>
+        <source>Sign messages with your CB AI COIN addresses to prove you own them</source>
+        <translation>Sign messages with your CB AI COIN addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified CI AI COIN addresses</source>
-        <translation>Verify messages to ensure they were signed with specified CI AI COIN addresses</translation>
+        <source>Verify messages to ensure they were signed with specified CB AI COIN addresses</source>
+        <translation>Verify messages to ensure they were signed with specified CB AI COIN addresses</translation>
     </message>
     <message>
         <location line="+110"/>
@@ -546,7 +546,7 @@
     </message>
     <message>
         <location line="-256"/>
-        <source>Request payments (generates QR codes and CI AI COIN: URIs)</source>
+        <source>Request payments (generates QR codes and CB AI COIN: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -561,7 +561,7 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a CI AI COIN: URI or payment request</source>
+        <source>Open a CB AI COIN: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -571,10 +571,10 @@
     </message>
     <message numerus="yes">
         <location line="+522"/>
-        <source>%n active connection(s) to CI AI COIN network</source>
+        <source>%n active connection(s) to CB AI COIN network</source>
         <translation>
-            <numerusform>%n active connection to CI AI COIN network</numerusform>
-            <numerusform>%n active connections to CI AI COIN network</numerusform>
+            <numerusform>%n active connection to CB AI COIN network</numerusform>
+            <numerusform>%n active connections to CB AI COIN network</numerusform>
         </translation>
     </message>
     <message>
@@ -662,7 +662,7 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the %1 help message to get a list with possible CI AI COIN command-line options</source>
+        <source>Show the %1 help message to get a list with possible CB AI COIN command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -792,8 +792,8 @@
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../CI AI COIN.cpp" line="+386"/>
-        <source>A fatal error occurred. CI AI COIN can no longer continue safely and will quit.</source>
+        <location filename="../CB AI COIN.cpp" line="+386"/>
+        <source>A fatal error occurred. CB AI COIN can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1097,7 +1097,7 @@
     </message>
     <message>
         <location line="+75"/>
-        <source>The entered address &quot;%1&quot; is not a valid CI AI COIN address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid CB AI COIN address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1222,8 +1222,8 @@
     </message>
     <message>
         <location filename="../intro.cpp" line="+22"/>
-        <source>CI AI COIN</source>
-        <translation type="unfinished">CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation type="unfinished">CB AI COIN</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1242,7 +1242,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>%1 will download and store a copy of the CI AI COIN block chain.</source>
+        <source>%1 will download and store a copy of the CB AI COIN block chain.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1294,12 +1294,12 @@
     </message>
     <message>
         <location line="+119"/>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the CI AI COIN network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the CB AI COIN network, as detailed below.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Attempting to spend CI AI COINs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend CB AI COINs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1555,8 +1555,8 @@
     </message>
     <message>
         <location line="+30"/>
-        <source>Automatically open the CI AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the CI AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the CB AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the CB AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1575,7 +1575,7 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the CI AI COIN network through a SOCKS5 proxy.</source>
+        <source>Connect to the CB AI COIN network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1623,7 +1623,7 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>Connect to the CI AI COIN network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the CB AI COIN network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1763,8 +1763,8 @@
     <message>
         <location line="+62"/>
         <location line="+386"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CI AI COIN network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the CI AI COIN network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CB AI COIN network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the CB AI COIN network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-139"/>
@@ -1861,7 +1861,7 @@
     </message>
     <message>
         <location line="-531"/>
-        <source>Cannot start CI AI COIN: click-to-pay handler</source>
+        <source>Cannot start CB AI COIN: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1876,7 +1876,7 @@
     </message>
     <message>
         <location line="-55"/>
-        <source>&apos;CI AI COIN://&apos; is not a valid URI. Use &apos;CI AI COIN:&apos; instead.</source>
+        <source>&apos;CB AI COIN://&apos; is not a valid URI. Use &apos;CB AI COIN:&apos; instead.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1914,7 +1914,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid CI AI COIN address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid CB AI COIN address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2041,13 +2041,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../CI AI COINunits.cpp" line="+195"/>
+        <location filename="../CB AI COINunits.cpp" line="+195"/>
         <source>Amount</source>
         <translation type="unfinished">Amount</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+108"/>
-        <source>Enter a CI AI COIN address (e.g. %1)</source>
+        <source>Enter a CB AI COIN address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2161,7 +2161,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../CI AI COIN.cpp" line="+118"/>
+        <location filename="../CB AI COIN.cpp" line="+118"/>
         <source>Error: Specified data directory &quot;%1&quot; does not exist.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2681,7 +2681,7 @@
     <message>
         <location line="-3"/>
         <location line="+46"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the CI AI COIN network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the CB AI COIN network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3020,7 +3020,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+543"/>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for CI AI COIN transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for CB AI COIN transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3220,7 +3220,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+101"/>
-        <source>Warning: Invalid CI AI COIN address</source>
+        <source>Warning: Invalid CB AI COIN address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3275,7 +3275,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+39"/>
-        <source>The CI AI COIN address to send the payment to</source>
+        <source>The CB AI COIN address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3302,7 +3302,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="-1028"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less CI AI COINs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less CB AI COINs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3337,7 +3337,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+54"/>
-        <source>A message that was attached to the CI AI COIN: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the CI AI COIN network.</source>
+        <source>A message that was attached to the CB AI COIN: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the CB AI COIN network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3394,12 +3394,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+6"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive CI AI COINs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive CB AI COINs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The CI AI COIN address to sign the message with</source>
+        <source>The CB AI COIN address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3441,8 +3441,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this CI AI COIN address</source>
-        <translation>Sign the message to prove you own this CI AI COIN address</translation>
+        <source>Sign the message to prove you own this CB AI COIN address</source>
+        <translation>Sign the message to prove you own this CB AI COIN address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3472,13 +3472,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
-        <source>The CI AI COIN address the message was signed with</source>
+        <source>The CB AI COIN address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified CI AI COIN address</source>
-        <translation>Verify the message to ensure it was signed with the specified CI AI COIN address</translation>
+        <source>Verify the message to ensure it was signed with the specified CB AI COIN address</source>
+        <translation>Verify the message to ensure it was signed with the specified CB AI COIN address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4149,7 +4149,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
 <context>
     <name>UnitDisplayStatusBarControl</name>
     <message>
-        <location filename="../CI AI COINgui.cpp" line="+156"/>
+        <location filename="../CB AI COINgui.cpp" line="+156"/>
         <source>Unit to show amounts in. Click to select another unit.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4289,9 +4289,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
 </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     <message>
-        <location filename="../CI AI COINstrings.cpp" line="+28"/>
+        <location filename="../CB AI COINstrings.cpp" line="+28"/>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation type="unfinished"></translation>
     </message>

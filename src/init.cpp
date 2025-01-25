@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2018 The CI AI COIN Core developers
+// Copyright (c) 2009-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
 #include <init.h>
@@ -100,7 +100,7 @@ static const char* FEE_ESTIMATES_FILENAME="fee_estimates.dat";
 /**
  * The PID file facilities.
  */
-static const char* BITCOIN_PID_FILENAME = "CI AI COINd.pid";
+static const char* BITCOIN_PID_FILENAME = "CB AI COINd.pid";
 
 static fs::path GetPidFile()
 {
@@ -549,8 +549,8 @@ void SetupServerArgs()
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/CI AI COIN/CI AI COIN>";
-    const std::string URL_WEBSITE = "<https://CI AI COINcore.org>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/CB AI COIN/CB AI COIN>";
+    const std::string URL_WEBSITE = "<https://CB AI COINcore.org>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i").translated, 2009, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -730,7 +730,7 @@ static void ThreadImport(std::vector<fs::path> vImportFiles)
 }
 
 /** Sanity checks
- *  Ensure that CI AI COIN is running in a usable environment with all
+ *  Ensure that CB AI COIN is running in a usable environment with all
  *  necessary library support.
  */
 static bool InitSanityCheck()
@@ -1161,7 +1161,7 @@ bool AppInitParameterInteraction()
 
 static bool LockDataDirectory(bool probeOnly)
 {
-    // Make sure only a single CI AI COIN process is using the data directory.
+    // Make sure only a single CB AI COIN process is using the data directory.
     fs::path datadir = GetDataDir();
     if (!DirIsWritable(datadir)) {
         return InitError(strprintf(_("Cannot write to data directory '%s'; check permissions.").translated, datadir.string()));
@@ -1247,9 +1247,9 @@ bool AppInitMain(NodeContext& node)
     // Warn about relative -datadir path.
     if (gArgs.IsArgSet("-datadir") && !fs::path(gArgs.GetArg("-datadir", "")).is_absolute()) {
         LogPrintf("Warning: relative datadir option '%s' specified, which will be interpreted relative to the " /* Continued */
-                  "current working directory '%s'. This is fragile, because if CI AI COIN is started in the future "
+                  "current working directory '%s'. This is fragile, because if CB AI COIN is started in the future "
                   "from a different location, it will be unable to locate the current data files. There could "
-                  "also be data loss if CI AI COIN is started while in a temporary directory.\n",
+                  "also be data loss if CB AI COIN is started while in a temporary directory.\n",
             gArgs.GetArg("-datadir", ""), fs::current_path().string());
     }
 

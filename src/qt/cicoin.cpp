@@ -1,13 +1,13 @@
-// Copyright (c) 2011-2019 The CI AI COIN Core developers
+// Copyright (c) 2011-2019 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
-#include <qt/CI AI COIN.h>
-#include <qt/CI AI COINgui.h>
+#include <qt/CB AI COIN.h>
+#include <qt/CB AI COINgui.h>
 
 #include <chainparams.h>
 #include <qt/clientmodel.h>
@@ -107,11 +107,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. CI AI COIN_de.qm (shortcut "de" needs to be defined in CI AI COIN.qrc)
+    // Load e.g. CB AI COIN_de.qm (shortcut "de" needs to be defined in CB AI COIN.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. CI AI COIN_de_DE.qm (shortcut "de_DE" needs to be defined in CI AI COIN.qrc)
+    // Load e.g. CB AI COIN_de_DE.qm (shortcut "de_DE" needs to be defined in CB AI COIN.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -127,18 +127,18 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
     }
 }
 
-CI AI COINCore::CI AI COINCore(interfaces::Node& node) :
+CB AI COINCore::CB AI COINCore(interfaces::Node& node) :
     QObject(), m_node(node)
 {
 }
 
-void CI AI COINCore::handleRunawayException(const std::exception *e)
+void CB AI COINCore::handleRunawayException(const std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
     Q_EMIT runawayException(QString::fromStdString(m_node.getWarnings("gui")));
 }
 
-void CI AI COINCore::initialize()
+void CB AI COINCore::initialize()
 {
     try
     {
@@ -153,7 +153,7 @@ void CI AI COINCore::initialize()
     }
 }
 
-void CI AI COINCore::shutdown()
+void CB AI COINCore::shutdown()
 {
     try
     {
@@ -169,9 +169,9 @@ void CI AI COINCore::shutdown()
 }
 
 static int qt_argc = 1;
-static const char* qt_argv = "CI AI COIN-qt";
+static const char* qt_argv = "CB AI COIN-qt";
 
-CI AI COINApplication::CI AI COINApplication(interfaces::Node& node):
+CB AI COINApplication::CB AI COINApplication(interfaces::Node& node):
     QApplication(qt_argc, const_cast<char **>(&qt_argv)),
     coreThread(nullptr),
     m_node(node),
@@ -185,20 +185,20 @@ CI AI COINApplication::CI AI COINApplication(interfaces::Node& node):
     setQuitOnLastWindowClosed(false);
 }
 
-void CI AI COINApplication::setupPlatformStyle()
+void CB AI COINApplication::setupPlatformStyle()
 {
     // UI per-platform customization
-    // This must be done inside the CI AI COINApplication constructor, or after it, because
+    // This must be done inside the CB AI COINApplication constructor, or after it, because
     // PlatformStyle::instantiate requires a QApplication
     std::string platformName;
-    platformName = gArgs.GetArg("-uiplatform", CI AI COINGUI::DEFAULT_UIPLATFORM);
+    platformName = gArgs.GetArg("-uiplatform", CB AI COINGUI::DEFAULT_UIPLATFORM);
     platformStyle = PlatformStyle::instantiate(QString::fromStdString(platformName));
     if (!platformStyle) // Fall back to "other" if specified name not found
         platformStyle = PlatformStyle::instantiate("other");
     assert(platformStyle);
 }
 
-CI AI COINApplication::~CI AI COINApplication()
+CB AI COINApplication::~CB AI COINApplication()
 {
     if(coreThread)
     {
@@ -217,62 +217,62 @@ CI AI COINApplication::~CI AI COINApplication()
 }
 
 #ifdef ENABLE_WALLET
-void CI AI COINApplication::createPaymentServer()
+void CB AI COINApplication::createPaymentServer()
 {
     paymentServer = new PaymentServer(this);
 }
 #endif
 
-void CI AI COINApplication::createOptionsModel(bool resetSettings)
+void CB AI COINApplication::createOptionsModel(bool resetSettings)
 {
     optionsModel = new OptionsModel(m_node, nullptr, resetSettings);
 }
 
-void CI AI COINApplication::createWindow(const NetworkStyle *networkStyle)
+void CB AI COINApplication::createWindow(const NetworkStyle *networkStyle)
 {
-    window = new CI AI COINGUI(m_node, platformStyle, networkStyle, nullptr);
+    window = new CB AI COINGUI(m_node, platformStyle, networkStyle, nullptr);
     window->setStyleSheet("QMainWindow {background-color: #ffffff} QPushButton {background-color: rgb(10, 164, 227);color: #ffffff} QPushButton:hover {background-color: #0eb5f6;color: #ffffff} QPushButton#Yes {background-color: rgb(10, 164, 227);color: #ffffff} QPushButton#Yes:hover {background-color: #0eb5f6;color: #ffffff} QPushButton#No {background-color: rgb(10, 164, 227);color: #ffffff} QPushButton#No:hover {background-color: #0eb5f6;color: #ffffff}");
 
     pollShutdownTimer = new QTimer(window);
-    connect(pollShutdownTimer, &QTimer::timeout, window, &CI AI COINGUI::detectShutdown);
+    connect(pollShutdownTimer, &QTimer::timeout, window, &CB AI COINGUI::detectShutdown);
 }
 
-void CI AI COINApplication::createSplashScreen(const NetworkStyle *networkStyle)
+void CB AI COINApplication::createSplashScreen(const NetworkStyle *networkStyle)
 {
     SplashScreen *splash = new SplashScreen(m_node, nullptr, networkStyle);
     // We don't hold a direct pointer to the splash screen after creation, but the splash
     // screen will take care of deleting itself when finish() happens.
     splash->show();
-    connect(this, &CI AI COINApplication::splashFinished, splash, &SplashScreen::finish);
-    connect(this, &CI AI COINApplication::requestedShutdown, splash, &QWidget::close);
+    connect(this, &CB AI COINApplication::splashFinished, splash, &SplashScreen::finish);
+    connect(this, &CB AI COINApplication::requestedShutdown, splash, &QWidget::close);
 }
 
-bool CI AI COINApplication::baseInitialize()
+bool CB AI COINApplication::baseInitialize()
 {
     return m_node.baseInitialize();
 }
 
-void CI AI COINApplication::startThread()
+void CB AI COINApplication::startThread()
 {
     if(coreThread)
         return;
     coreThread = new QThread(this);
-    CI AI COINCore *executor = new CI AI COINCore(m_node);
+    CB AI COINCore *executor = new CB AI COINCore(m_node);
     executor->moveToThread(coreThread);
 
     /*  communication to and from thread */
-    connect(executor, &CI AI COINCore::initializeResult, this, &CI AI COINApplication::initializeResult);
-    connect(executor, &CI AI COINCore::shutdownResult, this, &CI AI COINApplication::shutdownResult);
-    connect(executor, &CI AI COINCore::runawayException, this, &CI AI COINApplication::handleRunawayException);
-    connect(this, &CI AI COINApplication::requestedInitialize, executor, &CI AI COINCore::initialize);
-    connect(this, &CI AI COINApplication::requestedShutdown, executor, &CI AI COINCore::shutdown);
+    connect(executor, &CB AI COINCore::initializeResult, this, &CB AI COINApplication::initializeResult);
+    connect(executor, &CB AI COINCore::shutdownResult, this, &CB AI COINApplication::shutdownResult);
+    connect(executor, &CB AI COINCore::runawayException, this, &CB AI COINApplication::handleRunawayException);
+    connect(this, &CB AI COINApplication::requestedInitialize, executor, &CB AI COINCore::initialize);
+    connect(this, &CB AI COINApplication::requestedShutdown, executor, &CB AI COINCore::shutdown);
     /*  make sure executor object is deleted in its own thread */
     connect(coreThread, &QThread::finished, executor, &QObject::deleteLater);
 
     coreThread->start();
 }
 
-void CI AI COINApplication::parameterSetup()
+void CB AI COINApplication::parameterSetup()
 {
     // Default printtoconsole to false for the GUI. GUI programs should not
     // print to the console unnecessarily.
@@ -282,18 +282,18 @@ void CI AI COINApplication::parameterSetup()
     m_node.initParameterInteraction();
 }
 
-void CI AI COINApplication::SetPrune(bool prune, bool force) {
+void CB AI COINApplication::SetPrune(bool prune, bool force) {
      optionsModel->SetPrune(prune, force);
 }
 
-void CI AI COINApplication::requestInitialize()
+void CB AI COINApplication::requestInitialize()
 {
     qDebug() << __func__ << ": Requesting initialize";
     startThread();
     Q_EMIT requestedInitialize();
 }
 
-void CI AI COINApplication::requestShutdown()
+void CB AI COINApplication::requestShutdown()
 {
     // Show a simple window indicating shutdown status
     // Do this first as some of the steps may take some time below,
@@ -321,7 +321,7 @@ void CI AI COINApplication::requestShutdown()
     Q_EMIT requestedShutdown();
 }
 
-void CI AI COINApplication::initializeResult(bool success)
+void CB AI COINApplication::initializeResult(bool success)
 {
     qDebug() << __func__ << ": Initialization result: " << success;
     // Set exit result.
@@ -355,10 +355,10 @@ void CI AI COINApplication::initializeResult(bool success)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // CI AI COIN: URIs or payment requests:
+        // CB AI COIN: URIs or payment requests:
         if (paymentServer) {
-            connect(paymentServer, &PaymentServer::receivedPaymentRequest, window, &CI AI COINGUI::handlePaymentRequest);
-            connect(window, &CI AI COINGUI::receivedURI, paymentServer, &PaymentServer::handleURIOrFile);
+            connect(paymentServer, &PaymentServer::receivedPaymentRequest, window, &CB AI COINGUI::handlePaymentRequest);
+            connect(window, &CB AI COINGUI::receivedURI, paymentServer, &PaymentServer::handleURIOrFile);
             connect(paymentServer, &PaymentServer::message, [this](const QString& title, const QString& message, unsigned int style) {
                 window->message(title, message, style);
             });
@@ -372,18 +372,18 @@ void CI AI COINApplication::initializeResult(bool success)
     }
 }
 
-void CI AI COINApplication::shutdownResult()
+void CB AI COINApplication::shutdownResult()
 {
     quit(); // Exit second main loop invocation after shutdown finished
 }
 
-void CI AI COINApplication::handleRunawayException(const QString &message)
+void CB AI COINApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(nullptr, "Runaway exception", CI AI COINGUI::tr("A fatal error occurred. CI AI COIN can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(nullptr, "Runaway exception", CB AI COINGUI::tr("A fatal error occurred. CB AI COIN can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
 }
 
-WId CI AI COINApplication::getMainWinId() const
+WId CB AI COINApplication::getMainWinId() const
 {
     if (!window)
         return 0;
@@ -398,7 +398,7 @@ static void SetupUIArgs()
     gArgs.AddArg("-min", "Start minimized", ArgsManager::ALLOW_ANY, OptionsCategory::GUI);
     gArgs.AddArg("-resetguisettings", "Reset all settings changed in the GUI", ArgsManager::ALLOW_ANY, OptionsCategory::GUI);
     gArgs.AddArg("-splash", strprintf("Show splash screen on startup (default: %u)", DEFAULT_SPLASHSCREEN), ArgsManager::ALLOW_ANY, OptionsCategory::GUI);
-    gArgs.AddArg("-uiplatform", strprintf("Select platform to customize UI for (one of windows, macosx, other; default: %s)", CI AI COINGUI::DEFAULT_UIPLATFORM), ArgsManager::ALLOW_ANY | ArgsManager::DEBUG_ONLY, OptionsCategory::GUI);
+    gArgs.AddArg("-uiplatform", strprintf("Select platform to customize UI for (one of windows, macosx, other; default: %s)", CB AI COINGUI::DEFAULT_UIPLATFORM), ArgsManager::ALLOW_ANY | ArgsManager::DEBUG_ONLY, OptionsCategory::GUI);
 }
 
 int GuiMain(int argc, char* argv[])
@@ -420,8 +420,8 @@ int GuiMain(int argc, char* argv[])
     // Do not refer to data directory yet, this can be overridden by Intro::pickDataDirectory
 
     /// 1. Basic Qt initialization (not dependent on parameters or configuration)
-    Q_INIT_RESOURCE(CI AI COIN);
-    Q_INIT_RESOURCE(CI AI COIN_locale);
+    Q_INIT_RESOURCE(CB AI COIN);
+    Q_INIT_RESOURCE(CB AI COIN_locale);
 
     // Generate high-dpi pixmaps
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
@@ -429,7 +429,7 @@ int GuiMain(int argc, char* argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
 
-    CI AI COINApplication app(*node);
+    CB AI COINApplication app(*node);
 
     // Register meta types used for QMetaObject::invokeMethod
     qRegisterMetaType< bool* >();
@@ -485,7 +485,7 @@ int GuiMain(int argc, char* argv[])
     // Gracefully exit if the user cancels
     if (!Intro::showIfNeeded(*node, did_show_intro, prune)) return EXIT_SUCCESS;
 
-    /// 6. Determine availability of data directory and parse CI AI COIN.conf
+    /// 6. Determine availability of data directory and parse CB AI COIN.conf
     /// - Do not call GetDataDir(true) before this step finishes
     if (!CheckDataDirOption()) {
         node->initError(strprintf("Specified data directory \"%s\" does not exist.\n", gArgs.GetArg("-datadir", "")));
@@ -537,7 +537,7 @@ int GuiMain(int argc, char* argv[])
         exit(EXIT_SUCCESS);
 
     // Start up the payment server early, too, so impatient users that click on
-    // CI AI COIN: links repeatedly have their payment requests routed to this process:
+    // CB AI COIN: links repeatedly have their payment requests routed to this process:
     if (WalletModel::isWalletEnabled()) {
         app.createPaymentServer();
     }

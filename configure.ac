@@ -8,18 +8,18 @@ define(_CLIENT_VERSION_RC, 0)
 define(_CLIENT_VERSION_IS_RELEASE, false)
 define(_COPYRIGHT_YEAR, 2019)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
-define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[CI AI COIN Core]])
-AC_INIT([CI AI COIN Core],m4_join([.], _CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MINOR, _CLIENT_VERSION_REVISION, m4_if(_CLIENT_VERSION_BUILD, [0], [], _CLIENT_VERSION_BUILD))m4_if(_CLIENT_VERSION_RC, [0], [], [rc]_CLIENT_VERSION_RC),[CI AI COIN],[https://CI AI COINcore.org/])
+define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[CB AI COIN Core]])
+AC_INIT([CB AI COIN Core],m4_join([.], _CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MINOR, _CLIENT_VERSION_REVISION, m4_if(_CLIENT_VERSION_BUILD, [0], [], _CLIENT_VERSION_BUILD))m4_if(_CLIENT_VERSION_RC, [0], [], [rc]_CLIENT_VERSION_RC),[CB AI COIN],[https://CB AI COINcore.org/])
 AC_CONFIG_SRCDIR([src/validation.cpp])
-AC_CONFIG_HEADERS([src/config/CI AI COIN-config.h])
+AC_CONFIG_HEADERS([src/config/CB AI COIN-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=CI AI COINd
-BITCOIN_GUI_NAME=CI AI COIN-qt
-BITCOIN_CLI_NAME=CI AI COIN-cli
-BITCOIN_TX_NAME=CI AI COIN-tx
-BITCOIN_WALLET_TOOL_NAME=CI AI COIN-wallet
+BITCOIN_DAEMON_NAME=CB AI COINd
+BITCOIN_GUI_NAME=CB AI COIN-qt
+BITCOIN_CLI_NAME=CB AI COIN-cli
+BITCOIN_TX_NAME=CB AI COIN-tx
+BITCOIN_WALLET_TOOL_NAME=CB AI COIN-wallet
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])
@@ -442,39 +442,39 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build CI AI COIN-cli CI AI COIN-tx CI AI COIN-wallet (default=yes)])],
-  [build_CI AI COIN_utils=$withval],
-  [build_CI AI COIN_utils=yes])
+  [build CB AI COIN-cli CB AI COIN-tx CB AI COIN-wallet (default=yes)])],
+  [build_CB AI COIN_utils=$withval],
+  [build_CB AI COIN_utils=yes])
 
 AC_ARG_ENABLE([util-cli],
   [AS_HELP_STRING([--enable-util-cli],
-  [build CI AI COIN-cli])],
-  [build_CI AI COIN_cli=$enableval],
-  [build_CI AI COIN_cli=$build_CI AI COIN_utils])
+  [build CB AI COIN-cli])],
+  [build_CB AI COIN_cli=$enableval],
+  [build_CB AI COIN_cli=$build_CB AI COIN_utils])
 
 AC_ARG_ENABLE([util-tx],
   [AS_HELP_STRING([--enable-util-tx],
-  [build CI AI COIN-tx])],
-  [build_CI AI COIN_tx=$enableval],
-  [build_CI AI COIN_tx=$build_CI AI COIN_utils])
+  [build CB AI COIN-tx])],
+  [build_CB AI COIN_tx=$enableval],
+  [build_CB AI COIN_tx=$build_CB AI COIN_utils])
 
 AC_ARG_ENABLE([util-wallet],
   [AS_HELP_STRING([--enable-util-wallet],
-  [build CI AI COIN-wallet])],
-  [build_CI AI COIN_wallet=$enableval],
-  [build_CI AI COIN_wallet=$build_CI AI COIN_utils])
+  [build CB AI COIN-wallet])],
+  [build_CB AI COIN_wallet=$enableval],
+  [build_CB AI COIN_wallet=$build_CB AI COIN_utils])
 
 AC_ARG_WITH([libs],
   [AS_HELP_STRING([--with-libs],
   [build libraries (default=yes)])],
-  [build_CI AI COIN_libs=$withval],
-  [build_CI AI COIN_libs=yes])
+  [build_CB AI COIN_libs=$withval],
+  [build_CB AI COIN_libs=yes])
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
-  [build CI AI COINd daemon (default=yes)])],
-  [build_CI AI COINd=$withval],
-  [build_CI AI COINd=yes])
+  [build CB AI COINd daemon (default=yes)])],
+  [build_CB AI COINd=$withval],
+  [build_CB AI COINd=yes])
 
 use_pkgconfig=yes
 case $host in
@@ -675,7 +675,7 @@ AC_C_BIGENDIAN
 dnl Check for pthread compile/link requirements
 AX_PTHREAD
 
-# The following macro will add the necessary defines to CI AI COIN-config.h, but
+# The following macro will add the necessary defines to CB AI COIN-config.h, but
 # they also need to be passed down to any subprojects. Pull the results out of
 # the cache and add them to CPPFLAGS.
 AC_SYS_LARGEFILE
@@ -1004,15 +1004,15 @@ AC_SUBST(LIBMEMENV)
 dnl enable-fuzz should disable all other targets
 if test "x$enable_fuzz" = "xyes"; then
   AC_MSG_WARN(enable-fuzz will disable all other targets)
-  build_CI AI COIN_utils=no
-  build_CI AI COIN_cli=no
-  build_CI AI COIN_tx=no
-  build_CI AI COIN_wallet=no
-  build_CI AI COINd=no
-  build_CI AI COIN_libs=no
-  CI AI COIN_enable_qt=no
-  CI AI COIN_enable_qt_test=no
-  CI AI COIN_enable_qt_dbus=no
+  build_CB AI COIN_utils=no
+  build_CB AI COIN_cli=no
+  build_CB AI COIN_tx=no
+  build_CB AI COIN_wallet=no
+  build_CB AI COINd=no
+  build_CB AI COIN_libs=no
+  CB AI COIN_enable_qt=no
+  CB AI COIN_enable_qt_test=no
+  CB AI COIN_enable_qt_dbus=no
   enable_wallet=no
   use_bench=no
   use_upnp=no
@@ -1020,7 +1020,7 @@ if test "x$enable_fuzz" = "xyes"; then
 else
   BITCOIN_QT_INIT
 
-  dnl sets $CI AI COIN_enable_qt, $CI AI COIN_enable_qt_test, $CI AI COIN_enable_qt_dbus
+  dnl sets $CB AI COIN_enable_qt, $CB AI COIN_enable_qt_test, $CB AI COIN_enable_qt_dbus
   BITCOIN_QT_CONFIGURE([$use_pkgconfig])
 fi
 
@@ -1058,7 +1058,7 @@ if test x$have_miniupnpc != xno; then
 fi
 fi
 
-if test x$build_CI AI COIN_wallet$build_CI AI COIN_cli$build_CI AI COIN_tx$build_CI AI COINd$CI AI COIN_enable_qt$use_tests$use_bench = xnonononononono; then
+if test x$build_CB AI COIN_wallet$build_CB AI COIN_cli$build_CB AI COIN_tx$build_CB AI COINd$CB AI COIN_enable_qt$use_tests$use_bench = xnonononononono; then
     use_boost=no
 else
     use_boost=yes
@@ -1072,7 +1072,7 @@ define(MINIMUM_REQUIRED_BOOST, 1.47.0)
 dnl Check for boost libs
 AX_BOOST_BASE([MINIMUM_REQUIRED_BOOST])
 if test x$want_boost = xno; then
-    AC_MSG_ERROR([[only libCI AI COINconsensus can be built without boost]])
+    AC_MSG_ERROR([[only libCB AI COINconsensus can be built without boost]])
 fi
 AX_BOOST_SYSTEM
 AX_BOOST_FILESYSTEM
@@ -1244,7 +1244,7 @@ if test x$use_pkgconfig = xyes; then
       if test x$use_qr != xno; then
         BITCOIN_QT_CHECK([PKG_CHECK_MODULES([QR], [libqrencode], [have_qrencode=yes], [have_qrencode=no])])
       fi
-      if test x$build_CI AI COIN_cli$build_CI AI COINd$CI AI COIN_enable_qt$use_tests != xnononono; then
+      if test x$build_CB AI COIN_cli$build_CB AI COINd$CB AI COIN_enable_qt$use_tests != xnononono; then
         PKG_CHECK_MODULES([EVENT], [libevent],, [AC_MSG_ERROR(libevent not found.)])
         if test x$TARGET_OS != xwindows; then
           PKG_CHECK_MODULES([EVENT_PTHREADS], [libevent_pthreads],, [AC_MSG_ERROR(libevent_pthreads not found.)])
@@ -1266,7 +1266,7 @@ else
   AC_CHECK_HEADER([openssl/crypto.h],,AC_MSG_ERROR(libcrypto headers missing))
   AC_CHECK_LIB([crypto],      [main],CRYPTO_LIBS=-lcrypto, AC_MSG_ERROR(libcrypto missing))
 
-  if test x$build_CI AI COIN_cli$build_CI AI COINd$CI AI COIN_enable_qt$use_tests != xnononono; then
+  if test x$build_CB AI COIN_cli$build_CB AI COINd$CB AI COIN_enable_qt$use_tests != xnononono; then
     AC_CHECK_HEADER([event2/event.h],, AC_MSG_ERROR(libevent headers missing),)
     AC_CHECK_LIB([event],[main],EVENT_LIBS=-levent,AC_MSG_ERROR(libevent missing))
     if test x$TARGET_OS != xwindows; then
@@ -1323,7 +1323,7 @@ dnl univalue check
 
 need_bundled_univalue=yes
 
-if test x$build_CI AI COIN_wallet$build_CI AI COIN_cli$build_CI AI COIN_tx$build_CI AI COINd$CI AI COIN_enable_qt$use_tests$use_bench = xnonononononono; then
+if test x$build_CB AI COIN_wallet$build_CB AI COIN_cli$build_CB AI COIN_tx$build_CB AI COINd$CB AI COIN_enable_qt$use_tests$use_bench = xnonononononono; then
   need_bundled_univalue=no
 else
 
@@ -1367,29 +1367,29 @@ AM_CONDITIONAL([EMBEDDED_UNIVALUE],[test x$need_bundled_univalue = xyes])
 AC_SUBST(UNIVALUE_CFLAGS)
 AC_SUBST(UNIVALUE_LIBS)
 
-AC_MSG_CHECKING([whether to build CI AI COINd])
-AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_CI AI COINd = xyes])
-AC_MSG_RESULT($build_CI AI COINd)
+AC_MSG_CHECKING([whether to build CB AI COINd])
+AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_CB AI COINd = xyes])
+AC_MSG_RESULT($build_CB AI COINd)
 
-AC_MSG_CHECKING([whether to build CI AI COIN-cli])
-AM_CONDITIONAL([BUILD_BITCOIN_CLI], [test x$build_CI AI COIN_cli = xyes])
-AC_MSG_RESULT($build_CI AI COIN_cli)
+AC_MSG_CHECKING([whether to build CB AI COIN-cli])
+AM_CONDITIONAL([BUILD_BITCOIN_CLI], [test x$build_CB AI COIN_cli = xyes])
+AC_MSG_RESULT($build_CB AI COIN_cli)
 
-AC_MSG_CHECKING([whether to build CI AI COIN-tx])
-AM_CONDITIONAL([BUILD_BITCOIN_TX], [test x$build_CI AI COIN_tx = xyes])
-AC_MSG_RESULT($build_CI AI COIN_tx)
+AC_MSG_CHECKING([whether to build CB AI COIN-tx])
+AM_CONDITIONAL([BUILD_BITCOIN_TX], [test x$build_CB AI COIN_tx = xyes])
+AC_MSG_RESULT($build_CB AI COIN_tx)
 
-AC_MSG_CHECKING([whether to build CI AI COIN-wallet])
-AM_CONDITIONAL([BUILD_BITCOIN_WALLET], [test x$build_CI AI COIN_wallet = xyes])
-AC_MSG_RESULT($build_CI AI COIN_wallet)
+AC_MSG_CHECKING([whether to build CB AI COIN-wallet])
+AM_CONDITIONAL([BUILD_BITCOIN_WALLET], [test x$build_CB AI COIN_wallet = xyes])
+AC_MSG_RESULT($build_CB AI COIN_wallet)
 
 AC_MSG_CHECKING([whether to build libraries])
-AM_CONDITIONAL([BUILD_BITCOIN_LIBS], [test x$build_CI AI COIN_libs = xyes])
-if test x$build_CI AI COIN_libs = xyes; then
+AM_CONDITIONAL([BUILD_BITCOIN_LIBS], [test x$build_CB AI COIN_libs = xyes])
+if test x$build_CB AI COIN_libs = xyes; then
   AC_DEFINE(HAVE_CONSENSUS_LIB, 1, [Define this symbol if the consensus lib has been built])
-  AC_CONFIG_FILES([libCI AI COINconsensus.pc:libCI AI COINconsensus.pc.in])
+  AC_CONFIG_FILES([libCB AI COINconsensus.pc:libCB AI COINconsensus.pc.in])
 fi
-AC_MSG_RESULT($build_CI AI COIN_libs)
+AC_MSG_RESULT($build_CB AI COIN_libs)
 
 AC_LANG_POP
 
@@ -1452,13 +1452,13 @@ fi
 
 dnl these are only used when qt is enabled
 BUILD_TEST_QT=""
-if test x$CI AI COIN_enable_qt != xno; then
+if test x$CB AI COIN_enable_qt != xno; then
   dnl enable dbus support
   AC_MSG_CHECKING([whether to build GUI with support for D-Bus])
-  if test x$CI AI COIN_enable_qt_dbus != xno; then
+  if test x$CB AI COIN_enable_qt_dbus != xno; then
     AC_DEFINE([USE_DBUS],[1],[Define if dbus support should be compiled in])
   fi
-  AC_MSG_RESULT($CI AI COIN_enable_qt_dbus)
+  AC_MSG_RESULT($CB AI COIN_enable_qt_dbus)
 
   dnl enable qr support
   AC_MSG_CHECKING([whether to build GUI with support for QR codes])
@@ -1481,8 +1481,8 @@ if test x$CI AI COIN_enable_qt != xno; then
     AC_MSG_WARN("xgettext is required to update qt translations")
   fi
 
-  AC_MSG_CHECKING([whether to build test_CI AI COIN-qt])
-  if test x$use_gui_tests$CI AI COIN_enable_qt_test = xyesyes; then
+  AC_MSG_CHECKING([whether to build test_CB AI COIN-qt])
+  if test x$use_gui_tests$CB AI COIN_enable_qt_test = xyesyes; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="yes"
   else
@@ -1492,7 +1492,7 @@ fi
 
 AM_CONDITIONAL([ENABLE_ZMQ], [test "x$use_zmq" = "xyes"])
 
-AC_MSG_CHECKING([whether to build test_CI AI COIN])
+AC_MSG_CHECKING([whether to build test_CB AI COIN])
 if test x$use_tests = xyes; then
   AC_MSG_RESULT([yes])
   BUILD_TEST="yes"
@@ -1508,7 +1508,7 @@ else
   AC_MSG_RESULT([no])
 fi
 
-if test x$build_CI AI COIN_wallet$build_CI AI COIN_cli$build_CI AI COIN_tx$build_CI AI COIN_libs$build_CI AI COINd$CI AI COIN_enable_qt$use_bench$use_tests = xnononononononono; then
+if test x$build_CB AI COIN_wallet$build_CB AI COIN_cli$build_CB AI COIN_tx$build_CB AI COIN_libs$build_CB AI COINd$CB AI COIN_enable_qt$use_bench$use_tests = xnononononononono; then
   AC_MSG_ERROR([No targets! Please specify at least one of: --with-utils --with-libs --with-daemon --with-gui --enable-bench or --enable-tests])
 fi
 
@@ -1518,7 +1518,7 @@ AM_CONDITIONAL([TARGET_WINDOWS], [test x$TARGET_OS = xwindows])
 AM_CONDITIONAL([ENABLE_WALLET],[test x$enable_wallet = xyes])
 AM_CONDITIONAL([ENABLE_TESTS],[test x$BUILD_TEST = xyes])
 AM_CONDITIONAL([ENABLE_FUZZ],[test x$enable_fuzz = xyes])
-AM_CONDITIONAL([ENABLE_QT],[test x$CI AI COIN_enable_qt = xyes])
+AM_CONDITIONAL([ENABLE_QT],[test x$CB AI COIN_enable_qt = xyes])
 AM_CONDITIONAL([ENABLE_QT_TESTS],[test x$BUILD_TEST_QT = xyes])
 AM_CONDITIONAL([ENABLE_BENCH],[test x$use_bench = xyes])
 AM_CONDITIONAL([USE_QRCODE], [test x$use_qr = xyes])
@@ -1594,7 +1594,7 @@ AC_CONFIG_FILES([contrib/devtools/split-debug.sh],[chmod +x contrib/devtools/spl
 AM_COND_IF([HAVE_DOXYGEN], [AC_CONFIG_FILES([doc/Doxyfile])])
 AC_CONFIG_LINKS([contrib/filter-lcov.py:contrib/filter-lcov.py])
 AC_CONFIG_LINKS([test/functional/test_runner.py:test/functional/test_runner.py])
-AC_CONFIG_LINKS([test/util/CI AI COIN-util-test.py:test/util/CI AI COIN-util-test.py])
+AC_CONFIG_LINKS([test/util/CB AI COIN-util-test.py:test/util/CB AI COIN-util-test.py])
 AC_CONFIG_LINKS([test/util/rpcauth-test.py:test/util/rpcauth-test.py])
 
 dnl boost's m4 checks do something really nasty: they export these vars. As a
@@ -1640,8 +1640,8 @@ esac
 echo
 echo "Options used to compile and link:"
 echo "  with wallet   = $enable_wallet"
-echo "  with gui / qt = $CI AI COIN_enable_qt"
-if test x$CI AI COIN_enable_qt != xno; then
+echo "  with gui / qt = $CB AI COIN_enable_qt"
+if test x$CB AI COIN_enable_qt != xno; then
     echo "    with qr     = $use_qr"
 fi
 echo "  with zmq      = $use_zmq"

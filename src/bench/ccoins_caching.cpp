@@ -1,4 +1,4 @@
-// Copyright (c) 2016-2018 The CI AI COIN Core developers
+// Copyright (c) 2016-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -52,7 +52,7 @@ SetupDummyInputs(FillableSigningProvider& keystoreRet, CCoinsViewCache& coinsRet
 // many times micro-benchmarks of the database showed completely different
 // characteristics than e.g. reindex timings. But that's not a requirement of
 // every benchmark."
-// (https://github.com/CI AI COIN/CI AI COIN/issues/7883#issuecomment-224807484)
+// (https://github.com/CB AI COIN/CB AI COIN/issues/7883#issuecomment-224807484)
 static void CCoinsCaching(benchmark::State& state)
 {
     FillableSigningProvider keystore;

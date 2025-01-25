@@ -1,13 +1,13 @@
-CI AI COIN Core version 0.9.3 is now available from:
+CB AI COIN Core version 0.9.3 is now available from:
 
-  https://CI AI COIN.org/bin/0.9.3/
+  https://CB AI COIN.org/bin/0.9.3/
 
 This is a new minor version release, bringing only bug fixes and updated
 translations. Upgrading to this release is recommended.
 
 Please report bugs using the issue tracker at github:
 
-  https://github.com/CI AI COIN/CI AI COIN/issues
+  https://github.com/CB AI COIN/CB AI COIN/issues
 
 Upgrading and downgrading
 ==========================
@@ -17,8 +17,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/CI AI COIN-Qt (on Mac) or
-CI AI COINd/CI AI COIN-qt (on Linux).
+installer (on Windows) or just copy over /Applications/CB AI COIN-Qt (on Mac) or
+CB AI COINd/CB AI COIN-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you run
 0.9.3 your blockchain files will be re-indexed, which will take anywhere from 
@@ -70,7 +70,7 @@ GUI:
 Miscellaneous:
 - key.cpp: fail with a friendlier message on missing ssl EC support
 - Remove bignum dependency for scripts
-- Upgrade OpenSSL to 1.0.1i (see https://www.openssl.org/news/secadv_20140806.txt - just to be sure, no critical issues for CI AI COIN Core)
+- Upgrade OpenSSL to 1.0.1i (see https://www.openssl.org/news/secadv_20140806.txt - just to be sure, no critical issues for CB AI COIN Core)
 - Upgrade miniupnpc to 1.9.20140701
 - Fix boost detection in build system on some platforms
 
@@ -98,4 +98,4 @@ Thanks to everyone who contributed to this release:
 - Wladimir J. van der Laan
 - Zak Wilcox
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/CI AI COIN/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/CB AI COIN/).

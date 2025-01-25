@@ -23,10 +23,10 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The CI AI COIN Core developers"
+#define COPYRIGHT_HOLDERS_FINAL "The CB AI COIN Core developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "CI AI COIN Core"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "CB AI COIN Core"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2019
@@ -336,19 +336,19 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://github.com/CI AI COIN/CI AI COIN/issues"
+#define PACKAGE_BUGREPORT "https://github.com/CB AI COIN/CB AI COIN/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "CI AI COIN Core"
+#define PACKAGE_NAME "CB AI COIN Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "CI AI COIN Core 0.19.99"
+#define PACKAGE_STRING "CB AI COIN Core 0.19.99"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "CI AI COIN"
+#define PACKAGE_TARNAME "CB AI COIN"
 
 /* Define to the home page for this package. */
-#define PACKAGE_URL "https://CI AI COINcore.org/"
+#define PACKAGE_URL "https://CB AI COINcore.org/"
 
 /* Define to the version of this package. */
 #define PACKAGE_VERSION "0.19.99"

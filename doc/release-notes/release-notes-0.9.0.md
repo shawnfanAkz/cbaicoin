@@ -1,27 +1,27 @@
-CI AI COIN Core version 0.9.0 is now available from:
+CB AI COIN Core version 0.9.0 is now available from:
 
-  https://CI AI COIN.org/bin/0.9.0/
+  https://CB AI COIN.org/bin/0.9.0/
 
 This is a new major version release, bringing both new features and
 bug fixes.
 
 Please report bugs using the issue tracker at github:
 
-  https://github.com/CI AI COIN/CI AI COIN/issues
+  https://github.com/CB AI COIN/CB AI COIN/issues
 
 How to Upgrade
 --------------
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), uninstall all
-earlier versions of CI AI COIN, then run the installer (on Windows) or just copy
-over /Applications/CI AI COIN-Qt (on Mac) or CI AI COINd/CI AI COIN-qt (on Linux).
+earlier versions of CB AI COIN, then run the installer (on Windows) or just copy
+over /Applications/CB AI COIN-Qt (on Mac) or CB AI COINd/CB AI COIN-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you run
 0.9.0 your blockchain files will be re-indexed, which will take anywhere from 
 30 minutes to several hours, depending on the speed of your machine.
 
-On Windows, do not forget to uninstall all earlier versions of the CI AI COIN
+On Windows, do not forget to uninstall all earlier versions of the CB AI COIN
 client first, especially if you are switching to the 64-bit version.
 
 Windows 64-bit installer
@@ -59,11 +59,11 @@ Also, the first time you run a 0.8.x release on a 0.9 wallet it will rescan
 the blockchain for missing spent coins, which will take a long time (tens
 of minutes on a typical machine).
 
-Rebranding to CI AI COIN Core
+Rebranding to CB AI COIN Core
 ---------------------------
 
-To reduce confusion between CI AI COIN-the-network and CI AI COIN-the-software we
-have renamed the reference client to CI AI COIN Core.
+To reduce confusion between CB AI COIN-the-network and CB AI COIN-the-software we
+have renamed the reference client to CB AI COIN Core.
 
 
 OP_RETURN and data in the block chain
@@ -74,7 +74,7 @@ blockchain.  This change is not an endorsement of storing data in the
 blockchain.  The OP_RETURN change creates a provably-prunable output,
 to avoid data storage schemes -- some of which were already deployed --
 that were storing arbitrary data such as images as forever-unspendable
-TX outputs, bloating CI AI COIN's UTXO database.
+TX outputs, bloating CB AI COIN's UTXO database.
 
 Storing arbitrary data in the blockchain is still a bad idea; it is less
 costly and far more efficient to store non-currency data elsewhere.
@@ -85,20 +85,20 @@ Autotools build system
 For 0.9.0 we switched to an autotools-based build system instead of individual
 (q)makefiles.
 
-Using the standard "./autogen.sh; ./configure; make" to build CI AI COIN-Qt and
-CI AI COINd makes it easier for experienced open source developers to contribute 
+Using the standard "./autogen.sh; ./configure; make" to build CB AI COIN-Qt and
+CB AI COINd makes it easier for experienced open source developers to contribute 
 to the project.
 
 Be sure to check doc/build-*.md for your platform before building from source.
 
-CI AI COIN-cli
+CB AI COIN-cli
 -------------
 
-Another change in the 0.9 release is moving away from the CI AI COINd executable
+Another change in the 0.9 release is moving away from the CB AI COINd executable
 functioning both as a server and as a RPC client. The RPC client functionality
-("tell the running CI AI COIN daemon to do THIS") was split into a separate
-executable, 'CI AI COIN-cli'. The RPC client code will eventually be removed from
-CI AI COINd, but will be kept for backwards compatibility for a release or two.
+("tell the running CB AI COIN daemon to do THIS") was split into a separate
+executable, 'CB AI COIN-cli'. The RPC client code will eventually be removed from
+CB AI COINd, but will be kept for backwards compatibility for a release or two.
 
 `walletpassphrase` RPC
 -----------------------
@@ -197,13 +197,13 @@ Command-line options:
 - New option: -nospendzeroconfchange to never spend unconfirmed change outputs
 - New option: -zapwallettxes to rebuild the wallet's transaction information
 - Rename option '-tor' to '-onion' to better reflect what it does
-- Add '-disablewallet' mode to let CI AI COINd run entirely without wallet (when
+- Add '-disablewallet' mode to let CB AI COINd run entirely without wallet (when
   built with wallet)
 - Update default '-rpcsslciphers' to include TLSv1.2
 - make '-logtimestamps' default on and rework help-message
 - RPC client option: '-rpcwait', to wait for server start
 - Remove '-logtodebugger'
-- Allow `-noserver` with CI AI COINd
+- Allow `-noserver` with CB AI COINd
 
 Block-chain handling and storage:
 
@@ -254,7 +254,7 @@ Protocol and network:
 - Improve logging of failed connections
 - Bump protocol version to 70002
 - Add some additional logging to give extra network insight
-- Added new DNS seed from CI AI COINstats.com
+- Added new DNS seed from CB AI COINstats.com
 
 Validation:
 
@@ -295,18 +295,18 @@ GUI:
 - Add Coin Control Features
 - Improve receive coins workflow: make the 'Receive' tab into a form to request
   payments, and move historical address list functionality to File menu.
-- Rebrand to `CI AI COIN Core`
+- Rebrand to `CB AI COIN Core`
 - Move initialization/shutdown to a thread. This prevents "Not responding"
   messages during startup. Also show a window during shutdown.
 - Don't regenerate autostart link on every client startup
-- Show and store message of normal CI AI COIN:URI
+- Show and store message of normal CB AI COIN:URI
 - Fix richtext detection hang issue on very old Qt versions
 - OS X: Make use of the 10.8+ user notification center to display Growl-like 
   notifications
 - OS X: Added NSHighResolutionCapable flag to Info.plist for better font
   rendering on Retina displays.
-- OS X: Fix CI AI COIN-qt startup crash when clicking dock icon
-- Linux: Fix Gnome CI AI COIN: URI handler
+- OS X: Fix CB AI COIN-qt startup crash when clicking dock icon
+- Linux: Fix Gnome CB AI COIN: URI handler
 
 Miscellaneous:
 
@@ -314,7 +314,7 @@ Miscellaneous:
 - Add '-regtest' mode, similar to testnet but private with instant block
   generation with 'setgenerate' RPC.
 - Add 'linearize.py' script to contrib, for creating bootstrap.dat
-- Add separate CI AI COIN-cli client
+- Add separate CB AI COIN-cli client
 
 Credits
 --------

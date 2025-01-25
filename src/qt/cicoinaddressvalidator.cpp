@@ -1,8 +1,8 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <qt/CI AI COINaddressvalidator.h>
+#include <qt/CB AI COINaddressvalidator.h>
 
 #include <key_io.h>
 
@@ -15,12 +15,12 @@
   - All lower-case letters except for 'l'
 */
 
-CI AI COINAddressEntryValidator::CI AI COINAddressEntryValidator(QObject *parent) :
+CB AI COINAddressEntryValidator::CB AI COINAddressEntryValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State CI AI COINAddressEntryValidator::validate(QString &input, int &pos) const
+QValidator::State CB AI COINAddressEntryValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
 
@@ -80,15 +80,15 @@ QValidator::State CI AI COINAddressEntryValidator::validate(QString &input, int 
     return state;
 }
 
-CI AI COINAddressCheckValidator::CI AI COINAddressCheckValidator(QObject *parent) :
+CB AI COINAddressCheckValidator::CB AI COINAddressCheckValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State CI AI COINAddressCheckValidator::validate(QString &input, int &pos) const
+QValidator::State CB AI COINAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
-    // Validate the passed CI AI COIN address
+    // Validate the passed CB AI COIN address
     if (IsValidDestinationString(input.toStdString())) {
         return QValidator::Acceptable;
     }

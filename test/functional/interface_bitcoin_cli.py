@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2019 The CI AI COIN Core developers
+# Copyright (c) 2017-2019 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test CI AI COIN-cli"""
-from test_framework.test_framework import CI AI COINTestFramework
+"""Test CB AI COIN-cli"""
+from test_framework.test_framework import CB AI COINTestFramework
 from test_framework.util import assert_equal, assert_raises_process_error, get_auth_cookie
 
-class TestCI AI COINCli(CI AI COINTestFramework):
+class TestCB AI COINCli(CB AI COINTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True
@@ -18,13 +18,13 @@ class TestCI AI COINCli(CI AI COINTestFramework):
         cli_response = self.nodes[0].cli("-version").send_cli()
         assert "{} RPC client version".format(self.config['environment']['PACKAGE_NAME']) in cli_response
 
-        self.log.info("Compare responses from getwalletinfo RPC and `CI AI COIN-cli getwalletinfo`")
+        self.log.info("Compare responses from getwalletinfo RPC and `CB AI COIN-cli getwalletinfo`")
         if self.is_wallet_compiled():
             cli_response = self.nodes[0].cli.getwalletinfo()
             rpc_response = self.nodes[0].getwalletinfo()
             assert_equal(cli_response, rpc_response)
 
-        self.log.info("Compare responses from getblockchaininfo RPC and `CI AI COIN-cli getblockchaininfo`")
+        self.log.info("Compare responses from getblockchaininfo RPC and `CB AI COIN-cli getblockchaininfo`")
         cli_response = self.nodes[0].cli.getblockchaininfo()
         rpc_response = self.nodes[0].getblockchaininfo()
         assert_equal(cli_response, rpc_response)
@@ -48,7 +48,7 @@ class TestCI AI COINCli(CI AI COINTestFramework):
         self.log.info("Make sure that -getinfo with arguments fails")
         assert_raises_process_error(1, "-getinfo takes no arguments", self.nodes[0].cli('-getinfo').help)
 
-        self.log.info("Compare responses from `CI AI COIN-cli -getinfo` and the RPCs data is retrieved from.")
+        self.log.info("Compare responses from `CB AI COIN-cli -getinfo` and the RPCs data is retrieved from.")
         cli_get_info = self.nodes[0].cli('-getinfo').send_cli()
         if self.is_wallet_compiled():
             wallet_info = self.nodes[0].getwalletinfo()
@@ -74,4 +74,4 @@ class TestCI AI COINCli(CI AI COINTestFramework):
 
 
 if __name__ == '__main__':
-    TestCI AI COINCli().main()
+    TestCB AI COINCli().main()

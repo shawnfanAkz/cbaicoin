@@ -867,7 +867,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
                   </widget>
                  </item>
                  <item>
-                  <widget class="CI AI COINAmountField" name="customFee"/>
+                  <widget class="CB AI COINAmountField" name="customFee"/>
                  </item>
                  <item>
                   <spacer name="horizontalSpacer_6">
@@ -892,7 +892,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
                     <bool>true</bool>
                    </property>
                    <property name="toolTip">
-                    <string>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for CI AI COIN transactions than the network can process.</string>
+                    <string>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for CB AI COIN transactions than the network can process.</string>
                    </property>
                    <property name="text">
                     <string>A too low fee might result in a never confirming transaction (read the tooltip)</string>
@@ -1132,7 +1132,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <string>S&amp;end</string>
        </property>
        <property name="icon">
-        <iconset resource="../CI AI COIN.qrc">
+        <iconset resource="../CB AI COIN.qrc">
          <normaloff>:/icons/send</normaloff>:/icons/send</iconset>
        </property>
        <property name="autoDefault">
@@ -1161,7 +1161,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <string>Clear &amp;All</string>
        </property>
        <property name="icon">
-        <iconset resource="../CI AI COIN.qrc">
+        <iconset resource="../CB AI COIN.qrc">
          <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
        </property>
        <property name="autoDefault">
@@ -1181,7 +1181,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <string>Add &amp;Recipient</string>
        </property>
        <property name="icon">
-        <iconset resource="../CI AI COIN.qrc">
+        <iconset resource="../CB AI COIN.qrc">
          <normaloff>:/icons/add</normaloff>:/icons/add</iconset>
        </property>
        <property name="autoDefault">
@@ -1252,14 +1252,14 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
    <header>qt/qvalidatedlineedit.h</header>
   </customwidget>
   <customwidget>
-   <class>CI AI COINAmountField</class>
+   <class>CB AI COINAmountField</class>
    <extends>QLineEdit</extends>
-   <header>qt/CI AI COINamountfield.h</header>
+   <header>qt/CB AI COINamountfield.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../CI AI COIN.qrc"/>
+  <include location="../CB AI COIN.qrc"/>
  </resources>
  <connections/>
  <buttongroups>

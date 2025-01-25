@@ -1,13 +1,13 @@
-CI AI COIN Core version 0.10.1 is now available from:
+CB AI COIN Core version 0.10.1 is now available from:
 
-  <https://CI AI COIN.org/bin/CI AI COIN-core-0.10.1/>
+  <https://CB AI COIN.org/bin/CB AI COIN-core-0.10.1/>
 
 This is a new minor version release, bringing bug fixes and translation 
 updates. It is recommended to upgrade to this version.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/CI AI COIN/CI AI COIN/issues>
+  <https://github.com/CB AI COIN/CB AI COIN/issues>
 
 Upgrading and downgrading
 =========================
@@ -17,15 +17,15 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/CI AI COIN-Qt (on Mac) or
-CI AI COINd/CI AI COIN-qt (on Linux).
+installer (on Windows) or just copy over /Applications/CB AI COIN-Qt (on Mac) or
+CB AI COINd/CB AI COIN-qt (on Linux).
 
 Downgrade warning
 ------------------
 
 Because release 0.10.0 and later makes use of headers-first synchronization and
 parallel block download (see further), the block files and databases are not
-backwards-compatible with pre-0.10 versions of CI AI COIN Core or other software:
+backwards-compatible with pre-0.10 versions of CB AI COIN Core or other software:
 
 * Blocks will be stored on disk out of order (in the order they are
 received, really), which makes it incompatible with some tools or
@@ -48,7 +48,7 @@ Notable changes
 
 This is a minor release and hence there are no notable changes.
 For the notable changes in 0.10, refer to the release notes for the
-0.10.0 release at https://github.com/CI AI COIN/CI AI COIN/blob/v0.10.0/doc/release-notes.md
+0.10.0 release at https://github.com/CB AI COIN/CB AI COIN/blob/v0.10.0/doc/release-notes.md
 
 0.10.1 Change log
 =================
@@ -140,4 +140,4 @@ And all those who contributed additional code review and/or security research:
 - Sergio Demian Lerner
 - Sharon Goldberg
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/CI AI COIN/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/CB AI COIN/).

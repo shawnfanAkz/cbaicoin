@@ -64,7 +64,7 @@
     </message>
 </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
         <source>E&amp;xit</source>
         <translation>Buda</translation>
@@ -155,8 +155,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN</translation>
     </message>
     </context>
 <context>
@@ -187,8 +187,8 @@
         <translation>Marii </translation>
     </message>
     <message>
-        <source>Enter a CI AI COIN address (e.g. %1)</source>
-        <translation>Nyora kero ye CI AI COIN (sekuti %1)</translation>
+        <source>Enter a CB AI COIN address (e.g. %1)</source>
+        <translation>Nyora kero ye CB AI COIN (sekuti %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -344,6 +344,6 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     </context>
 </TS>

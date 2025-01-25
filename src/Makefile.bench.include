@@ -1,18 +1,18 @@
-# Copyright (c) 2015-2016 The CI AI COIN Core developers
+# Copyright (c) 2015-2016 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-bin_PROGRAMS += bench/bench_CI AI COIN
+bin_PROGRAMS += bench/bench_CB AI COIN
 BENCH_SRCDIR = bench
-BENCH_BINARY = bench/bench_CI AI COIN$(EXEEXT)
+BENCH_BINARY = bench/bench_CB AI COIN$(EXEEXT)
 
 RAW_BENCH_FILES = \
   bench/data/block413567.raw
 GENERATED_BENCH_FILES = $(RAW_BENCH_FILES:.raw=.raw.h)
 
-bench_bench_CI AI COIN_SOURCES = \
+bench_bench_CB AI COIN_SOURCES = \
   $(RAW_BENCH_FILES) \
-  bench/bench_CI AI COIN.cpp \
+  bench/bench_CB AI COIN.cpp \
   bench/bench.cpp \
   bench/bench.h \
   bench/block_assemble.cpp \
@@ -47,11 +47,11 @@ bench_bench_CI AI COIN_SOURCES = \
   test/util.h \
   test/util.cpp
 
-nodist_bench_bench_CI AI COIN_SOURCES = $(GENERATED_BENCH_FILES)
+nodist_bench_bench_CB AI COIN_SOURCES = $(GENERATED_BENCH_FILES)
 
-bench_bench_CI AI COIN_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
-bench_bench_CI AI COIN_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bench_bench_CI AI COIN_LDADD = \
+bench_bench_CB AI COIN_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
+bench_bench_CB AI COIN_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bench_bench_CB AI COIN_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_SERVER) \
@@ -68,16 +68,16 @@ bench_bench_CI AI COIN_LDADD = \
   $(EVENT_LIBS)
 
 if ENABLE_ZMQ
-bench_bench_CI AI COIN_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+bench_bench_CB AI COIN_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-bench_bench_CI AI COIN_SOURCES += bench/coin_selection.cpp
-bench_bench_CI AI COIN_SOURCES += bench/wallet_balance.cpp
+bench_bench_CB AI COIN_SOURCES += bench/coin_selection.cpp
+bench_bench_CB AI COIN_SOURCES += bench/wallet_balance.cpp
 endif
 
-bench_bench_CI AI COIN_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS)
-bench_bench_CI AI COIN_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+bench_bench_CB AI COIN_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS)
+bench_bench_CB AI COIN_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 CLEAN_BITCOIN_BENCH = bench/*.gcda bench/*.gcno $(GENERATED_BENCH_FILES)
 
@@ -85,13 +85,13 @@ CLEANFILES += $(CLEAN_BITCOIN_BENCH)
 
 bench/data.cpp: bench/data/block413567.raw.h
 
-CI AI COIN_bench: $(BENCH_BINARY)
+CB AI COIN_bench: $(BENCH_BINARY)
 
 bench: $(BENCH_BINARY) FORCE
 	$(BENCH_BINARY)
 
-CI AI COIN_bench_clean : FORCE
-	rm -f $(CLEAN_BITCOIN_BENCH) $(bench_bench_CI AI COIN_OBJECTS) $(BENCH_BINARY)
+CB AI COIN_bench_clean : FORCE
+	rm -f $(CLEAN_BITCOIN_BENCH) $(bench_bench_CB AI COIN_OBJECTS) $(BENCH_BINARY)
 
 %.raw.h: %.raw
 	@$(MKDIR_P) $(@D)

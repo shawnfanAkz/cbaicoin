@@ -1,11 +1,11 @@
-CI AI COIN-Qt version 0.8.0 is now available from:
-  http://sourceforge.net/projects/CI AI COIN/files/CI AI COIN/CI AI COIN-0.8.0/
+CB AI COIN-Qt version 0.8.0 is now available from:
+  http://sourceforge.net/projects/CB AI COIN/files/CB AI COIN/CB AI COIN-0.8.0/
 
 This is a major release designed to improve performance and handle the
 increasing volume of transactions on the network.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/CI AI COIN/CI AI COIN/issues
+  https://github.com/CB AI COIN/CB AI COIN/issues
 
 How to Upgrade
 --------------
@@ -13,7 +13,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/CI AI COIN-Qt (on Mac) or CI AI COINd/CI AI COIN-qt (on Linux).
+/Applications/CB AI COIN-Qt (on Mac) or CB AI COINd/CB AI COIN-qt (on Linux).
 
 The first time you run after the upgrade a re-indexing process will be
 started that will take anywhere from 30 minutes to several hours,
@@ -31,7 +31,7 @@ details).
 Improvements
 ------------
 
-Mac and Windows binaries are signed with certificates owned by the CI AI COIN
+Mac and Windows binaries are signed with certificates owned by the CB AI COIN
 Foundation, to be compatible with the new security features in OSX 10.8 and
 Windows 8.
 
@@ -61,7 +61,7 @@ contrib/spendfrom is a python-language command-line utility that demonstrates
 how to use the "raw transactions" JSON-RPC api to send coins received from particular
 addresses (also known as "coin control").
 
-New/changed settings (command-line or CI AI COIN.conf file)
+New/changed settings (command-line or CB AI COIN.conf file)
 --------------------------------------------------------
 
 dbcache : controls LevelDB memory usage.

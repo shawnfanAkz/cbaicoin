@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018 The CI AI COIN Core developers
+# Copyright (c) 2018 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,9 +8,9 @@ export LC_ALL=C.UTF-8
 
 # Make sure default datadir does not exist and is never read by creating a dummy file
 if [ "$TRAVIS_OS_NAME" == "osx" ]; then
-  echo > $HOME/Library/Application\ Support/CI AI COIN
+  echo > $HOME/Library/Application\ Support/CB AI COIN
 else
-  DOCKER_EXEC echo \> \$HOME/.CI AI COIN
+  DOCKER_EXEC echo \> \$HOME/.CB AI COIN
 fi
 
 mkdir -p depends/SDKs depends/sdk-sources

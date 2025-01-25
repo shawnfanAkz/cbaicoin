@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2018 The CI AI COIN Core developers
+// Copyright (c) 2009-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -290,7 +290,7 @@ public:
     size_t DynamicMemoryUsage() const;
 
     /**
-     * Amount of CI AI COINs coming in to a transaction
+     * Amount of CB AI COINs coming in to a transaction
      * Note that lightweight clients may not know anything besides the hash of previous transactions,
      * so may not be able to calculate this.
      *
@@ -327,7 +327,7 @@ const Coin& AccessByTxid(const CCoinsViewCache& cache, const uint256& txid);
 /**
  * This is a minimally invasive approach to shutdown on LevelDB read errors from the
  * chainstate, while keeping user interface out of the common library, which is shared
- * between CI AI COINd, and CI AI COIN-qt and non-server tools.
+ * between CB AI COINd, and CB AI COIN-qt and non-server tools.
  *
  * Writes do not need similar protection, as failure to write is handled by the caller.
 */

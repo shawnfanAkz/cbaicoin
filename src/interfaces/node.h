@@ -1,4 +1,4 @@
-// Copyright (c) 2018 The CI AI COIN Core developers
+// Copyright (c) 2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,7 +35,7 @@ namespace interfaces {
 class Handler;
 class Wallet;
 
-//! Top-level interface for a CI AI COIN node (CI AI COINd process).
+//! Top-level interface for a CB AI COIN node (CB AI COINd process).
 class Node
 {
 public:

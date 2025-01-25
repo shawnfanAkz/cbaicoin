@@ -1,10 +1,10 @@
-package org.CI AI COIN;
+package org.CB AI COIN;
 
 import com.google.common.io.BaseEncoding;
 import java.util.Arrays;
 import java.math.BigInteger;
 import javax.xml.bind.DatatypeConverter;
-import static org.CI AI COIN.NativeSecp256k1Util.*;
+import static org.CB AI COIN.NativeSecp256k1Util.*;
 
 /**
  * This class holds test cases defined for testing this library.

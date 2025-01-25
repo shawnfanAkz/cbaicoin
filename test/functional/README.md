@@ -23,13 +23,13 @@ don't have test cases for.
 - The oldest supported Python version is specified in [doc/dependencies.md](/doc/dependencies.md).
   Consider using [pyenv](https://github.com/pyenv/pyenv), which checks [.python-version](/.python-version),
   to prevent accidentally introducing modern syntax from an unsupported Python version.
-  The Travis linter also checks this, but [possibly not in all cases](https://github.com/CI AI COIN/CI AI COIN/pull/14884#discussion_r239585126).
+  The Travis linter also checks this, but [possibly not in all cases](https://github.com/CB AI COIN/CB AI COIN/pull/14884#discussion_r239585126).
 - See [the python lint script](/test/lint/lint-python.sh) that checks for violations that
   could lead to bugs and issues in the test code.
 - Avoid wildcard imports
 - Use a module-level docstring to describe what the test is testing, and how it
   is testing it.
-- When subclassing the CI AI COINTestFramwork, place overrides for the
+- When subclassing the CB AI COINTestFramwork, place overrides for the
   `set_test_params()`, `add_options()` and `setup_xxxx()` methods at the top of
   the subclass, then locally-defined helper methods, then the `run_test()` method.
 - Use `'{}'.format(x)` for string formatting, not `'%s' % x`.
@@ -87,12 +87,12 @@ over the network (`CBlock`, `CTransaction`, etc, along with the network-level
 wrappers for them, `msg_block`, `msg_tx`, etc).
 
 - P2P tests have two threads. One thread handles all network communication
-with the CI AI COINd(s) being tested in a callback-based event loop; the other
+with the CB AI COINd(s) being tested in a callback-based event loop; the other
 implements the test logic.
 
-- `P2PConnection` is the class used to connect to a CI AI COINd.  `P2PInterface`
+- `P2PConnection` is the class used to connect to a CB AI COINd.  `P2PInterface`
 contains the higher level logic for processing P2P payloads and connecting to
-the CI AI COIN Core node application logic. For custom behaviour, subclass the
+the CB AI COIN Core node application logic. For custom behaviour, subclass the
 P2PInterface object and override the callback methods.
 
 - Can be used to write tests where specific P2P protocol behavior is tested.
@@ -104,7 +104,7 @@ The following are useful modules for test developers. They are located in
 [test/functional/test_framework/](test_framework).
 
 #### [authproxy.py](test_framework/authproxy.py)
-Taken from the [python-CI AI COINrpc repository](https://github.com/jgarzik/python-CI AI COINrpc).
+Taken from the [python-CB AI COINrpc repository](https://github.com/jgarzik/python-CB AI COINrpc).
 
 #### [test_framework.py](test_framework/test_framework.py)
 Base class for functional tests.
@@ -113,10 +113,10 @@ Base class for functional tests.
 Generally useful functions.
 
 #### [mininode.py](test_framework/mininode.py)
-Basic code to support P2P connectivity to a CI AI COINd.
+Basic code to support P2P connectivity to a CB AI COINd.
 
 #### [script.py](test_framework/script.py)
-Utilities for manipulating transaction scripts (originally from python-CI AI COINlib)
+Utilities for manipulating transaction scripts (originally from python-CB AI COINlib)
 
 #### [key.py](test_framework/key.py)
 Test-only secp256k1 elliptic curve implementation

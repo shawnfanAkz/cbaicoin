@@ -6,7 +6,7 @@
 # You'll also have to manually change the executable in the configuration to the correct path of the already built executable
 
 cmake_minimum_required(VERSION 3.7)
-project(CI AI COIN)
+project(CB AI COIN)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -82,4 +82,4 @@ file(GLOB SOURCE_FILES
         src/rpc/*.h
         )
 
-add_executable(CI AI COIN ${SOURCE_FILES})
+add_executable(CB AI COIN ${SOURCE_FILES})

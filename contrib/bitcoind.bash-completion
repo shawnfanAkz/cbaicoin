@@ -1,15 +1,15 @@
-# bash programmable completion for CI AI COINd(1) and CI AI COIN-qt(1)
-# Copyright (c) 2012-2016 The CI AI COIN Core developers
+# bash programmable completion for CB AI COINd(1) and CB AI COIN-qt(1)
+# Copyright (c) 2012-2016 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-_CI AI COINd() {
+_CB AI COINd() {
     local cur prev words=() cword
-    local CI AI COINd
+    local CB AI COINd
 
-    # save and use original argument to invoke CI AI COINd for -help
+    # save and use original argument to invoke CB AI COINd for -help
     # it might not be in $PATH
-    CI AI COINd="$1"
+    CB AI COINd="$1"
 
     COMPREPLY=()
     _get_comp_words_by_ref -n = cur prev words cword
@@ -33,7 +33,7 @@ _CI AI COINd() {
             # only parse -help if sensible
             if [[ -z "$cur" || "$cur" =~ ^- ]]; then
                 local helpopts
-                helpopts=$($CI AI COINd -help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+                helpopts=$($CB AI COINd -help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
                 COMPREPLY=( $( compgen -W "$helpopts" -- "$cur" ) )
             fi
 
@@ -45,7 +45,7 @@ _CI AI COINd() {
             ;;
     esac
 } &&
-complete -F _CI AI COINd CI AI COINd CI AI COIN-qt
+complete -F _CB AI COINd CB AI COINd CB AI COIN-qt
 
 # Local variables:
 # mode: shell-script

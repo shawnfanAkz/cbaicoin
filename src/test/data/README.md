@@ -1,7 +1,7 @@
 Description
 ------------
 
-This directory contains data-driven tests for various aspects of CI AI COIN.
+This directory contains data-driven tests for various aspects of CB AI COIN.
 
 License
 --------

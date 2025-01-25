@@ -10,5 +10,5 @@ packages/*
 *.vcxproj.user
 *.vcxproj
 */Win32
-libCI AI COIN_qt/QtGeneratedFiles/*
-test_CI AI COIN-qt/QtGeneratedFiles/*
+libCB AI COIN_qt/QtGeneratedFiles/*
+test_CB AI COIN-qt/QtGeneratedFiles/*

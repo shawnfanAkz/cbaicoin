@@ -42,17 +42,17 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see [*Disable-wallet mode*](/doc/build-osx.md#disable-wallet-mode)).
 
-## Build CI AI COIN Core
+## Build CB AI COIN Core
 
-1. Clone the CI AI COIN Core source code:
+1. Clone the CB AI COIN Core source code:
     ```shell
-    git clone https://github.com/CI AI COIN/CI AI COIN
-    cd CI AI COIN
+    git clone https://github.com/CB AI COIN/CB AI COIN
+    cd CB AI COIN
     ```
 
-2.  Build CI AI COIN Core:
+2.  Build CB AI COIN Core:
 
-    Configure and build the headless CI AI COIN Core binaries as well as the GUI (if Qt is found).
+    Configure and build the headless CB AI COIN Core binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
     ```shell
@@ -72,7 +72,7 @@ from the root of the repository.
     ```
 
 ## `disable-wallet` mode
-When the intention is to run only a P2P node without a wallet, CI AI COIN Core may be
+When the intention is to run only a P2P node without a wallet, CB AI COIN Core may be
 compiled in `disable-wallet` mode with:
 ```shell
 ./configure --disable-wallet
@@ -83,36 +83,36 @@ In this case there is no dependency on Berkeley DB 4.8.
 Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC call.
 
 ## Running
-CI AI COIN Core is now available at `./src/CI AI COINd`
+CB AI COIN Core is now available at `./src/CB AI COINd`
 
 Before running, you may create an empty configuration file:
 ```shell
-mkdir -p "/Users/${USER}/Library/Application Support/CI AI COIN"
+mkdir -p "/Users/${USER}/Library/Application Support/CB AI COIN"
 
-touch "/Users/${USER}/Library/Application Support/CI AI COIN/CI AI COIN.conf"
+touch "/Users/${USER}/Library/Application Support/CB AI COIN/CB AI COIN.conf"
 
-chmod 600 "/Users/${USER}/Library/Application Support/CI AI COIN/CI AI COIN.conf"
+chmod 600 "/Users/${USER}/Library/Application Support/CB AI COIN/CB AI COIN.conf"
 ```
 
-The first time you run CI AI COINd, it will start downloading the blockchain. This process could
+The first time you run CB AI COINd, it will start downloading the blockchain. This process could
 take many hours, or even days on slower than average systems.
 
 You can monitor the download process by looking at the debug.log file:
 ```shell
-tail -f $HOME/Library/Application\ Support/CI AI COIN/debug.log
+tail -f $HOME/Library/Application\ Support/CB AI COIN/debug.log
 ```
 
 ## Other commands:
 ```shell
-./src/CI AI COINd -daemon      # Starts the CI AI COIN daemon.
-./src/CI AI COIN-cli --help    # Outputs a list of command-line options.
-./src/CI AI COIN-cli help      # Outputs a list of RPC commands when the daemon is running.
+./src/CB AI COINd -daemon      # Starts the CB AI COIN daemon.
+./src/CB AI COIN-cli --help    # Outputs a list of command-line options.
+./src/CB AI COIN-cli help      # Outputs a list of RPC commands when the daemon is running.
 ```
 
 ## Notes
 * Tested on OS X 10.10 Yosemite through macOS 10.14 Mojave on 64-bit Intel
 processors only.
-* Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/CI AI COIN/CI AI COIN/issues/7714).
+* Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/CB AI COIN/CB AI COIN/issues/7714).
 
 ## Deterministic macOS DMG Notes
 Working macOS DMGs are created in Linux by combining a recent `clang`, the Apple
@@ -202,7 +202,7 @@ deterministic. Here's how it works:
   of a tarball, which also contains all of the tools that have been previously (deterministically)
   built in order to create a final DMG.
 - The Apple keyholder uses this unsigned app to create a detached signature, using the
-  script that is also included there. Detached signatures are available from this [repository](https://github.com/CI AI COIN-core/CI AI COIN-detached-sigs).
+  script that is also included there. Detached signatures are available from this [repository](https://github.com/CB AI COIN-core/CB AI COIN-detached-sigs).
 - Builders feed the unsigned app + detached signature back into Gitian. It uses the
   pre-built tools to recombine the pieces into a deterministic DMG.
 

@@ -73,9 +73,9 @@ When rebuilding during development, note that running `make`, without giving a t
 Obviously, it is important to build and run the tests at appropriate times -- but when you just want a quick compile to check your work, consider picking one or a set of build targets relevant to what you're working on, e.g.:
 
 ```sh
-make src/CI AI COINd src/CI AI COIN-cli
-make src/qt/CI AI COIN-qt
-make -C src CI AI COIN_bench
+make src/CB AI COINd src/CB AI COIN-cli
+make src/qt/CB AI COIN-qt
+make -C src CB AI COIN_bench
 ```
 
 (You can and should combine this with `-j`, as above, for a parallel build.)
@@ -173,7 +173,7 @@ When looking at other's pull requests, it may make sense to add the following se
 ```
 [remote "upstream-pull"]
         fetch = +refs/pull/*:refs/remotes/upstream-pull/*
-        url = git@github.com:CI AI COIN/CI AI COIN.git
+        url = git@github.com:CB AI COIN/CB AI COIN.git
 ```
 
 This will add an `upstream-pull` remote to your git repository, which can be fetched using `git fetch --all` or `git fetch upstream-pull`. Afterwards, you can use `upstream-pull/NUMBER/head` in arguments to `git show`, `git checkout` and anywhere a commit id would be acceptable to see the changes from pull request NUMBER.

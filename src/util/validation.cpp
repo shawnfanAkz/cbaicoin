@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2019 The CI AI COIN Core developers
+// Copyright (c) 2009-2019 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,4 +16,4 @@ std::string FormatStateMessage(const ValidationState &state)
         state.GetDebugMessage().empty() ? "" : ", "+state.GetDebugMessage());
 }
 
-const std::string strMessageMagic = "CI AI COIN Signed Message:\n";
+const std::string strMessageMagic = "CB AI COIN Signed Message:\n";

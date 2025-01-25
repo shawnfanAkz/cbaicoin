@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2019 The CI AI COIN Core developers
+# Copyright (c) 2017-2019 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Class for CI AI COINd node under test"""
+"""Class for CB AI COINd node under test"""
 
 import contextlib
 import decimal
@@ -46,7 +46,7 @@ class ErrorMatch(Enum):
 
 
 class TestNode():
-    """A class for representing a CI AI COINd node under test.
+    """A class for representing a CB AI COINd node under test.
 
     This class contains:
 
@@ -59,7 +59,7 @@ class TestNode():
     To make things easier for the test writer, any unrecognised messages will
     be dispatched to the RPC connection."""
 
-    def __init__(self, i, datadir, *, chain, rpchost, timewait, CI AI COINd, CI AI COIN_cli, coverage_dir, cwd, extra_conf=None, extra_args=None, use_cli=False, start_perf=False):
+    def __init__(self, i, datadir, *, chain, rpchost, timewait, CB AI COINd, CB AI COIN_cli, coverage_dir, cwd, extra_conf=None, extra_args=None, use_cli=False, start_perf=False):
         """
         Kwargs:
             start_perf (bool): If True, begin profiling the node with `perf` as soon as
@@ -68,13 +68,13 @@ class TestNode():
 
         self.index = i
         self.datadir = datadir
-        self.CI AI COINconf = os.path.join(self.datadir, "CI AI COIN.conf")
+        self.CB AI COINconf = os.path.join(self.datadir, "CB AI COIN.conf")
         self.stdout_dir = os.path.join(self.datadir, "stdout")
         self.stderr_dir = os.path.join(self.datadir, "stderr")
         self.chain = chain
         self.rpchost = rpchost
         self.rpc_timeout = timewait
-        self.binary = CI AI COINd
+        self.binary = CB AI COINd
         self.coverage_dir = coverage_dir
         self.cwd = cwd
         if extra_conf is not None:
@@ -83,8 +83,8 @@ class TestNode():
         # For those callers that need more flexibility, they can just set the args property directly.
         # Note that common args are set in the config file (see initialize_datadir)
         self.extra_args = extra_args
-        # Configuration for logging is set as command-line args rather than in the CI AI COIN.conf file.
-        # This means that starting a CI AI COINd using the temp dir to debug a failed test won't
+        # Configuration for logging is set as command-line args rather than in the CB AI COIN.conf file.
+        # This means that starting a CB AI COINd using the temp dir to debug a failed test won't
         # spam debug.log.
         self.args = [
             self.binary,
@@ -97,7 +97,7 @@ class TestNode():
             "-uacomment=testnode%d" % i,
         ]
 
-        self.cli = TestNodeCLI(CI AI COIN_cli, self.datadir)
+        self.cli = TestNodeCLI(CB AI COIN_cli, self.datadir)
         self.use_cli = use_cli
         self.start_perf = start_perf
 
@@ -163,7 +163,7 @@ class TestNode():
         raise AssertionError(self._node_msg(msg))
 
     def __del__(self):
-        # Ensure that we don't leave any CI AI COINd processes lying around after
+        # Ensure that we don't leave any CB AI COINd processes lying around after
         # the test ends
         if self.process and self.cleanup_on_exit:
             # Should only happen on test failure
@@ -185,7 +185,7 @@ class TestNode():
         if extra_args is None:
             extra_args = self.extra_args
 
-        # Add a new stdout and stderr file each time CI AI COINd is started
+        # Add a new stdout and stderr file each time CB AI COINd is started
         if stderr is None:
             stderr = tempfile.NamedTemporaryFile(dir=self.stderr_dir, delete=False)
         if stdout is None:
@@ -197,7 +197,7 @@ class TestNode():
             cwd = self.cwd
 
         # Delete any existing cookie file -- if such a file exists (eg due to
-        # unclean shutdown), it will get overwritten anyway by CI AI COINd, and
+        # unclean shutdown), it will get overwritten anyway by CB AI COINd, and
         # potentially interfere with our attempt to authenticate
         delete_cookie_file(self.datadir, self.chain)
 
@@ -207,19 +207,19 @@ class TestNode():
         self.process = subprocess.Popen(self.args + extra_args, env=subp_env, stdout=stdout, stderr=stderr, cwd=cwd, **kwargs)
 
         self.running = True
-        self.log.debug("CI AI COINd started, waiting for RPC to come up")
+        self.log.debug("CB AI COINd started, waiting for RPC to come up")
 
         if self.start_perf:
             self._start_perf()
 
     def wait_for_rpc_connection(self):
-        """Sets up an RPC connection to the CI AI COINd process. Returns False if unable to connect."""
+        """Sets up an RPC connection to the CB AI COINd process. Returns False if unable to connect."""
         # Poll at a rate of four times per second
         poll_per_s = 4
         for _ in range(poll_per_s * self.rpc_timeout):
             if self.process.poll() is not None:
                 raise FailedToStartError(self._node_msg(
-                    'CI AI COINd exited with status {} during initialization'.format(self.process.returncode)))
+                    'CB AI COINd exited with status {} during initialization'.format(self.process.returncode)))
             try:
                 rpc = get_rpc_proxy(rpc_url(self.datadir, self.index, self.chain, self.rpchost), self.index, timeout=self.rpc_timeout, coveragedir=self.coverage_dir)
                 rpc.getblockcount()
@@ -239,11 +239,11 @@ class TestNode():
                 # -342 Service unavailable, RPC server started but is shutting down due to error
                 if e.error['code'] != -28 and e.error['code'] != -342:
                     raise  # unknown JSON RPC exception
-            except ValueError as e:  # cookie file not found and no rpcuser or rpcassword. CI AI COINd still starting
+            except ValueError as e:  # cookie file not found and no rpcuser or rpcassword. CB AI COINd still starting
                 if "No RPC credentials" not in str(e):
                     raise
             time.sleep(1.0 / poll_per_s)
-        self._raise_assertion_error("Unable to connect to CI AI COINd")
+        self._raise_assertion_error("Unable to connect to CB AI COINd")
 
     def generate(self, nblocks, maxtries=1000000):
         self.log.debug("TestNode.generate() dispatches `generate` call to `generatetoaddress`")
@@ -399,7 +399,7 @@ class TestNode():
 
         if not test_success('readelf -S {} | grep .debug_str'.format(shlex.quote(self.binary))):
             self.log.warning(
-                "perf output won't be very useful without debug symbols compiled into CI AI COINd")
+                "perf output won't be very useful without debug symbols compiled into CB AI COINd")
 
         output_path = tempfile.NamedTemporaryFile(
             dir=self.datadir,
@@ -440,11 +440,11 @@ class TestNode():
     def assert_start_raises_init_error(self, extra_args=None, expected_msg=None, match=ErrorMatch.FULL_TEXT, *args, **kwargs):
         """Attempt to start the node and expect it to raise an error.
 
-        extra_args: extra arguments to pass through to CI AI COINd
-        expected_msg: regex that stderr should match when CI AI COINd fails
+        extra_args: extra arguments to pass through to CB AI COINd
+        expected_msg: regex that stderr should match when CB AI COINd fails
 
-        Will throw if CI AI COINd starts without an error.
-        Will throw if an expected_msg is provided and it does not match CI AI COINd's stdout."""
+        Will throw if CB AI COINd starts without an error.
+        Will throw if an expected_msg is provided and it does not match CB AI COINd's stdout."""
         with tempfile.NamedTemporaryFile(dir=self.stderr_dir, delete=False) as log_stderr, \
              tempfile.NamedTemporaryFile(dir=self.stdout_dir, delete=False) as log_stdout:
             try:
@@ -453,7 +453,7 @@ class TestNode():
                 self.stop_node()
                 self.wait_until_stopped()
             except FailedToStartError as e:
-                self.log.debug('CI AI COINd failed to start: %s', e)
+                self.log.debug('CB AI COINd failed to start: %s', e)
                 self.running = False
                 self.process = None
                 # Check stderr for expected message
@@ -474,9 +474,9 @@ class TestNode():
                                 'Expected message "{}" does not fully match stderr:\n"{}"'.format(expected_msg, stderr))
             else:
                 if expected_msg is None:
-                    assert_msg = "CI AI COINd should have exited with an error"
+                    assert_msg = "CB AI COINd should have exited with an error"
                 else:
-                    assert_msg = "CI AI COINd should have exited with expected error " + expected_msg
+                    assert_msg = "CB AI COINd should have exited with expected error " + expected_msg
                 self._raise_assertion_error(assert_msg)
 
     def add_p2p_connection(self, p2p_conn, *, wait_for_verack=True, **kwargs):
@@ -531,17 +531,17 @@ def arg_to_cli(arg):
         return str(arg)
 
 class TestNodeCLI():
-    """Interface to CI AI COIN-cli for an individual node"""
+    """Interface to CB AI COIN-cli for an individual node"""
 
     def __init__(self, binary, datadir):
         self.options = []
         self.binary = binary
         self.datadir = datadir
         self.input = None
-        self.log = logging.getLogger('TestFramework.CI AI COINcli')
+        self.log = logging.getLogger('TestFramework.CB AI COINcli')
 
     def __call__(self, *options, input=None):
-        # TestNodeCLI is callable with CI AI COIN-cli command-line options
+        # TestNodeCLI is callable with CB AI COIN-cli command-line options
         cli = TestNodeCLI(self.binary, self.datadir)
         cli.options = [str(o) for o in options]
         cli.input = input
@@ -560,17 +560,17 @@ class TestNodeCLI():
         return results
 
     def send_cli(self, command=None, *args, **kwargs):
-        """Run CI AI COIN-cli command. Deserializes returned string as python object."""
+        """Run CB AI COIN-cli command. Deserializes returned string as python object."""
         pos_args = [arg_to_cli(arg) for arg in args]
         named_args = [str(key) + "=" + arg_to_cli(value) for (key, value) in kwargs.items()]
-        assert not (pos_args and named_args), "Cannot use positional arguments and named arguments in the same CI AI COIN-cli call"
+        assert not (pos_args and named_args), "Cannot use positional arguments and named arguments in the same CB AI COIN-cli call"
         p_args = [self.binary, "-datadir=" + self.datadir] + self.options
         if named_args:
             p_args += ["-named"]
         if command is not None:
             p_args += [command]
         p_args += pos_args + named_args
-        self.log.debug("Running CI AI COIN-cli command: %s" % command)
+        self.log.debug("Running CB AI COIN-cli command: %s" % command)
         process = subprocess.Popen(p_args, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
         cli_stdout, cli_stderr = process.communicate(input=self.input)
         returncode = process.poll()

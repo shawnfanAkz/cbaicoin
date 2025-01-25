@@ -11,7 +11,7 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>CI AI COIN.icns</string>
+  <string>CB AI COIN.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>CI AI COIN-Qt</string>
+  <string>CB AI COIN-Qt</string>
 
   <key>CFBundleName</key>
-  <string>CI AI COIN-Qt</string>
+  <string>CB AI COIN-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.CI AI COINfoundation.CI AI COIN-Qt</string>
+  <string>org.CB AI COINfoundation.CB AI COIN-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.CI AI COIN.CI AI COINPayment</string>
+      <string>org.CB AI COIN.CB AI COINPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>CI AI COIN</string>
+        <string>CB AI COIN</string>
       </array>
     </dict>
   </array>

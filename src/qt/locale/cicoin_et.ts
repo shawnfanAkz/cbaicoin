@@ -66,8 +66,8 @@
         <translation>Vastuvõtvad aadressid</translation>
     </message>
     <message>
-        <source>These are your CI AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu CI AI COIN aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
+        <source>These are your CB AI COIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu CB AI COIN aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,8 +160,8 @@
         <translation>Kinnita rahakoti krüpteerimine.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CI AI COINS&lt;/b&gt;!</source>
-        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA CI AI COINID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CB AI COINS&lt;/b&gt;!</source>
+        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA CB AI COINID&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -212,7 +212,7 @@
     </message>
     </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signeeri &amp;sõnum</translation>
@@ -282,8 +282,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>Send coins to a CI AI COIN address</source>
-        <translation>Saada münte CI AI COINi aadressile</translation>
+        <source>Send coins to a CB AI COIN address</source>
+        <translation>Saada münte CB AI COINi aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -326,12 +326,12 @@
         <translation>Krüpteeri oma rahakoti privaatvõtmed</translation>
     </message>
     <message>
-        <source>Sign messages with your CI AI COIN addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma CI AI COINi aadressiga</translation>
+        <source>Sign messages with your CB AI COIN addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma CB AI COINi aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CI AI COIN addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud CI AI COINi aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified CB AI COIN addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud CB AI COINi aadressiga</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -350,20 +350,20 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and CI AI COIN: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja CI AI COINi: URId)</translation>
+        <source>Request payments (generates QR codes and CB AI COIN: URIs)</source>
+        <translation>Loo maksepäring (genereerib QR koodid ja CB AI COINi: URId)</translation>
     </message>
     <message>
-        <source>Open a CI AI COIN: URI or payment request</source>
-        <translation>Ava CI AI COINi: URI või maksepäring</translation>
+        <source>Open a CB AI COIN: URI or payment request</source>
+        <translation>Ava CB AI COINi: URI või maksepäring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Käsurea valikud</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to CI AI COIN network</source>
-        <translation><numerusform>%n aktiivne ühendus CI AI COINi võrku</numerusform><numerusform>%n aktiivset ühendust CI AI COINi võrku</numerusform></translation>
+        <source>%n active connection(s) to CB AI COIN network</source>
+        <translation><numerusform>%n aktiivne ühendus CB AI COINi võrku</numerusform><numerusform>%n aktiivset ühendust CB AI COINi võrku</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -616,8 +616,8 @@
         <translation>Muuda saatvat aadressi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid CI AI COIN address.</source>
-        <translation>Sisestatud aadress "%1" ei ole korrektne CI AI COIN aadress.</translation>
+        <source>The entered address "%1" is not a valid CB AI COIN address.</source>
+        <translation>Sisestatud aadress "%1" ei ole korrektne CB AI COIN aadress.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -653,8 +653,8 @@
         <translation>Tere tulemast</translation>
     </message>
     <message>
-        <source>CI AI COIN</source>
-        <translation>CI AI COIN</translation>
+        <source>CB AI COIN</source>
+        <translation>CB AI COIN</translation>
     </message>
     <message>
         <source>Error</source>
@@ -729,8 +729,8 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the CI AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>CI AI COINi kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the CB AI COIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>CB AI COINi kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -828,7 +828,7 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CI AI COIN network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CB AI COIN network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Bitconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -1355,8 +1355,8 @@
         <translation>Maksepäring aegunud.</translation>
     </message>
     <message>
-        <source>Warning: Invalid CI AI COIN address</source>
-        <translation>Hoiatus: Ebakorrektne CI AI COIN aadress</translation>
+        <source>Warning: Invalid CB AI COIN address</source>
+        <translation>Hoiatus: Ebakorrektne CB AI COIN aadress</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1439,8 +1439,8 @@
         <translation>&amp;Allkirjastamise teade</translation>
     </message>
     <message>
-        <source>The CI AI COIN address to sign the message with</source>
-        <translation>CI AI COIN aadress millega sõnum allkirjastada</translation>
+        <source>The CB AI COIN address to sign the message with</source>
+        <translation>CB AI COIN aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1471,8 +1471,8 @@
         <translation>Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CI AI COIN address</source>
-        <translation>Allkirjasta sõnum CI AI COINi aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this CB AI COIN address</source>
+        <translation>Allkirjasta sõnum CB AI COINi aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1491,12 +1491,12 @@
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>The CI AI COIN address the message was signed with</source>
-        <translation>CI AI COIN aadress millega sõnum on allkirjastatud</translation>
+        <source>The CB AI COIN address the message was signed with</source>
+        <translation>CB AI COIN aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CI AI COIN address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud CI AI COINi aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified CB AI COIN address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud CB AI COINi aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1922,7 +1922,7 @@
     </message>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
         <translation>See on test-versioon - kasutamine omal riisikol - ära kasuta mining'uks ega kaupmeeste programmides</translation>

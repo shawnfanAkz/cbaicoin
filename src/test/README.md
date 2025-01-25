@@ -1,12 +1,12 @@
 # Unit tests
 
 The sources in this directory are unit test cases. Boost includes a
-unit testing framework, and since CI AI COIN Core already uses Boost, it makes
+unit testing framework, and since CB AI COIN Core already uses Boost, it makes
 sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
 
-The build system is set up to compile an executable called `test_CI AI COIN`
+The build system is set up to compile an executable called `test_CB AI COIN`
 that runs all of the unit tests. The main source file is called
 `setup_common.cpp`.
 
@@ -17,32 +17,32 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the CI AI COINd tests manually, launch `src/test/test_CI AI COIN`. To recompile
+To run the CB AI COINd tests manually, launch `src/test/test_CB AI COIN`. To recompile
 after a test file was modified, run `make` and then run the test again. If you
 modify a non-test file, use `make -C src/test` to recompile only what's needed
-to run the CI AI COINd tests.
+to run the CB AI COINd tests.
 
-To add more CI AI COINd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more CB AI COINd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new `BOOST_AUTO_TEST_SUITE` sections.
 
-To run the CI AI COIN-qt tests manually, launch `src/qt/test/test_CI AI COIN-qt`
+To run the CB AI COIN-qt tests manually, launch `src/qt/test/test_CB AI COIN-qt`
 
-To add more CI AI COIN-qt tests, add them to the `src/qt/test/` directory and
+To add more CB AI COIN-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.
 
 ### Running individual tests
 
-test_CI AI COIN has some built-in command-line arguments; for
+test_CB AI COIN has some built-in command-line arguments; for
 example, to run just the getarg_tests verbosely:
 
-    test_CI AI COIN --log_level=all --run_test=getarg_tests
+    test_CB AI COIN --log_level=all --run_test=getarg_tests
 
 ... or to run just the doubledash test:
 
-    test_CI AI COIN --run_test=getarg_tests/doubledash
+    test_CB AI COIN --run_test=getarg_tests/doubledash
 
-Run `test_CI AI COIN --help` for the full list.
+Run `test_CB AI COIN --help` for the full list.
 
 ### Adding test cases
 
@@ -59,9 +59,9 @@ see `uint256_tests.cpp`.
 To write to logs from unit tests you need to use specific message methods
 provided by Boost. The simplest is `BOOST_TEST_MESSAGE`.
 
-For debugging you can launch the test_CI AI COIN executable with `gdb`or `lldb` and
-start debugging, just like you would with CI AI COINd:
+For debugging you can launch the test_CB AI COIN executable with `gdb`or `lldb` and
+start debugging, just like you would with CB AI COINd:
 
 ```bash
-gdb src/test/test_CI AI COIN
+gdb src/test/test_CB AI COIN
 ```

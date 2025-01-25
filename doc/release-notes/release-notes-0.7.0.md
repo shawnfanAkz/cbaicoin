@@ -1,24 +1,24 @@
-CI AI COIN version 0.7.0 is now available for download at:
-  http://sourceforge.net/projects/CI AI COIN/files/CI AI COIN/CI AI COIN-0.7.0/
+CB AI COIN version 0.7.0 is now available for download at:
+  http://sourceforge.net/projects/CB AI COIN/files/CB AI COIN/CB AI COIN-0.7.0/
 
-We recommend that everybody running prior versions of CI AI COINd/CI AI COIN-Qt
+We recommend that everybody running prior versions of CB AI COINd/CB AI COIN-Qt
 upgrade to this release, except for users running Mac OSX 10.5.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/CI AI COIN/CI AI COIN/issues
+  https://github.com/CB AI COIN/CB AI COIN/issues
 
 Project source code is hosted at github; you can get
 source-only tarballs/zipballs directly from there:
-  https://github.com/CI AI COIN/CI AI COIN/tarball/v0.7.0  # .tar.gz
-  https://github.com/CI AI COIN/CI AI COIN/zipball/v0.7.0  # .zip
+  https://github.com/CB AI COIN/CB AI COIN/tarball/v0.7.0  # .tar.gz
+  https://github.com/CB AI COIN/CB AI COIN/zipball/v0.7.0  # .zip
 
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
-CI AI COIN up-to-date.  Just type
-  sudo apt-add-repository ppa:CI AI COIN/CI AI COIN
+CB AI COIN up-to-date.  Just type
+  sudo apt-add-repository ppa:CB AI COIN/CB AI COIN
   sudo apt-get update
-in your terminal, then install the CI AI COIN-qt package:
-  sudo apt-get install CI AI COIN-qt
+in your terminal, then install the CB AI COIN-qt package:
+  sudo apt-get install CB AI COIN-qt
 
 
 How to Upgrade
@@ -27,10 +27,10 @@ If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
 Code:
-/Applications/CI AI COIN-Qt
+/Applications/CB AI COIN-Qt
 (on Mac) or
 Code:
-CI AI COINd/CI AI COIN-qt
+CB AI COINd/CB AI COIN-qt
 (on Linux).
 
 If you were running on Linux with a version that might have been compiled
@@ -45,14 +45,14 @@ Incompatible Changes
   and 'getrawmempool' commands.
 * Remove deprecated RPC 'getblocknumber'
 
-CI AI COIN Improvement Proposals implemented
+CB AI COIN Improvement Proposals implemented
 
 BIP 22 - 'getblocktemplate', 'submitblock' RPCs
 BIP 34 - block version 2, height in coinbase
 BIP 35 - 'mempool' message, extended 'getdata' message behavior
 
 
-Core CI AI COIN handling and blockchain database
+Core CB AI COIN handling and blockchain database
 
 * Reduced CPU usage, by eliminating some redundant hash calculations
 * Cache signature verifications, to eliminate redundant signature checks
@@ -109,7 +109,7 @@ Qt GUI
 * Add 2 labels to the overviewpage that display Wallet and Transaction status (obsolete or current)
 * Extend the optionsdialog (e.g. language selection) and re-work it to a tabbed UI
 * Merge sign/verify message into a single window with tabbed UI
-* Ensure a changed CI AI COIN unit immediately updates all GUI elements that use units
+* Ensure a changed CB AI COIN unit immediately updates all GUI elements that use units
 * Update QR Code dialog
 * Improve error reporting at startup
 * Fine-grained UI updates for a much smoother UI during block downloads
@@ -119,8 +119,8 @@ Qt GUI
 * Much better translations
 * Override progress bar design on platforms with segmented progress bars to assist with readability
 * Added 'immature balance' display on the overview page
-* (Windows only): enable ASLR and DEP for CI AI COIN-qt.exe
-* (Windows only): add meta-data to CI AI COIN-qt.exe (e.g. description)
+* (Windows only): enable ASLR and DEP for CB AI COIN-qt.exe
+* (Windows only): add meta-data to CB AI COIN-qt.exe (e.g. description)
 
 Internal codebase
 
@@ -131,7 +131,7 @@ Internal codebase
 Miscellaneous
 
 * Reopen debug.log upon SIGHUP
-* Bash programmable completion for CI AI COINd(1)
+* Bash programmable completion for CB AI COINd(1)
 * On supported OS's, each thread is given a useful name
 
 

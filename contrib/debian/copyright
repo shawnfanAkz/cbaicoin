@@ -1,13 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: CI AI COIN
+Upstream-Name: CB AI COIN
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
- irc://#CI AI COIN@freenode.net
-Source: https://github.com/CI AI COIN/CI AI COIN
+ irc://#CB AI COIN@freenode.net
+Source: https://github.com/CB AI COIN/CB AI COIN
 
 Files: *
-Copyright: 2009-2019, CI AI COIN Core Developers
+Copyright: 2009-2019, CB AI COIN Core Developers
 License: Expat
-Comment: The CI AI COIN Core Developers encompasses the current developers listed on CI AI COIN.org,
+Comment: The CB AI COIN Core Developers encompasses the current developers listed on CB AI COIN.org,
          as well as the numerous contributors to the project.
 
 Files: debian/*
@@ -75,12 +75,12 @@ Copyright: Stephen Hutchings, Jonas Schnelli
 License: Expat
 Comment: Modifications of Stephen Hutchings' Typicons
 
-Files: src/qt/res/icons/CI AI COIN.*
-       share/pixmaps/CI AI COIN*
-       src/qt/res/src/CI AI COIN.svg
+Files: src/qt/res/icons/CB AI COIN.*
+       share/pixmaps/CB AI COIN*
+       src/qt/res/src/CB AI COIN.svg
 Copyright: Bitboy, Jonas Schnelli
 License: public-domain
-Comment: Site: https://CI AI COINtalk.org/?topic=1756.0
+Comment: Site: https://CB AI COINtalk.org/?topic=1756.0
 
 Files: src/qt/res/icons/proxy.png
        src/qt/res/src/proxy.svg

@@ -1,9 +1,9 @@
-// Copyright (c) 2009-2018 The CI AI COIN Core developers
+// Copyright (c) 2009-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
 #include <clientversion.h>
@@ -35,7 +35,7 @@ static const int CONTINUE_EXECUTION=-1;
 
 const std::function<std::string(const char*)> G_TRANSLATION_FUN = nullptr;
 
-static void SetupCI AI COINTxArgs()
+static void SetupCB AI COINTxArgs()
 {
     SetupHelpOptions(gArgs);
 
@@ -80,7 +80,7 @@ static int AppInitRawTx(int argc, char* argv[])
     //
     // Parameters
     //
-    SetupCI AI COINTxArgs();
+    SetupCB AI COINTxArgs();
     std::string error;
     if (!gArgs.ParseParameters(argc, argv, error)) {
         tfm::format(std::cerr, "Error parsing command line arguments: %s\n", error);
@@ -99,9 +99,9 @@ static int AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || HelpRequested(gArgs)) {
         // First part of help message is specific to this utility
-        std::string strUsage = PACKAGE_NAME " CI AI COIN-tx utility version " + FormatFullVersion() + "\n\n" +
-            "Usage:  CI AI COIN-tx [options] <hex-tx> [commands]  Update hex-encoded CI AI COIN transaction\n" +
-            "or:     CI AI COIN-tx [options] -create [commands]   Create hex-encoded CI AI COIN transaction\n" +
+        std::string strUsage = PACKAGE_NAME " CB AI COIN-tx utility version " + FormatFullVersion() + "\n\n" +
+            "Usage:  CB AI COIN-tx [options] <hex-tx> [commands]  Update hex-encoded CB AI COIN transaction\n" +
+            "or:     CB AI COIN-tx [options] -create [commands]   Create hex-encoded CB AI COIN transaction\n" +
             "\n";
         strUsage += gArgs.GetHelpMessage();
 
@@ -791,7 +791,7 @@ static int CommandLineRawTx(int argc, char* argv[])
             if (argc < 2)
                 throw std::runtime_error("too few parameters");
 
-            // param: hex-encoded CI AI COIN transaction
+            // param: hex-encoded CB AI COIN transaction
             std::string strHexTx(argv[1]);
             if (strHexTx == "-")                 // "-" implies standard input
                 strHexTx = readStdin();

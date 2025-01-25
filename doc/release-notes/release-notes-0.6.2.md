@@ -1,10 +1,10 @@
-CI AI COIN version 0.6.2 is now available for download at:
-http://sourceforge.net/projects/CI AI COIN/files/CI AI COIN/CI AI COIN-0.6.2/
+CB AI COIN version 0.6.2 is now available for download at:
+http://sourceforge.net/projects/CB AI COIN/files/CB AI COIN/CB AI COIN-0.6.2/
 
 This is a bug-fix and code-cleanup release, with no major new features.
 
 Please report bugs using the github issue tracker at:
-https://github.com/CI AI COIN/CI AI COIN/issues
+https://github.com/CB AI COIN/CB AI COIN/issues
 
 
 NOTABLE CHANGES
@@ -14,7 +14,7 @@ portable to different data directories by default. If you need a
 portable blkindex.dat file then run with the new -detachdb=1 option
 or the "Detach databases at shutdown" GUI preference.
 
-Fixed https://github.com/CI AI COIN/CI AI COIN/issues/1065, a bug that
+Fixed https://github.com/CB AI COIN/CB AI COIN/issues/1065, a bug that
 could cause long-running nodes to crash.
 
 Mac and Windows binaries are compiled against OpenSSL 1.0.1b (Linux

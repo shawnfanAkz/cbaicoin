@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Copyright (c) 2014-2015 The CI AI COIN Core developers
+# Copyright (c) 2014-2015 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 export LC_ALL=C
-if ! [[ "$2" =~ ^(git@)?(www.)?github.com(:|/)CI AI COIN/CI AI COIN(.git)?$ ]]; then
+if ! [[ "$2" =~ ^(git@)?(www.)?github.com(:|/)CB AI COIN/CB AI COIN(.git)?$ ]]; then
     exit 0
 fi
 

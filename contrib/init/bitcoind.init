@@ -1,36 +1,36 @@
 #!/usr/bin/env bash
 #
-#  CI AI COINd The CI AI COIN core server.
+#  CB AI COINd The CB AI COIN core server.
 #
 #
 # chkconfig: 345 80 20
-# description: CI AI COINd
-# processname: CI AI COINd
+# description: CB AI COINd
+# processname: CB AI COINd
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/CI AI COINd, see below
-if [ -f /etc/sysconfig/CI AI COINd ]; then
-        . /etc/sysconfig/CI AI COINd
+# you can override defaults in /etc/sysconfig/CB AI COINd, see below
+if [ -f /etc/sysconfig/CB AI COINd ]; then
+        . /etc/sysconfig/CB AI COINd
 fi
 
 RETVAL=0
 
-prog=CI AI COINd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/CI AI COINd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/CI AI COINd}
+prog=CB AI COINd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/CB AI COINd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/CB AI COINd}
 
-# CI AI COINd defaults to /usr/bin/CI AI COINd, override with BITCOIND_BIN
-CI AI COINd=${BITCOIND_BIN-/usr/bin/CI AI COINd}
+# CB AI COINd defaults to /usr/bin/CB AI COINd, override with BITCOIND_BIN
+CB AI COINd=${BITCOIND_BIN-/usr/bin/CB AI COINd}
 
-# CI AI COINd opts default to -disablewallet, override with BITCOIND_OPTS
-CI AI COINd_opts=${BITCOIND_OPTS--disablewallet}
+# CB AI COINd opts default to -disablewallet, override with BITCOIND_OPTS
+CB AI COINd_opts=${BITCOIND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $CI AI COINd $CI AI COINd_opts
+    daemon $DAEMONOPTS $CB AI COINd $CB AI COINd_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile

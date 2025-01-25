@@ -1,4 +1,4 @@
-// Copyright (c) 2013-2018 The CI AI COIN Core developers
+// Copyright (c) 2013-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,10 +14,10 @@ bool noui_ThreadSafeQuestion(const std::string& /* ignored interactive message *
 /** Non-GUI handler, which only logs a message. */
 void noui_InitMessage(const std::string& message);
 
-/** Connect all CI AI COINd signal handlers */
+/** Connect all CB AI COINd signal handlers */
 void noui_connect();
 
-/** Suppress all CI AI COINd signal handlers. Used to suppress output during test runs that produce expected errors */
+/** Suppress all CB AI COINd signal handlers. Used to suppress output during test runs that produce expected errors */
 void noui_suppress();
 
 /** Reconnects the regular Non-GUI handlers after having used noui_suppress */

@@ -1,7 +1,7 @@
 #include <iostream>
 
-// CI AI COIN includes.
-#include <..\src\script\CI AI COINconsensus.h>
+// CB AI COIN includes.
+#include <..\src\script\CB AI COINconsensus.h>
 #include <..\src\primitives\transaction.h>
 #include <..\src\script\script.h>
 #include <..\src\streams.h>
@@ -27,7 +27,7 @@ CMutableTransaction BuildSpendingTransaction(const CScript& scriptSig, const CSc
 
 int main()
 {
-    std::cout << "CI AI COINconsensus version: " << CI AI COINconsensus_version() << std::endl;
+    std::cout << "CB AI COINconsensus version: " << CB AI COINconsensus_version() << std::endl;
 
     CScript pubKeyScript;
     pubKeyScript << OP_1 << OP_0 << OP_1;
@@ -40,8 +40,8 @@ int main()
     CDataStream stream(SER_NETWORK, PROTOCOL_VERSION);
     stream << vanillaSpendTx;
 
-    CI AI COINconsensus_error err;
-    auto op0Result = CI AI COINconsensus_verify_script_with_amount(pubKeyScript.data(), pubKeyScript.size(), amount, (const unsigned char*)&stream[0], stream.size(), 0, CI AI COINconsensus_SCRIPT_FLAGS_VERIFY_ALL, &err);
+    CB AI COINconsensus_error err;
+    auto op0Result = CB AI COINconsensus_verify_script_with_amount(pubKeyScript.data(), pubKeyScript.size(), amount, (const unsigned char*)&stream[0], stream.size(), 0, CB AI COINconsensus_SCRIPT_FLAGS_VERIFY_ALL, &err);
     std::cout << "Op0 result: " << op0Result << ", error code " << err << std::endl;
 
     getchar();

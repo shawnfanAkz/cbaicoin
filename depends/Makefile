@@ -13,7 +13,7 @@ RAPIDCHECK ?=
 NO_WALLET ?=
 NO_ZMQ ?=
 NO_UPNP ?=
-FALLBACK_DOWNLOAD_PATH ?= https://CI AI COINcore.org/depends-sources
+FALLBACK_DOWNLOAD_PATH ?= https://CB AI COINcore.org/depends-sources
 
 BUILD = $(shell ./config.guess)
 HOST ?= $(BUILD)

@@ -1,20 +1,20 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <qt/CI AI COINunits.h>
+#include <qt/CB AI COINunits.h>
 
 #include <QStringList>
 
-CI AI COINUnits::CI AI COINUnits(QObject *parent):
+CB AI COINUnits::CB AI COINUnits(QObject *parent):
         QAbstractListModel(parent),
         unitlist(availableUnits())
 {
 }
 
-QList<CI AI COINUnits::Unit> CI AI COINUnits::availableUnits()
+QList<CB AI COINUnits::Unit> CB AI COINUnits::availableUnits()
 {
-    QList<CI AI COINUnits::Unit> unitlist;
+    QList<CB AI COINUnits::Unit> unitlist;
     unitlist.append(CICX);
     unitlist.append(mCICX);
     unitlist.append(uCICX);
@@ -22,7 +22,7 @@ QList<CI AI COINUnits::Unit> CI AI COINUnits::availableUnits()
     return unitlist;
 }
 
-bool CI AI COINUnits::valid(int unit)
+bool CB AI COINUnits::valid(int unit)
 {
     switch(unit)
     {
@@ -36,7 +36,7 @@ bool CI AI COINUnits::valid(int unit)
     }
 }
 
-QString CI AI COINUnits::longName(int unit)
+QString CB AI COINUnits::longName(int unit)
 {
     switch(unit)
     {
@@ -48,7 +48,7 @@ QString CI AI COINUnits::longName(int unit)
     }
 }
 
-QString CI AI COINUnits::shortName(int unit)
+QString CB AI COINUnits::shortName(int unit)
 {
     switch(unit)
     {
@@ -58,19 +58,19 @@ QString CI AI COINUnits::shortName(int unit)
     }
 }
 
-QString CI AI COINUnits::description(int unit)
+QString CB AI COINUnits::description(int unit)
 {
     switch(unit)
     {
-    case CICX: return QString("CI AI COINs");
-    case mCICX: return QString("Milli-CI AI COINs (1 / 1" THIN_SP_UTF8 "000)");
-    case uCICX: return QString("Micro-CI AI COINs (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case CICX: return QString("CB AI COINs");
+    case mCICX: return QString("Milli-CB AI COINs (1 / 1" THIN_SP_UTF8 "000)");
+    case uCICX: return QString("Micro-CB AI COINs (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     case SAT: return QString("Ione (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
 
-qint64 CI AI COINUnits::factor(int unit)
+qint64 CB AI COINUnits::factor(int unit)
 {
     switch(unit)
     {
@@ -82,7 +82,7 @@ qint64 CI AI COINUnits::factor(int unit)
     }
 }
 
-int CI AI COINUnits::decimals(int unit)
+int CB AI COINUnits::decimals(int unit)
 {
     switch(unit)
     {
@@ -94,7 +94,7 @@ int CI AI COINUnits::decimals(int unit)
     }
 }
 
-QString CI AI COINUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
+QString CB AI COINUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
 {
     // Note: not using straight sprintf here because we do NOT want
     // localized number formatting.
@@ -138,12 +138,12 @@ QString CI AI COINUnits::format(int unit, const CAmount& nIn, bool fPlus, Separa
 // Please take care to use formatHtmlWithUnit instead, when
 // appropriate.
 
-QString CI AI COINUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString CB AI COINUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     return format(unit, amount, plussign, separators) + QString(" ") + shortName(unit);
 }
 
-QString CI AI COINUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString CB AI COINUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QString str(formatWithUnit(unit, amount, plussign, separators));
     str.replace(QChar(THIN_SP_CP), QString(THIN_SP_HTML));
@@ -151,7 +151,7 @@ QString CI AI COINUnits::formatHtmlWithUnit(int unit, const CAmount& amount, boo
 }
 
 
-bool CI AI COINUnits::parse(int unit, const QString &value, CAmount *val_out)
+bool CB AI COINUnits::parse(int unit, const QString &value, CAmount *val_out)
 {
     if(!valid(unit) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -190,23 +190,23 @@ bool CI AI COINUnits::parse(int unit, const QString &value, CAmount *val_out)
     return ok;
 }
 
-QString CI AI COINUnits::getAmountColumnTitle(int unit)
+QString CB AI COINUnits::getAmountColumnTitle(int unit)
 {
     QString amountTitle = QObject::tr("Amount");
-    if (CI AI COINUnits::valid(unit))
+    if (CB AI COINUnits::valid(unit))
     {
-        amountTitle += " ("+CI AI COINUnits::shortName(unit) + ")";
+        amountTitle += " ("+CB AI COINUnits::shortName(unit) + ")";
     }
     return amountTitle;
 }
 
-int CI AI COINUnits::rowCount(const QModelIndex &parent) const
+int CB AI COINUnits::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return unitlist.size();
 }
 
-QVariant CI AI COINUnits::data(const QModelIndex &index, int role) const
+QVariant CB AI COINUnits::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     if(row >= 0 && row < unitlist.size())
@@ -226,7 +226,7 @@ QVariant CI AI COINUnits::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-CAmount CI AI COINUnits::maxMoney()
+CAmount CB AI COINUnits::maxMoney()
 {
     return MAX_MONEY;
 }

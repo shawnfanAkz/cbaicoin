@@ -1,10 +1,10 @@
-CI AI COIN version 0.7.2 is now available from:
-  http://sourceforge.net/projects/CI AI COIN/files/CI AI COIN/CI AI COIN-0.7.2
+CB AI COIN version 0.7.2 is now available from:
+  http://sourceforge.net/projects/CB AI COIN/files/CB AI COIN/CB AI COIN-0.7.2
 
 This is a bug-fix minor release.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/CI AI COIN/CI AI COIN/issues
+  https://github.com/CB AI COIN/CB AI COIN/issues
 
 How to Upgrade
 --------------
@@ -12,7 +12,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/CI AI COIN-Qt (on Mac) or CI AI COINd/CI AI COIN-qt (on Linux).
+/Applications/CB AI COIN-Qt (on Mac) or CB AI COINd/CB AI COIN-qt (on Linux).
 
 If you were running on Linux with a version that might have been compiled
 with a different version of Berkeley DB (for example, if you were using an
@@ -40,7 +40,7 @@ Bug fixes
   database twice.
 
 * Fix use-after-free problems in initialization and shutdown, the latter of
-  which caused CI AI COIN-Qt to crash on Windows when exiting.
+  which caused CB AI COIN-Qt to crash on Windows when exiting.
 
 * Correct library linking so building on Windows natively works.
 

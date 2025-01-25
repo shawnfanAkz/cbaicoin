@@ -1,14 +1,14 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
 #include <qt/paymentserver.h>
 
-#include <qt/CI AI COINunits.h>
+#include <qt/CB AI COINunits.h>
 #include <qt/guiutil.h>
 #include <qt/optionsmodel.h>
 
@@ -38,7 +38,7 @@
 #include <QUrlQuery>
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCOIN_IPC_PREFIX("CI AI COIN:");
+const QString BITCOIN_IPC_PREFIX("CB AI COIN:");
 
 //
 // Create a name that is unique for:
@@ -47,7 +47,7 @@ const QString BITCOIN_IPC_PREFIX("CI AI COIN:");
 //
 static QString ipcServerName()
 {
-    QString name("CI AI COINQt");
+    QString name("CB AI COINQt");
 
     // Append a simple hash of the datadir
     // Note that GetDataDir(true) returns a different path
@@ -82,17 +82,17 @@ void PaymentServer::ipcParseCommandLine(interfaces::Node& node, int argc, char* 
         if (arg.startsWith("-"))
             continue;
 
-        // If the CI AI COIN: URI contains a payment request, we are not able to detect the
+        // If the CB AI COIN: URI contains a payment request, we are not able to detect the
         // network as that would require fetching and parsing the payment request.
         // That means clicking such an URI which contains a testnet payment request
         // will start a mainnet instance and throw a "wrong network" error.
-        if (arg.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // CI AI COIN: URI
+        if (arg.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // CB AI COIN: URI
         {
             if (savedPaymentRequests.contains(arg)) continue;
             savedPaymentRequests.insert(arg);
 
             SendCoinsRecipient r;
-            if (GUIUtil::parseCI AI COINURI(arg, &r) && !r.address.isEmpty())
+            if (GUIUtil::parseCB AI COINURI(arg, &r) && !r.address.isEmpty())
             {
                 auto tempChainParams = CreateChainParams(CBaseChainParams::MAIN);
 
@@ -155,7 +155,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
     optionsModel(nullptr)
 {
     // Install global event filter to catch QFileOpenEvents
-    // on Mac: sent when you click CI AI COIN: links
+    // on Mac: sent when you click CB AI COIN: links
     // other OSes: helpful when dealing with payment request files
     if (parent)
         parent->installEventFilter(this);
@@ -172,7 +172,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
         if (!uriServer->listen(name)) {
             // constructor is called early in init, so don't use "Q_EMIT message()" here
             QMessageBox::critical(nullptr, tr("Payment request error"),
-                tr("Cannot start CI AI COIN: click-to-pay handler"));
+                tr("Cannot start CB AI COIN: click-to-pay handler"));
         }
         else {
             connect(uriServer, &QLocalServer::newConnection, this, &PaymentServer::handleURIConnection);
@@ -185,7 +185,7 @@ PaymentServer::~PaymentServer()
 }
 
 //
-// OSX-specific way of handling CI AI COIN: URIs
+// OSX-specific way of handling CB AI COIN: URIs
 //
 bool PaymentServer::eventFilter(QObject *object, QEvent *event)
 {
@@ -220,18 +220,18 @@ void PaymentServer::handleURIOrFile(const QString& s)
         return;
     }
 
-    if (s.startsWith("CI AI COIN://", Qt::CaseInsensitive))
+    if (s.startsWith("CB AI COIN://", Qt::CaseInsensitive))
     {
-        Q_EMIT message(tr("URI handling"), tr("'CI AI COIN://' is not a valid URI. Use 'CI AI COIN:' instead."),
+        Q_EMIT message(tr("URI handling"), tr("'CB AI COIN://' is not a valid URI. Use 'CB AI COIN:' instead."),
             CClientUIInterface::MSG_ERROR);
     }
-    else if (s.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // CI AI COIN: URI
+    else if (s.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // CB AI COIN: URI
     {
         QUrlQuery uri((QUrl(s)));
         // normal URI
         {
             SendCoinsRecipient recipient;
-            if (GUIUtil::parseCI AI COINURI(s, &recipient))
+            if (GUIUtil::parseCB AI COINURI(s, &recipient))
             {
                 if (!IsValidDestinationString(recipient.address.toStdString())) {
                     if (uri.hasQueryItem("r")) {  // payment request
@@ -249,7 +249,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
             }
             else
                 Q_EMIT message(tr("URI handling"),
-                    tr("URI cannot be parsed! This can be caused by an invalid CI AI COIN address or malformed URI parameters."),
+                    tr("URI cannot be parsed! This can be caused by an invalid CB AI COIN address or malformed URI parameters."),
                     CClientUIInterface::ICON_WARNING);
 
             return;

@@ -1,4 +1,4 @@
-The wallet has been created by starting CI AI COIN Core with the options
+The wallet has been created by starting CB AI COIN Core with the options
 `-regtest -datadir=/tmp -nowallet -walletdir=$(pwd)/test/functional/data/wallets/`.
 
 In the source code, `WalletFeature::FEATURE_LATEST` has been modified to be large, so that the minversion is too high

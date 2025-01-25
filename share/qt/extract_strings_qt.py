@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2012-2018 The CI AI COIN Core developers
+# Copyright (c) 2012-2018 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 '''
@@ -11,7 +11,7 @@ import operator
 import os
 import sys
 
-OUT_CPP="qt/CI AI COINstrings.cpp"
+OUT_CPP="qt/CB AI COINstrings.cpp"
 EMPTY=['""']
 
 def parse_po(text):
@@ -75,11 +75,11 @@ f.write("""
 #define UNUSED
 #endif
 """)
-f.write('static const char UNUSED *CI AI COIN_strings[] = {\n')
-f.write('QT_TRANSLATE_NOOP("CI AI COIN-core", "%s"),\n' % (os.getenv('COPYRIGHT_HOLDERS'),))
+f.write('static const char UNUSED *CB AI COIN_strings[] = {\n')
+f.write('QT_TRANSLATE_NOOP("CB AI COIN-core", "%s"),\n' % (os.getenv('COPYRIGHT_HOLDERS'),))
 messages.sort(key=operator.itemgetter(0))
 for (msgid, msgstr) in messages:
     if msgid != EMPTY:
-        f.write('QT_TRANSLATE_NOOP("CI AI COIN-core", %s),\n' % ('\n'.join(msgid)))
+        f.write('QT_TRANSLATE_NOOP("CB AI COIN-core", %s),\n' % ('\n'.join(msgid)))
 f.write('};\n')
 f.close()

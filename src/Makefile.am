@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2016 The CI AI COIN Core developers
+# Copyright (c) 2013-2016 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -24,37 +24,37 @@ BITCOIN_INCLUDES=-I$(builddir) $(BDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFL
 BITCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
 BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
-LIBBITCOIN_SERVER=libCI AI COIN_server.a
-LIBBITCOIN_COMMON=libCI AI COIN_common.a
-LIBBITCOIN_CONSENSUS=libCI AI COIN_consensus.a
-LIBBITCOIN_CLI=libCI AI COIN_cli.a
-LIBBITCOIN_UTIL=libCI AI COIN_util.a
-LIBBITCOIN_CRYPTO_BASE=crypto/libCI AI COIN_crypto_base.a
-LIBBITCOINQT=qt/libCI AI COINqt.a
+LIBBITCOIN_SERVER=libCB AI COIN_server.a
+LIBBITCOIN_COMMON=libCB AI COIN_common.a
+LIBBITCOIN_CONSENSUS=libCB AI COIN_consensus.a
+LIBBITCOIN_CLI=libCB AI COIN_cli.a
+LIBBITCOIN_UTIL=libCB AI COIN_util.a
+LIBBITCOIN_CRYPTO_BASE=crypto/libCB AI COIN_crypto_base.a
+LIBBITCOINQT=qt/libCB AI COINqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=libCI AI COIN_zmq.a
+LIBBITCOIN_ZMQ=libCB AI COIN_zmq.a
 endif
 if BUILD_BITCOIN_LIBS
-LIBBITCOINCONSENSUS=libCI AI COINconsensus.la
+LIBBITCOINCONSENSUS=libCB AI COINconsensus.la
 endif
 if ENABLE_WALLET
-LIBBITCOIN_WALLET=libCI AI COIN_wallet.a
-LIBBITCOIN_WALLET_TOOL=libCI AI COIN_wallet_tool.a
+LIBBITCOIN_WALLET=libCB AI COIN_wallet.a
+LIBBITCOIN_WALLET_TOOL=libCB AI COIN_wallet_tool.a
 endif
 
 LIBBITCOIN_CRYPTO= $(LIBBITCOIN_CRYPTO_BASE)
 if ENABLE_SSE41
-LIBBITCOIN_CRYPTO_SSE41 = crypto/libCI AI COIN_crypto_sse41.a
+LIBBITCOIN_CRYPTO_SSE41 = crypto/libCB AI COIN_crypto_sse41.a
 LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_SSE41)
 endif
 if ENABLE_AVX2
-LIBBITCOIN_CRYPTO_AVX2 = crypto/libCI AI COIN_crypto_avx2.a
+LIBBITCOIN_CRYPTO_AVX2 = crypto/libCB AI COIN_crypto_avx2.a
 LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_AVX2)
 endif
 if ENABLE_SHANI
-LIBBITCOIN_CRYPTO_SHANI = crypto/libCI AI COIN_crypto_shani.a
+LIBBITCOIN_CRYPTO_SHANI = crypto/libCB AI COIN_crypto_shani.a
 LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_SHANI)
 endif
 
@@ -82,23 +82,23 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += CI AI COINd
+  bin_PROGRAMS += CB AI COINd
 endif
 
 if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += CI AI COIN-cli
+  bin_PROGRAMS += CB AI COIN-cli
 endif
 if BUILD_BITCOIN_TX
-  bin_PROGRAMS += CI AI COIN-tx
+  bin_PROGRAMS += CB AI COIN-tx
 endif
 if ENABLE_WALLET
 if BUILD_BITCOIN_WALLET
-  bin_PROGRAMS += CI AI COIN-wallet
+  bin_PROGRAMS += CB AI COIN-wallet
 endif
 endif
 
 .PHONY: FORCE check-symbols check-security
-# CI AI COIN core #
+# CB AI COIN core #
 BITCOIN_CORE_H = \
   addrdb.h \
   addrman.h \
@@ -255,15 +255,15 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh "$(abs_top_builddir)/src/obj/build.h" \
 	  "$(abs_top_srcdir)"
-libCI AI COIN_util_a-clientversion.$(OBJEXT): obj/build.h
+libCB AI COIN_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between CI AI COINd and CI AI COIN-qt
+# server: shared between CB AI COINd and CB AI COIN-qt
 # Contains code accessing mempool and chain state that is meant to be separated
 # from wallet and gui code (see node/README.md). Shared code should go in
-# libCI AI COIN_common or libCI AI COIN_util libraries, instead.
-libCI AI COIN_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libCI AI COIN_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libCI AI COIN_server_a_SOURCES = \
+# libCB AI COIN_common or libCB AI COIN_util libraries, instead.
+libCB AI COIN_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libCB AI COIN_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libCB AI COIN_server_a_SOURCES = \
   addrdb.cpp \
   addrman.cpp \
   banman.cpp \
@@ -314,16 +314,16 @@ libCI AI COIN_server_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_WALLET
-libCI AI COIN_server_a_SOURCES += wallet/init.cpp
+libCB AI COIN_server_a_SOURCES += wallet/init.cpp
 endif
 if !ENABLE_WALLET
-libCI AI COIN_server_a_SOURCES += dummywallet.cpp
+libCB AI COIN_server_a_SOURCES += dummywallet.cpp
 endif
 
 if ENABLE_ZMQ
-libCI AI COIN_zmq_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libCI AI COIN_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libCI AI COIN_zmq_a_SOURCES = \
+libCB AI COIN_zmq_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libCB AI COIN_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libCB AI COIN_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp \
@@ -331,11 +331,11 @@ libCI AI COIN_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between CI AI COINd and CI AI COIN-qt, but only linked
+# wallet: shared between CB AI COINd and CB AI COIN-qt, but only linked
 # when wallet enabled
-libCI AI COIN_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libCI AI COIN_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libCI AI COIN_wallet_a_SOURCES = \
+libCB AI COIN_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libCB AI COIN_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libCB AI COIN_wallet_a_SOURCES = \
   interfaces/wallet.cpp \
   wallet/coincontrol.cpp \
   wallet/crypter.cpp \
@@ -353,16 +353,16 @@ libCI AI COIN_wallet_a_SOURCES = \
   wallet/coinselection.cpp \
   $(BITCOIN_CORE_H)
 
-libCI AI COIN_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libCI AI COIN_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libCI AI COIN_wallet_tool_a_SOURCES = \
+libCB AI COIN_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libCB AI COIN_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libCB AI COIN_wallet_tool_a_SOURCES = \
   wallet/wallettool.cpp \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libCI AI COIN_crypto_base_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libCI AI COIN_crypto_base_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libCI AI COIN_crypto_base_a_SOURCES = \
+crypto_libCB AI COIN_crypto_base_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libCB AI COIN_crypto_base_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libCB AI COIN_crypto_base_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/chacha_poly_aead.h \
@@ -390,7 +390,7 @@ crypto_libCI AI COIN_crypto_base_a_SOURCES = \
   crypto/siphash.h
 
 # x11
-crypto_libCI AI COIN_crypto_base_a_SOURCES += \
+crypto_libCB AI COIN_crypto_base_a_SOURCES += \
   crypto/blake.c \
   crypto/bmw.c \
   crypto/cubehash.c \
@@ -416,31 +416,31 @@ crypto_libCI AI COIN_crypto_base_a_SOURCES += \
   crypto/sph_types.h
 
 if USE_ASM
-crypto_libCI AI COIN_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
+crypto_libCB AI COIN_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
 endif
 
-crypto_libCI AI COIN_crypto_sse41_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libCI AI COIN_crypto_sse41_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libCI AI COIN_crypto_sse41_a_CXXFLAGS += $(SSE41_CXXFLAGS)
-crypto_libCI AI COIN_crypto_sse41_a_CPPFLAGS += -DENABLE_SSE41
-crypto_libCI AI COIN_crypto_sse41_a_SOURCES = crypto/sha256_sse41.cpp
+crypto_libCB AI COIN_crypto_sse41_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libCB AI COIN_crypto_sse41_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libCB AI COIN_crypto_sse41_a_CXXFLAGS += $(SSE41_CXXFLAGS)
+crypto_libCB AI COIN_crypto_sse41_a_CPPFLAGS += -DENABLE_SSE41
+crypto_libCB AI COIN_crypto_sse41_a_SOURCES = crypto/sha256_sse41.cpp
 
-crypto_libCI AI COIN_crypto_avx2_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libCI AI COIN_crypto_avx2_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libCI AI COIN_crypto_avx2_a_CXXFLAGS += $(AVX2_CXXFLAGS)
-crypto_libCI AI COIN_crypto_avx2_a_CPPFLAGS += -DENABLE_AVX2
-crypto_libCI AI COIN_crypto_avx2_a_SOURCES = crypto/sha256_avx2.cpp
+crypto_libCB AI COIN_crypto_avx2_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libCB AI COIN_crypto_avx2_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libCB AI COIN_crypto_avx2_a_CXXFLAGS += $(AVX2_CXXFLAGS)
+crypto_libCB AI COIN_crypto_avx2_a_CPPFLAGS += -DENABLE_AVX2
+crypto_libCB AI COIN_crypto_avx2_a_SOURCES = crypto/sha256_avx2.cpp
 
-crypto_libCI AI COIN_crypto_shani_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libCI AI COIN_crypto_shani_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libCI AI COIN_crypto_shani_a_CXXFLAGS += $(SHANI_CXXFLAGS)
-crypto_libCI AI COIN_crypto_shani_a_CPPFLAGS += -DENABLE_SHANI
-crypto_libCI AI COIN_crypto_shani_a_SOURCES = crypto/sha256_shani.cpp
+crypto_libCB AI COIN_crypto_shani_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libCB AI COIN_crypto_shani_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libCB AI COIN_crypto_shani_a_CXXFLAGS += $(SHANI_CXXFLAGS)
+crypto_libCB AI COIN_crypto_shani_a_CPPFLAGS += -DENABLE_SHANI
+crypto_libCB AI COIN_crypto_shani_a_SOURCES = crypto/sha256_shani.cpp
 
 # consensus: shared between all executables that validate any consensus rules.
-libCI AI COIN_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libCI AI COIN_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libCI AI COIN_consensus_a_SOURCES = \
+libCB AI COIN_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libCB AI COIN_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libCB AI COIN_consensus_a_SOURCES = \
   amount.h \
   arith_uint256.cpp \
   arith_uint256.h \
@@ -458,7 +458,7 @@ libCI AI COIN_consensus_a_SOURCES = \
   primitives/transaction.h \
   pubkey.cpp \
   pubkey.h \
-  script/CI AI COINconsensus.cpp \
+  script/CB AI COINconsensus.cpp \
   script/interpreter.cpp \
   script/interpreter.h \
   script/script.cpp \
@@ -474,10 +474,10 @@ libCI AI COIN_consensus_a_SOURCES = \
   util/strencodings.h \
   version.h
 
-# common: shared between CI AI COINd, and CI AI COIN-qt and non-server tools
-libCI AI COIN_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libCI AI COIN_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libCI AI COIN_common_a_SOURCES = \
+# common: shared between CB AI COINd, and CB AI COIN-qt and non-server tools
+libCB AI COIN_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libCB AI COIN_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libCB AI COIN_common_a_SOURCES = \
   base58.cpp \
   bech32.cpp \
   bloom.cpp \
@@ -511,9 +511,9 @@ libCI AI COIN_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libCI AI COIN_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libCI AI COIN_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libCI AI COIN_util_a_SOURCES = \
+libCB AI COIN_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libCB AI COIN_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libCB AI COIN_util_a_SOURCES = \
   support/lockedpool.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -546,35 +546,35 @@ libCI AI COIN_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libCI AI COIN_util_a_SOURCES += compat/glibc_compat.cpp
+libCB AI COIN_util_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += $(COMPAT_LDFLAGS)
 endif
 
-# cli: shared between CI AI COIN-cli and CI AI COIN-qt
-libCI AI COIN_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libCI AI COIN_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libCI AI COIN_cli_a_SOURCES = \
+# cli: shared between CB AI COIN-cli and CB AI COIN-qt
+libCB AI COIN_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libCB AI COIN_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libCB AI COIN_cli_a_SOURCES = \
   compat/stdin.h \
   compat/stdin.cpp \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libCI AI COIN_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libCB AI COIN_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# CI AI COINd binary #
-CI AI COINd_SOURCES = CI AI COINd.cpp
-CI AI COINd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-CI AI COINd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-CI AI COINd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# CB AI COINd binary #
+CB AI COINd_SOURCES = CB AI COINd.cpp
+CB AI COINd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+CB AI COINd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+CB AI COINd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-CI AI COINd_SOURCES += CI AI COINd-res.rc
+CB AI COINd_SOURCES += CB AI COINd-res.rc
 endif
 
 # Libraries below may be listed more than once to resolve circular dependencies (see
 # https://eli.thegreenplace.net/2013/07/09/library-order-in-static-linking#circular-dependency)
-CI AI COINd_LDADD = \
+CB AI COINd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_SERVER) \
@@ -589,38 +589,38 @@ CI AI COINd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-CI AI COINd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+CB AI COINd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# CI AI COIN-cli binary #
-CI AI COIN_cli_SOURCES = CI AI COIN-cli.cpp
-CI AI COIN_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-CI AI COIN_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-CI AI COIN_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# CB AI COIN-cli binary #
+CB AI COIN_cli_SOURCES = CB AI COIN-cli.cpp
+CB AI COIN_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+CB AI COIN_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+CB AI COIN_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-CI AI COIN_cli_SOURCES += CI AI COIN-cli-res.rc
+CB AI COIN_cli_SOURCES += CB AI COIN-cli-res.rc
 endif
 
-CI AI COIN_cli_LDADD = \
+CB AI COIN_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-CI AI COIN_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+CB AI COIN_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# CI AI COIN-tx binary #
-CI AI COIN_tx_SOURCES = CI AI COIN-tx.cpp
-CI AI COIN_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-CI AI COIN_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-CI AI COIN_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# CB AI COIN-tx binary #
+CB AI COIN_tx_SOURCES = CB AI COIN-tx.cpp
+CB AI COIN_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+CB AI COIN_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+CB AI COIN_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-CI AI COIN_tx_SOURCES += CI AI COIN-tx-res.rc
+CB AI COIN_tx_SOURCES += CB AI COIN-tx-res.rc
 endif
 
-CI AI COIN_tx_LDADD = \
+CB AI COIN_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -628,20 +628,20 @@ CI AI COIN_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-CI AI COIN_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+CB AI COIN_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
-# CI AI COIN-wallet binary #
-CI AI COIN_wallet_SOURCES = CI AI COIN-wallet.cpp
-CI AI COIN_wallet_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-CI AI COIN_wallet_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-CI AI COIN_wallet_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# CB AI COIN-wallet binary #
+CB AI COIN_wallet_SOURCES = CB AI COIN-wallet.cpp
+CB AI COIN_wallet_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+CB AI COIN_wallet_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+CB AI COIN_wallet_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-CI AI COIN_wallet_SOURCES += CI AI COIN-wallet-res.rc
+CB AI COIN_wallet_SOURCES += CB AI COIN-wallet-res.rc
 endif
 
-CI AI COIN_wallet_LDADD = \
+CB AI COIN_wallet_LDADD = \
   $(LIBBITCOIN_WALLET_TOOL) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_COMMON) \
@@ -655,22 +655,22 @@ CI AI COIN_wallet_LDADD = \
   $(LIBSECP256K1) \
   $(LIBUNIVALUE)
 
-CI AI COIN_wallet_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS)
+CB AI COIN_wallet_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS)
 #
 
-# CI AI COINconsensus library #
+# CB AI COINconsensus library #
 if BUILD_BITCOIN_LIBS
-include_HEADERS = script/CI AI COINconsensus.h
-libCI AI COINconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libCI AI COIN_crypto_base_a_SOURCES) $(libCI AI COIN_consensus_a_SOURCES)
+include_HEADERS = script/CB AI COINconsensus.h
+libCB AI COINconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libCB AI COIN_crypto_base_a_SOURCES) $(libCB AI COIN_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
-  libCI AI COINconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libCB AI COINconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libCI AI COINconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libCI AI COINconsensus_la_LIBADD = $(LIBSECP256K1)
-libCI AI COINconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
-libCI AI COINconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libCB AI COINconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libCB AI COINconsensus_la_LIBADD = $(LIBSECP256K1)
+libCB AI COINconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+libCB AI COINconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #
@@ -700,12 +700,12 @@ CLEANFILES += obj/build.h
 EXTRA_DIST = $(CTAES_DIST)
 
 
-config/CI AI COIN-config.h: config/stamp-h1
+config/CB AI COIN-config.h: config/stamp-h1
 	@$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-config/stamp-h1: $(top_srcdir)/$(subdir)/config/CI AI COIN-config.h.in $(top_builddir)/config.status
+config/stamp-h1: $(top_srcdir)/$(subdir)/config/CB AI COIN-config.h.in $(top_builddir)/config.status
 	$(AM_V_at)$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-$(top_srcdir)/$(subdir)/config/CI AI COIN-config.h.in:  $(am__configure_deps)
-	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/CI AI COIN-config.h.in
+$(top_srcdir)/$(subdir)/config/CB AI COIN-config.h.in:  $(am__configure_deps)
+	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/CB AI COIN-config.h.in
 
 clean-local:
 	-$(MAKE) -C secp256k1 clean

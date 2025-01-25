@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018 The CI AI COIN Core developers
+// Copyright (c) 2014-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,8 +9,8 @@
 #include <string>
 
 /**
- * CBaseChainParams defines the base parameters (shared between CI AI COIN-cli and CI AI COINd)
- * of a given instance of the CI AI COIN system.
+ * CBaseChainParams defines the base parameters (shared between CB AI COIN-cli and CB AI COINd)
+ * of a given instance of the CB AI COIN system.
  */
 class CBaseChainParams
 {

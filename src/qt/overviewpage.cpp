@@ -1,11 +1,11 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/overviewpage.h>
 #include <qt/forms/ui_overviewpage.h>
 
-#include <qt/CI AI COINunits.h>
+#include <qt/CB AI COINunits.h>
 #include <qt/clientmodel.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
@@ -28,7 +28,7 @@ class TxViewDelegate : public QAbstractItemDelegate
     Q_OBJECT
 public:
     explicit TxViewDelegate(const PlatformStyle *_platformStyle, QObject *parent=nullptr):
-        QAbstractItemDelegate(parent), unit(CI AI COINUnits::CICX),
+        QAbstractItemDelegate(parent), unit(CB AI COINUnits::CICX),
         platformStyle(_platformStyle)
     {
 
@@ -86,7 +86,7 @@ public:
             foreground = option.palette.color(QPalette::Text);
         }
         painter->setPen(foreground);
-        QString amountText = CI AI COINUnits::formatWithUnit(unit, amount, true, CI AI COINUnits::separatorAlways);
+        QString amountText = CB AI COINUnits::formatWithUnit(unit, amount, true, CB AI COINUnits::separatorAlways);
         if(!confirmed)
         {
             amountText = QString("[") + amountText + QString("]");
@@ -162,19 +162,19 @@ void OverviewPage::setBalance(const interfaces::WalletBalances& balances)
     int unit = walletModel->getOptionsModel()->getDisplayUnit();
     m_balances = balances;
     if (walletModel->privateKeysDisabled()) {
-        ui->labelBalance->setText(CI AI COINUnits::formatWithUnit(unit, balances.watch_only_balance, false, CI AI COINUnits::separatorAlways));
-        ui->labelUnconfirmed->setText(CI AI COINUnits::formatWithUnit(unit, balances.unconfirmed_watch_only_balance, false, CI AI COINUnits::separatorAlways));
-        ui->labelImmature->setText(CI AI COINUnits::formatWithUnit(unit, balances.immature_watch_only_balance, false, CI AI COINUnits::separatorAlways));
-        ui->labelTotal->setText(CI AI COINUnits::formatWithUnit(unit, balances.watch_only_balance + balances.unconfirmed_watch_only_balance + balances.immature_watch_only_balance, false, CI AI COINUnits::separatorAlways));
+        ui->labelBalance->setText(CB AI COINUnits::formatWithUnit(unit, balances.watch_only_balance, false, CB AI COINUnits::separatorAlways));
+        ui->labelUnconfirmed->setText(CB AI COINUnits::formatWithUnit(unit, balances.unconfirmed_watch_only_balance, false, CB AI COINUnits::separatorAlways));
+        ui->labelImmature->setText(CB AI COINUnits::formatWithUnit(unit, balances.immature_watch_only_balance, false, CB AI COINUnits::separatorAlways));
+        ui->labelTotal->setText(CB AI COINUnits::formatWithUnit(unit, balances.watch_only_balance + balances.unconfirmed_watch_only_balance + balances.immature_watch_only_balance, false, CB AI COINUnits::separatorAlways));
     } else {
-        ui->labelBalance->setText(CI AI COINUnits::formatWithUnit(unit, balances.balance, false, CI AI COINUnits::separatorAlways));
-        ui->labelUnconfirmed->setText(CI AI COINUnits::formatWithUnit(unit, balances.unconfirmed_balance, false, CI AI COINUnits::separatorAlways));
-        ui->labelImmature->setText(CI AI COINUnits::formatWithUnit(unit, balances.immature_balance, false, CI AI COINUnits::separatorAlways));
-        ui->labelTotal->setText(CI AI COINUnits::formatWithUnit(unit, balances.balance + balances.unconfirmed_balance + balances.immature_balance, false, CI AI COINUnits::separatorAlways));
-        ui->labelWatchAvailable->setText(CI AI COINUnits::formatWithUnit(unit, balances.watch_only_balance, false, CI AI COINUnits::separatorAlways));
-        ui->labelWatchPending->setText(CI AI COINUnits::formatWithUnit(unit, balances.unconfirmed_watch_only_balance, false, CI AI COINUnits::separatorAlways));
-        ui->labelWatchImmature->setText(CI AI COINUnits::formatWithUnit(unit, balances.immature_watch_only_balance, false, CI AI COINUnits::separatorAlways));
-        ui->labelWatchTotal->setText(CI AI COINUnits::formatWithUnit(unit, balances.watch_only_balance + balances.unconfirmed_watch_only_balance + balances.immature_watch_only_balance, false, CI AI COINUnits::separatorAlways));
+        ui->labelBalance->setText(CB AI COINUnits::formatWithUnit(unit, balances.balance, false, CB AI COINUnits::separatorAlways));
+        ui->labelUnconfirmed->setText(CB AI COINUnits::formatWithUnit(unit, balances.unconfirmed_balance, false, CB AI COINUnits::separatorAlways));
+        ui->labelImmature->setText(CB AI COINUnits::formatWithUnit(unit, balances.immature_balance, false, CB AI COINUnits::separatorAlways));
+        ui->labelTotal->setText(CB AI COINUnits::formatWithUnit(unit, balances.balance + balances.unconfirmed_balance + balances.immature_balance, false, CB AI COINUnits::separatorAlways));
+        ui->labelWatchAvailable->setText(CB AI COINUnits::formatWithUnit(unit, balances.watch_only_balance, false, CB AI COINUnits::separatorAlways));
+        ui->labelWatchPending->setText(CB AI COINUnits::formatWithUnit(unit, balances.unconfirmed_watch_only_balance, false, CB AI COINUnits::separatorAlways));
+        ui->labelWatchImmature->setText(CB AI COINUnits::formatWithUnit(unit, balances.immature_watch_only_balance, false, CB AI COINUnits::separatorAlways));
+        ui->labelWatchTotal->setText(CB AI COINUnits::formatWithUnit(unit, balances.watch_only_balance + balances.unconfirmed_watch_only_balance + balances.immature_watch_only_balance, false, CB AI COINUnits::separatorAlways));
     }
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users

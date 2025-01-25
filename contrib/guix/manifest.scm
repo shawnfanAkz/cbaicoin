@@ -99,7 +99,7 @@ chain for " target " development."))
       (home-page (package-home-page xgcc))
       (license (package-license xgcc)))))
 
-(define* (make-CI AI COIN-cross-toolchain target
+(define* (make-CB AI COIN-cross-toolchain target
                                   #:key
                                   (base-gcc-for-libc gcc-5)
                                   (base-kernel-headers linux-libre-headers-4.19)
@@ -107,7 +107,7 @@ chain for " target " development."))
                                   (base-gcc (make-gcc-rpath-link
                                              (make-ssp-fixed-gcc gcc-9))))
   "Convienience wrapper around MAKE-CROSS-TOOLCHAIN with default values
-desirable for building CI AI COIN Core release binaries."
+desirable for building CB AI COIN Core release binaries."
   (make-cross-toolchain target
                    base-gcc-for-libc
                    base-kernel-headers
@@ -147,12 +147,12 @@ desirable for building CI AI COIN Core release binaries."
        ;; Native gcc 9 toolchain targeting glibc 2.27
        (make-gcc-toolchain gcc-9 glibc-2.27)
        ;; Cross gcc 9 toolchains targeting glibc 2.27
-       (make-CI AI COIN-cross-toolchain "i686-linux-gnu")
-       (make-CI AI COIN-cross-toolchain "x86_64-linux-gnu")
-       (make-CI AI COIN-cross-toolchain "aarch64-linux-gnu")
-       (make-CI AI COIN-cross-toolchain "arm-linux-gnueabihf")
+       (make-CB AI COIN-cross-toolchain "i686-linux-gnu")
+       (make-CB AI COIN-cross-toolchain "x86_64-linux-gnu")
+       (make-CB AI COIN-cross-toolchain "aarch64-linux-gnu")
+       (make-CB AI COIN-cross-toolchain "arm-linux-gnueabihf")
        ;; The glibc 2.27 for riscv64 needs gcc 7 to successfully build (see:
        ;; https://www.gnu.org/software/gcc/gcc-7/changes.html#riscv). The final
        ;; toolchain is still a gcc 9 toolchain targeting glibc 2.27.
-       (make-CI AI COIN-cross-toolchain "riscv64-linux-gnu"
+       (make-CB AI COIN-cross-toolchain "riscv64-linux-gnu"
                                      #:base-gcc-for-libc gcc-7)))

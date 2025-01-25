@@ -1,17 +1,17 @@
-CI AI COIN Core version 0.18.1 is now available from:
+CB AI COIN Core version 0.18.1 is now available from:
 
-  <https://CI AI COINcore.org/bin/CI AI COIN-core-0.18.1/>
+  <https://CB AI COINcore.org/bin/CB AI COIN-core-0.18.1/>
 
 This is a new minor version release, including new features, various bug
 fixes and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/CI AI COIN/CI AI COIN/issues>
+  <https://github.com/CB AI COIN/CB AI COIN/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://CI AI COINcore.org/en/list/announcements/join/>
+  <https://CB AI COINcore.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============
@@ -19,7 +19,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has
 completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-`/Applications/CI AI COIN-Qt` (on Mac) or `CI AI COINd`/`CI AI COIN-qt` (on
+`/Applications/CB AI COIN-Qt` (on Mac) or `CB AI COINd`/`CB AI COIN-qt` (on
 Linux).
 
 The first time you run version 0.15.0 or newer, your chainstate database
@@ -35,16 +35,16 @@ wallet versions are still supported.
 Compatibility
 ==============
 
-CI AI COIN Core is supported and extensively tested on operating systems
+CB AI COIN Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.10+, and Windows 7 and newer. It is not
-recommended to use CI AI COIN Core on unsupported systems.
+recommended to use CB AI COIN Core on unsupported systems.
 
-CI AI COIN Core should also work on most other Unix-like systems but is not
+CB AI COIN Core should also work on most other Unix-like systems but is not
 as frequently tested on them.
 
 From 0.17.0 onwards, macOS <10.10 is no longer supported. 0.17.0 is
 built using Qt 5.9.x, which doesn't support versions of macOS older than
-10.10. Additionally, CI AI COIN Core does not yet change appearance when
+10.10. Additionally, CB AI COIN Core does not yet change appearance when
 macOS "dark mode" is activated.
 
 Known issues
@@ -91,7 +91,7 @@ not to use coin control features with multiple wallets loaded.
 
 ### Build system
 - #15985 Add test for GCC bug 90348 (sipa)
-- #15947 Install CI AI COIN-wallet manpage (domob1812)
+- #15947 Install CB AI COIN-wallet manpage (domob1812)
 - #15983 build with -fstack-reuse=none (MarcoFalke)
 
 ### Tests and QA
@@ -133,4 +133,4 @@ Thanks to everyone who directly contributed to this release:
 - tecnovert
 - Wladimir J. van der Laan
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/CI AI COIN/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/CB AI COIN/).

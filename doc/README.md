@@ -1,41 +1,41 @@
-CI AI COIN Core
+CB AI COIN Core
 =============
 
 Setup
 ---------------------
-CI AI COIN Core is the original CI AI COIN client and it builds the backbone of the network. It downloads and, by default, stores the entire history of CI AI COIN transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+CB AI COIN Core is the original CB AI COIN client and it builds the backbone of the network. It downloads and, by default, stores the entire history of CB AI COIN transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download CI AI COIN Core, visit [CI AI COINcore.org](https://CI AI COINcore.org/en/download/).
+To download CB AI COIN Core, visit [CB AI COINcore.org](https://CB AI COINcore.org/en/download/).
 
 Running
 ---------------------
-The following are some helpful notes on how to run CI AI COIN Core on your native platform.
+The following are some helpful notes on how to run CB AI COIN Core on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/CI AI COIN-qt` (GUI) or
-- `bin/CI AI COINd` (headless)
+- `bin/CB AI COIN-qt` (GUI) or
+- `bin/CB AI COINd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run CI AI COIN-qt.exe.
+Unpack the files into a directory, and then run CB AI COIN-qt.exe.
 
 ### macOS
 
-Drag CI AI COIN Core to your applications folder, and then run CI AI COIN Core.
+Drag CB AI COIN Core to your applications folder, and then run CB AI COIN Core.
 
 ### Need Help?
 
-* See the documentation at the [CI AI COIN Wiki](https://en.CI AI COIN.it/wiki/Main_Page)
+* See the documentation at the [CB AI COIN Wiki](https://en.CB AI COIN.it/wiki/Main_Page)
 for help and more information.
-* Ask for help on [#CI AI COIN](http://webchat.freenode.net?channels=CI AI COIN) on Freenode. If you don't have an IRC client, use [webchat here](http://webchat.freenode.net?channels=CI AI COIN).
-* Ask for help on the [CI AI COINTalk](https://CI AI COINtalk.org/) forums, in the [Technical Support board](https://CI AI COINtalk.org/index.php?board=4.0).
+* Ask for help on [#CB AI COIN](http://webchat.freenode.net?channels=CB AI COIN) on Freenode. If you don't have an IRC client, use [webchat here](http://webchat.freenode.net?channels=CB AI COIN).
+* Ask for help on the [CB AI COINTalk](https://CB AI COINtalk.org/) forums, in the [Technical Support board](https://CB AI COINtalk.org/index.php?board=4.0).
 
 Building
 ---------------------
-The following are developer notes on how to build CI AI COIN Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build CB AI COIN Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -44,17 +44,17 @@ The following are developer notes on how to build CI AI COIN Core on your native
 - [FreeBSD Build Notes](build-freebsd.md)
 - [OpenBSD Build Notes](build-openbsd.md)
 - [NetBSD Build Notes](build-netbsd.md)
-- [Gitian Building Guide (External Link)](https://github.com/CI AI COIN-core/docs/blob/master/gitian-building.md)
+- [Gitian Building Guide (External Link)](https://github.com/CB AI COIN-core/docs/blob/master/gitian-building.md)
 
 Development
 ---------------------
-The CI AI COIN repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The CB AI COIN repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Productivity Notes](productivity.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://dev.visucore.com/CI AI COIN/doxygen/)
+- [Source Code Documentation (External Link)](https://dev.visucore.com/CB AI COIN/doxygen/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [JSON-RPC Interface](JSON-RPC-interface.md)
@@ -65,13 +65,13 @@ The CI AI COIN repo's [root README](/README.md) contains relevant information on
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [CI AI COINTalk](https://CI AI COINtalk.org/) forums, in the [Development & Technical Discussion board](https://CI AI COINtalk.org/index.php?board=6.0).
-* Discuss project-specific development on #CI AI COIN-core-dev on Freenode. If you don't have an IRC client, use [webchat here](http://webchat.freenode.net/?channels=CI AI COIN-core-dev).
-* Discuss general CI AI COIN development on #CI AI COIN-dev on Freenode. If you don't have an IRC client, use [webchat here](http://webchat.freenode.net/?channels=CI AI COIN-dev).
+* Discuss on the [CB AI COINTalk](https://CB AI COINtalk.org/) forums, in the [Development & Technical Discussion board](https://CB AI COINtalk.org/index.php?board=6.0).
+* Discuss project-specific development on #CB AI COIN-core-dev on Freenode. If you don't have an IRC client, use [webchat here](http://webchat.freenode.net/?channels=CB AI COIN-core-dev).
+* Discuss general CB AI COIN development on #CB AI COIN-dev on Freenode. If you don't have an IRC client, use [webchat here](http://webchat.freenode.net/?channels=CB AI COIN-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
-- [CI AI COIN.conf Configuration File](CI AI COIN-conf.md)
+- [CB AI COIN.conf Configuration File](CB AI COIN-conf.md)
 - [Files](files.md)
 - [Fuzz-testing](fuzzing.md)
 - [Reduce Memory](reduce-memory.md)

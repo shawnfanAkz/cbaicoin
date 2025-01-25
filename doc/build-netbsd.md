@@ -2,7 +2,7 @@ NetBSD build guide
 ======================
 (updated for NetBSD 8.0)
 
-This guide describes how to build CI AI COINd and command-line utilities on NetBSD.
+This guide describes how to build CB AI COINd and command-line utilities on NetBSD.
 
 This guide does not contain instructions for building the GUI.
 
@@ -22,7 +22,7 @@ libtool
 pkg-config
 python37
 
-git clone https://github.com/CI AI COIN/CI AI COIN.git
+git clone https://github.com/CB AI COIN/CB AI COIN.git
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
@@ -47,7 +47,7 @@ from the root of the repository. Then set `BDB_PREFIX` for the next section:
 export BDB_PREFIX="$PWD/db4"
 ```
 
-### Building CI AI COIN Core
+### Building CB AI COIN Core
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).
 

@@ -12,25 +12,25 @@
 @SOURCE_FILES@
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\libCI AI COINconsensus\libCI AI COINconsensus.vcxproj">
+    <ProjectReference Include="..\libCB AI COINconsensus\libCB AI COINconsensus.vcxproj">
       <Project>{2b384fa8-9ee1-4544-93cb-0d733c25e8ce}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libCI AI COIN_common\libCI AI COIN_common.vcxproj">
+    <ProjectReference Include="..\libCB AI COIN_common\libCB AI COIN_common.vcxproj">
       <Project>{7c87e378-df58-482e-aa2f-1bc129bc19ce}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libCI AI COIN_crypto\libCI AI COIN_crypto.vcxproj">
+    <ProjectReference Include="..\libCB AI COIN_crypto\libCB AI COIN_crypto.vcxproj">
       <Project>{6190199c-6cf4-4dad-bfbd-93fa72a760c1}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libCI AI COIN_server\libCI AI COIN_server.vcxproj">
+    <ProjectReference Include="..\libCB AI COIN_server\libCB AI COIN_server.vcxproj">
       <Project>{460fee33-1fe1-483f-b3bf-931ff8e969a5}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libCI AI COIN_util\libCI AI COIN_util.vcxproj">
+    <ProjectReference Include="..\libCB AI COIN_util\libCB AI COIN_util.vcxproj">
       <Project>{b53a5535-ee9d-4c6f-9a26-f79ee3bc3754}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libCI AI COIN_wallet\libCI AI COIN_wallet.vcxproj">
+    <ProjectReference Include="..\libCB AI COIN_wallet\libCB AI COIN_wallet.vcxproj">
       <Project>{93b86837-b543-48a5-a89b-7c87abb77df2}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libCI AI COIN_zmq\libCI AI COIN_zmq.vcxproj">
+    <ProjectReference Include="..\libCB AI COIN_zmq\libCB AI COIN_zmq.vcxproj">
       <Project>{792d487f-f14c-49fc-a9de-3fc150f31c3f}</Project>
     </ProjectReference>
     <ProjectReference Include="..\libunivalue\libunivalue.vcxproj">

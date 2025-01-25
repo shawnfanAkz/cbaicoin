@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2018 The CI AI COIN Core developers
+// Copyright (c) 2017-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +7,7 @@
 
 /**
  * Context-independent transaction checking code that can be called outside the
- * CI AI COIN server and doesn't depend on chain or mempool state. Transaction
+ * CB AI COIN server and doesn't depend on chain or mempool state. Transaction
  * verification code that does call server functions or depend on server state
  * belongs in tx_verify.h/cpp instead.
  */

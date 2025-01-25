@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -41,18 +41,18 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** CI AI COIN unit definitions. Encapsulates parsing and formatting
+/** CB AI COIN unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class CI AI COINUnits: public QAbstractListModel
+class CB AI COINUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit CI AI COINUnits(QObject *parent);
+    explicit CB AI COINUnits(QObject *parent);
 
-    /** CI AI COIN units.
-      @note Source: https://en.CI AI COIN.it/wiki/Units . Please add only sensible ones
+    /** CB AI COIN units.
+      @note Source: https://en.CB AI COIN.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
@@ -124,8 +124,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<CI AI COINUnits::Unit> unitlist;
+    QList<CB AI COINUnits::Unit> unitlist;
 };
-typedef CI AI COINUnits::Unit CI AI COINUnit;
+typedef CB AI COINUnits::Unit CB AI COINUnit;
 
 #endif // BITCOIN_QT_BITCOINUNITS_H

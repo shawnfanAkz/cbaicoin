@@ -1,4 +1,4 @@
-Fuzz-testing CI AI COIN Core
+Fuzz-testing CB AI COIN Core
 ==========================
 
 A special test harness in `src/test/fuzz/` is provided for each fuzz target to
@@ -17,7 +17,7 @@ Extract the example seeds (or other starting inputs) into the inputs
 directory before starting fuzzing.
 
 ```
-git clone https://github.com/CI AI COIN-core/qa-assets
+git clone https://github.com/CB AI COIN-core/qa-assets
 export DIR_FUZZ_IN=$PWD/qa-assets/fuzz_seed_corpus
 ```
 
@@ -43,7 +43,7 @@ export AFLPATH=$PWD
 
 ### Instrumentation
 
-To build CI AI COIN Core using AFL instrumentation (this assumes that the
+To build CB AI COIN Core using AFL instrumentation (this assumes that the
 `AFLPATH` was set as above):
 ```
 ./configure --disable-ccache --disable-shared --enable-tests --enable-fuzz CC=${AFLPATH}/afl-gcc CXX=${AFLPATH}/afl-g++

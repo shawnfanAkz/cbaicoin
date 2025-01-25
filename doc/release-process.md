@@ -5,8 +5,8 @@ Release Process
 
 ### Before every release candidate
 
-* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/CI AI COIN/CI AI COIN/blob/master/doc/translation_process.md#synchronising-translations).
-* Update manpages, see [gen-manpages.sh](https://github.com/CI AI COIN/CI AI COIN/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/CB AI COIN/CB AI COIN/blob/master/doc/translation_process.md#synchronising-translations).
+* Update manpages, see [gen-manpages.sh](https://github.com/CB AI COIN/CB AI COIN/blob/master/contrib/devtools/README.md#gen-manpagessh).
 * Update release candidate version in `configure.ac` (`CLIENT_VERSION_RC`).
 
 ### Before every major and minor release
@@ -19,17 +19,17 @@ Release Process
 
 * On both the master branch and the new release branch:
   - update `CLIENT_VERSION_MINOR` in [`configure.ac`](../configure.ac)
-  - update `CLIENT_VERSION_MINOR`, `PACKAGE_VERSION`, and `PACKAGE_STRING` in [`build_msvc/CI AI COIN_config.h`](/build_msvc/CI AI COIN_config.h)
-* On the new release branch in [`configure.ac`](../configure.ac) and [`build_msvc/CI AI COIN_config.h`](/build_msvc/CI AI COIN_config.h) (see [this commit](https://github.com/CI AI COIN/CI AI COIN/commit/742f7dd)):
+  - update `CLIENT_VERSION_MINOR`, `PACKAGE_VERSION`, and `PACKAGE_STRING` in [`build_msvc/CB AI COIN_config.h`](/build_msvc/CB AI COIN_config.h)
+* On the new release branch in [`configure.ac`](../configure.ac) and [`build_msvc/CB AI COIN_config.h`](/build_msvc/CB AI COIN_config.h) (see [this commit](https://github.com/CB AI COIN/CB AI COIN/commit/742f7dd)):
   - set `CLIENT_VERSION_REVISION` to `0`
   - set `CLIENT_VERSION_IS_RELEASE` to `true`
 
 #### Before branch-off
 
-* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/CI AI COIN/CI AI COIN/pull/7415) for an example.
+* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/CB AI COIN/CB AI COIN/pull/7415) for an example.
 * Update [`src/chainparams.cpp`](/src/chainparams.cpp) m_assumed_blockchain_size and m_assumed_chain_state_size with the current size plus some overhead (see [this](#how-to-calculate-m_assumed_blockchain_size-and-m_assumed_chain_state_size) for information on how to calculate them).
 * Update `src/chainparams.cpp` chainTxData with statistics about the transaction count and rate. Use the output of the RPC `getchaintxstats`, see
-  [this pull request](https://github.com/CI AI COIN/CI AI COIN/pull/17002) for an example. Reviewers can verify the results by running `getchaintxstats <window_block_count> <window_last_block_hash>` with the `window_block_count` and `window_last_block_hash` from your output.
+  [this pull request](https://github.com/CB AI COIN/CB AI COIN/pull/17002) for an example. Reviewers can verify the results by running `getchaintxstats <window_block_count> <window_last_block_hash>` with the `window_block_count` and `window_last_block_hash` from your output.
 * Update `src/chainparams.cpp` nMinimumChainWork with information from the getblockchaininfo rpc.
 * Update `src/chainparams.cpp` defaultAssumeValid with information from the getblockhash rpc.
   - The selected value must not be orphaned so it may be useful to set the value two blocks back from the tip.
@@ -61,14 +61,14 @@ If you're using the automated script (found in [contrib/gitian-build.py](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/CI AI COIN-core/gitian.sigs.git
-    git clone https://github.com/CI AI COIN-core/CI AI COIN-detached-sigs.git
+    git clone https://github.com/CB AI COIN-core/gitian.sigs.git
+    git clone https://github.com/CB AI COIN-core/CB AI COIN-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/CI AI COIN/CI AI COIN.git
+    git clone https://github.com/CB AI COIN/CB AI COIN.git
 
 ### Write the release notes
 
-Open a draft of the release notes for collaborative editing at https://github.com/CI AI COIN-core/CI AI COIN-devwiki/wiki.
+Open a draft of the release notes for collaborative editing at https://github.com/CB AI COIN-core/CB AI COIN-devwiki/wiki.
 
 For the period during which the notes are being edited on the wiki, the version on the branch should be wiped and replaced with a link to the wiki which should be used for all announcements until `-final`.
 
@@ -93,7 +93,7 @@ If you're using the automated script (found in [contrib/gitian-build.py](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./CI AI COIN
+    pushd ./CB AI COIN
     export SIGNER="(your Gitian key, ie bluematt, sipa, etc)"
     export VERSION=(new version, e.g. 0.20.0)
     git fetch
@@ -116,7 +116,7 @@ Ensure gitian-builder is up-to-date:
 
     pushd ./gitian-builder
     mkdir -p inputs
-    wget -P inputs https://CI AI COINcore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
+    wget -P inputs https://CB AI COINcore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
     echo 'a8c4e9cafba922f89de0df1f2152e7be286aba73f78505169bc351a7938dd911 inputs/osslsigncode-Backports-to-1.7.1.patch' | sha256sum -c
     wget -P inputs https://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz
     echo 'f9a8cdb38b9c309326764ebc937cba1523a3a751a7ab05df3ecc99d18ae466c9 inputs/osslsigncode-1.7.1.tar.gz' | sha256sum -c
@@ -128,10 +128,10 @@ Create the macOS SDK tarball, see the [macOS build instructions](build-osx.md#de
 
 NOTE: Gitian is sometimes unable to download files. If you have errors, try the step below.
 
-By default, Gitian will fetch source files as needed. To cache them ahead of time, make sure you have checked out the tag you want to build in CI AI COIN, then:
+By default, Gitian will fetch source files as needed. To cache them ahead of time, make sure you have checked out the tag you want to build in CB AI COIN, then:
 
     pushd ./gitian-builder
-    make -C ../CI AI COIN/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../CB AI COIN/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -139,47 +139,47 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url CI AI COIN=/path/to/CI AI COIN,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url CB AI COIN=/path/to/CB AI COIN,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign CI AI COIN Core for Linux, Windows, and macOS:
+### Build and sign CB AI COIN Core for Linux, Windows, and macOS:
 
     pushd ./gitian-builder
-    ./bin/gbuild --num-make 2 --memory 3000 --commit CI AI COIN=v${VERSION} ../CI AI COIN/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../CI AI COIN/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/CI AI COIN-*.tar.gz build/out/src/CI AI COIN-*.tar.gz ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit CB AI COIN=v${VERSION} ../CB AI COIN/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../CB AI COIN/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/CB AI COIN-*.tar.gz build/out/src/CB AI COIN-*.tar.gz ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit CI AI COIN=v${VERSION} ../CI AI COIN/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../CI AI COIN/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/CI AI COIN-*-win-unsigned.tar.gz inputs/CI AI COIN-win-unsigned.tar.gz
-    mv build/out/CI AI COIN-*.zip build/out/CI AI COIN-*.exe ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit CB AI COIN=v${VERSION} ../CB AI COIN/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../CB AI COIN/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/CB AI COIN-*-win-unsigned.tar.gz inputs/CB AI COIN-win-unsigned.tar.gz
+    mv build/out/CB AI COIN-*.zip build/out/CB AI COIN-*.exe ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit CI AI COIN=v${VERSION} ../CI AI COIN/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../CI AI COIN/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/CI AI COIN-*-osx-unsigned.tar.gz inputs/CI AI COIN-osx-unsigned.tar.gz
-    mv build/out/CI AI COIN-*.tar.gz build/out/CI AI COIN-*.dmg ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit CB AI COIN=v${VERSION} ../CB AI COIN/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../CB AI COIN/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/CB AI COIN-*-osx-unsigned.tar.gz inputs/CB AI COIN-osx-unsigned.tar.gz
+    mv build/out/CB AI COIN-*.tar.gz build/out/CB AI COIN-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`CI AI COIN-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`CI AI COIN-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`CI AI COIN-${VERSION}-win[32|64]-setup-unsigned.exe`, `CI AI COIN-${VERSION}-win[32|64].zip`)
-  4. macOS unsigned installer and dist tarball (`CI AI COIN-${VERSION}-osx-unsigned.dmg`, `CI AI COIN-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`CB AI COIN-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`CB AI COIN-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`CB AI COIN-${VERSION}-win[32|64]-setup-unsigned.exe`, `CB AI COIN-${VERSION}-win[32|64].zip`)
+  4. macOS unsigned installer and dist tarball (`CB AI COIN-${VERSION}-osx-unsigned.dmg`, `CB AI COIN-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
-Add other gitian builders keys to your gpg keyring, and/or refresh keys: See `../CI AI COIN/contrib/gitian-keys/README.md`.
+Add other gitian builders keys to your gpg keyring, and/or refresh keys: See `../CB AI COIN/contrib/gitian-keys/README.md`.
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../CI AI COIN/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../CI AI COIN/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../CI AI COIN/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../CB AI COIN/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../CB AI COIN/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../CB AI COIN/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -200,22 +200,22 @@ Codesigner only: Create Windows/macOS detached signatures:
 
 Codesigner only: Sign the macOS binary:
 
-    transfer CI AI COIN-osx-unsigned.tar.gz to macOS for signing
-    tar xf CI AI COIN-osx-unsigned.tar.gz
+    transfer CB AI COIN-osx-unsigned.tar.gz to macOS for signing
+    tar xf CB AI COIN-osx-unsigned.tar.gz
     ./detached-sig-create.sh -s "Key ID"
     Enter the keychain password and authorize the signature
     Move signature-osx.tar.gz back to the gitian host
 
 Codesigner only: Sign the windows binaries:
 
-    tar xf CI AI COIN-win-unsigned.tar.gz
+    tar xf CB AI COIN-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 Codesigner only: Commit the detached codesign payloads:
 
-    cd ~/CI AI COIN-detached-sigs
+    cd ~/CB AI COIN-detached-sigs
     checkout the appropriate branch for this release series
     rm -rf *
     tar xf signature-osx.tar.gz
@@ -228,24 +228,24 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/macOS detached signatures:
 
 - Once the Windows/macOS builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [CI AI COIN-detached-sigs](https://github.com/CI AI COIN-core/CI AI COIN-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [CB AI COIN-detached-sigs](https://github.com/CB AI COIN-core/CB AI COIN-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed macOS binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../CI AI COIN/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../CI AI COIN/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../CI AI COIN/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/CI AI COIN-osx-signed.dmg ../CI AI COIN-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../CB AI COIN/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../CB AI COIN/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../CB AI COIN/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/CB AI COIN-osx-signed.dmg ../CB AI COIN-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../CI AI COIN/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../CI AI COIN/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../CI AI COIN/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/CI AI COIN-*win64-setup.exe ../CI AI COIN-${VERSION}-win64-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../CB AI COIN/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../CB AI COIN/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../CB AI COIN/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/CB AI COIN-*win64-setup.exe ../CB AI COIN-${VERSION}-win64-setup.exe
     popd
 
 Commit your signature for the signed macOS/Windows binaries:
@@ -267,22 +267,22 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-CI AI COIN-${VERSION}-aarch64-linux-gnu.tar.gz
-CI AI COIN-${VERSION}-arm-linux-gnueabihf.tar.gz
-CI AI COIN-${VERSION}-i686-pc-linux-gnu.tar.gz
-CI AI COIN-${VERSION}-riscv64-linux-gnu.tar.gz
-CI AI COIN-${VERSION}-x86_64-linux-gnu.tar.gz
-CI AI COIN-${VERSION}-osx64.tar.gz
-CI AI COIN-${VERSION}-osx.dmg
-CI AI COIN-${VERSION}.tar.gz
-CI AI COIN-${VERSION}-win64-setup.exe
-CI AI COIN-${VERSION}-win64.zip
+CB AI COIN-${VERSION}-aarch64-linux-gnu.tar.gz
+CB AI COIN-${VERSION}-arm-linux-gnueabihf.tar.gz
+CB AI COIN-${VERSION}-i686-pc-linux-gnu.tar.gz
+CB AI COIN-${VERSION}-riscv64-linux-gnu.tar.gz
+CB AI COIN-${VERSION}-x86_64-linux-gnu.tar.gz
+CB AI COIN-${VERSION}-osx64.tar.gz
+CB AI COIN-${VERSION}-osx.dmg
+CB AI COIN-${VERSION}.tar.gz
+CB AI COIN-${VERSION}-win64-setup.exe
+CB AI COIN-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the CI AI COIN.org server, nor put them in the torrent*.
+space *do not upload these to the CB AI COIN.org server, nor put them in the torrent*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -292,81 +292,81 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the CI AI COIN.org server
-  into `/var/www/bin/CI AI COIN-core-${VERSION}`
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the CB AI COIN.org server
+  into `/var/www/bin/CB AI COIN-core-${VERSION}`
 
 - A `.torrent` will appear in the directory after a few minutes. Optionally help seed this torrent. To get the `magnet:` URI use:
 ```bash
 transmission-show -m <torrent file>
 ```
 Insert the magnet URI into the announcement sent to mailing lists. This permits
-people without access to `CI AI COIN.org` to download the binary distribution.
+people without access to `CB AI COIN.org` to download the binary distribution.
 Also put it into the `optional_magnetlink:` slot in the YAML file for
-CI AI COIN.org (see below for CI AI COIN.org update instructions).
+CB AI COIN.org (see below for CB AI COIN.org update instructions).
 
-- Update CI AI COIN.org version
+- Update CB AI COIN.org version
 
-  - First, check to see if the CI AI COIN.org maintainers have prepared a
-    release: https://github.com/CI AI COIN-dot-org/CI AI COIN.org/labels/Core
+  - First, check to see if the CB AI COIN.org maintainers have prepared a
+    release: https://github.com/CB AI COIN-dot-org/CB AI COIN.org/labels/Core
 
       - If they have, it will have previously failed their Travis CI
         checks because the final release files weren't uploaded.
         Trigger a Travis CI rebuild---if it passes, merge.
 
-  - If they have not prepared a release, follow the CI AI COIN.org release
-    instructions: https://github.com/CI AI COIN-dot-org/CI AI COIN.org/blob/master/docs/adding-events-release-notes-and-alerts.md#release-notes
+  - If they have not prepared a release, follow the CB AI COIN.org release
+    instructions: https://github.com/CB AI COIN-dot-org/CB AI COIN.org/blob/master/docs/adding-events-release-notes-and-alerts.md#release-notes
 
   - After the pull request is merged, the website will automatically show the newest version within 15 minutes, as well
     as update the OS download links. Ping @saivann/@harding (saivann/harding on Freenode) in case anything goes wrong
 
 - Update other repositories and websites for new version
 
-  - CI AI COINcore.org blog post
+  - CB AI COINcore.org blog post
 
-  - CI AI COINcore.org maintained versions update:
-    [table](https://github.com/CI AI COIN-core/CI AI COINcore.org/commits/master/_includes/posts/maintenance-table.md)
+  - CB AI COINcore.org maintained versions update:
+    [table](https://github.com/CB AI COIN-core/CB AI COINcore.org/commits/master/_includes/posts/maintenance-table.md)
 
-  - CI AI COINcore.org RPC documentation update
+  - CB AI COINcore.org RPC documentation update
 
   - Update packaging repo
 
-      - Notify BlueMatt so that he can start building [the PPAs](https://launchpad.net/~CI AI COIN/+archive/ubuntu/CI AI COIN)
+      - Notify BlueMatt so that he can start building [the PPAs](https://launchpad.net/~CB AI COIN/+archive/ubuntu/CB AI COIN)
 
       - Create a new branch for the major release "0.xx" (used to build the snap package)
 
       - Notify MarcoFalke so that he can start building the snap package
 
-        - https://code.launchpad.net/~CI AI COIN-core/CI AI COIN-core-snap/+git/packaging (Click "Import Now" to fetch the branch)
-        - https://code.launchpad.net/~CI AI COIN-core/CI AI COIN-core-snap/+git/packaging/+ref/0.xx (Click "Create snap package")
-        - Name it "CI AI COIN-core-snap-0.xx"
+        - https://code.launchpad.net/~CB AI COIN-core/CB AI COIN-core-snap/+git/packaging (Click "Import Now" to fetch the branch)
+        - https://code.launchpad.net/~CB AI COIN-core/CB AI COIN-core-snap/+git/packaging/+ref/0.xx (Click "Create snap package")
+        - Name it "CB AI COIN-core-snap-0.xx"
         - Leave owner and series as-is
         - Select architectures that are compiled via gitian
         - Leave "automatically build when branch changes" unticked
         - Tick "automatically upload to store"
-        - Put "CI AI COIN-core" in the registered store package name field
+        - Put "CB AI COIN-core" in the registered store package name field
         - Tick the "edge" box
         - Put "0.xx" in the track field
         - Click "create snap package"
         - Click "Request builds" for every new release on this branch (after updating the snapcraft.yml in the branch to reflect the latest gitian results)
-        - Promote release on https://snapcraft.io/CI AI COIN-core/releases if it passes sanity checks
+        - Promote release on https://snapcraft.io/CB AI COIN-core/releases if it passes sanity checks
 
   - This repo
 
       - Archive the release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-      - Create a [new GitHub release](https://github.com/CI AI COIN/CI AI COIN/releases/new) with a link to the archived release notes
+      - Create a [new GitHub release](https://github.com/CB AI COIN/CB AI COIN/releases/new) with a link to the archived release notes
 
-      - Create a pinned meta-issue for testing the release candidate (see [this issue](https://github.com/CI AI COIN/CI AI COIN/issues/15555) for an example) and provide a link to it in the release announcements where useful
+      - Create a pinned meta-issue for testing the release candidate (see [this issue](https://github.com/CB AI COIN/CB AI COIN/issues/15555) for an example) and provide a link to it in the release announcements where useful
 
 - Announce the release:
 
-  - CI AI COIN-dev and CI AI COIN-core-dev mailing list
+  - CB AI COIN-dev and CB AI COIN-core-dev mailing list
 
-  - CI AI COIN Core announcements list https://CI AI COINcore.org/en/list/announcements/join/
+  - CB AI COIN Core announcements list https://CB AI COINcore.org/en/list/announcements/join/
 
-  - Update title of #CI AI COIN on Freenode IRC
+  - Update title of #CB AI COIN on Freenode IRC
 
-  - Optionally twitter, reddit /r/CI AI COIN, ... but this will usually sort out itself
+  - Optionally twitter, reddit /r/CB AI COIN, ... but this will usually sort out itself
 
   - Celebrate
 

@@ -9,15 +9,15 @@ SOURCE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src'
 DEFAULT_PLATFORM_TOOLSET = R'v141'
 
 libs = [
-    'libCI AI COIN_cli',
-    'libCI AI COIN_common',
-    'libCI AI COIN_crypto',
-    'libCI AI COIN_server',
-    'libCI AI COIN_util',
-    'libCI AI COIN_wallet_tool',
-    'libCI AI COIN_wallet',
-    'libCI AI COIN_zmq',
-    'bench_CI AI COIN',
+    'libCB AI COIN_cli',
+    'libCB AI COIN_common',
+    'libCB AI COIN_crypto',
+    'libCB AI COIN_server',
+    'libCB AI COIN_util',
+    'libCB AI COIN_wallet_tool',
+    'libCB AI COIN_wallet',
+    'libCB AI COIN_zmq',
+    'bench_CB AI COIN',
 ]
 
 ignore_list = [
@@ -54,7 +54,7 @@ def set_common_properties(toolset):
         wfile.write(s)
 
 def main():
-    parser = argparse.ArgumentParser(description='CI AI COIN-core msbuild configuration initialiser.')
+    parser = argparse.ArgumentParser(description='CB AI COIN-core msbuild configuration initialiser.')
     parser.add_argument('-toolset', nargs='?',help='Optionally sets the msbuild platform toolset, e.g. v142 for Visual Studio 2019.'
          ' default is %s.'%DEFAULT_PLATFORM_TOOLSET)
     args = parser.parse_args()
@@ -75,7 +75,7 @@ def main():
             with open(vcxproj_filename, 'w', encoding='utf-8') as vcxproj_file:
                 vcxproj_file.write(vcxproj_in_file.read().replace(
                     '@SOURCE_FILES@\n', content))
-    copyfile(os.path.join(SOURCE_DIR,'../build_msvc/CI AI COIN_config.h'), os.path.join(SOURCE_DIR, 'config/CI AI COIN-config.h'))
+    copyfile(os.path.join(SOURCE_DIR,'../build_msvc/CB AI COIN_config.h'), os.path.join(SOURCE_DIR, 'config/CB AI COIN-config.h'))
     copyfile(os.path.join(SOURCE_DIR,'../build_msvc/libsecp256k1_config.h'), os.path.join(SOURCE_DIR, 'secp256k1/src/libsecp256k1-config.h'))
 
 if __name__ == '__main__':

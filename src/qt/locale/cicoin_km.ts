@@ -145,10 +145,10 @@
     </message>
 </context>
 <context>
-    <name>CI AI COINGUI</name>
+    <name>CB AI COINGUI</name>
     <message>
-        <source>Send coins to a CI AI COIN address</source>
-        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន CI AI COIN មួយ</translation>
+        <source>Send coins to a CB AI COIN address</source>
+        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន CB AI COIN មួយ</translation>
     </message>
     </context>
 <context>
@@ -313,6 +313,6 @@
     </message>
     </context>
 <context>
-    <name>CI AI COIN-core</name>
+    <name>CB AI COIN-core</name>
     </context>
 </TS>

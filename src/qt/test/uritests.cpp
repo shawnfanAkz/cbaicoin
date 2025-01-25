@@ -1,4 +1,4 @@
-// Copyright (c) 2009-2018 The CI AI COIN Core developers
+// Copyright (c) 2009-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,54 +13,54 @@ void URITests::uriTests()
 {
     SendCoinsRecipient rv;
     QUrl uri;
-    uri.setUrl(QString("CI AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?req-dontexist="));
-    QVERIFY(!GUIUtil::parseCI AI COINURI(uri, &rv));
+    uri.setUrl(QString("CB AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?req-dontexist="));
+    QVERIFY(!GUIUtil::parseCB AI COINURI(uri, &rv));
 
-    uri.setUrl(QString("CI AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?dontexist="));
-    QVERIFY(GUIUtil::parseCI AI COINURI(uri, &rv));
+    uri.setUrl(QString("CB AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?dontexist="));
+    QVERIFY(GUIUtil::parseCB AI COINURI(uri, &rv));
     QVERIFY(rv.address == QString("175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W"));
     QVERIFY(rv.label == QString());
     QVERIFY(rv.amount == 0);
 
-    uri.setUrl(QString("CI AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?label=Wikipedia Example Address"));
-    QVERIFY(GUIUtil::parseCI AI COINURI(uri, &rv));
+    uri.setUrl(QString("CB AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?label=Wikipedia Example Address"));
+    QVERIFY(GUIUtil::parseCB AI COINURI(uri, &rv));
     QVERIFY(rv.address == QString("175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W"));
     QVERIFY(rv.label == QString("Wikipedia Example Address"));
     QVERIFY(rv.amount == 0);
 
-    uri.setUrl(QString("CI AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=0.001"));
-    QVERIFY(GUIUtil::parseCI AI COINURI(uri, &rv));
+    uri.setUrl(QString("CB AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=0.001"));
+    QVERIFY(GUIUtil::parseCB AI COINURI(uri, &rv));
     QVERIFY(rv.address == QString("175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W"));
     QVERIFY(rv.label == QString());
     QVERIFY(rv.amount == 100000);
 
-    uri.setUrl(QString("CI AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=1.001"));
-    QVERIFY(GUIUtil::parseCI AI COINURI(uri, &rv));
+    uri.setUrl(QString("CB AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=1.001"));
+    QVERIFY(GUIUtil::parseCB AI COINURI(uri, &rv));
     QVERIFY(rv.address == QString("175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W"));
     QVERIFY(rv.label == QString());
     QVERIFY(rv.amount == 100100000);
 
-    uri.setUrl(QString("CI AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=100&label=Wikipedia Example"));
-    QVERIFY(GUIUtil::parseCI AI COINURI(uri, &rv));
+    uri.setUrl(QString("CB AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=100&label=Wikipedia Example"));
+    QVERIFY(GUIUtil::parseCB AI COINURI(uri, &rv));
     QVERIFY(rv.address == QString("175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W"));
     QVERIFY(rv.amount == 10000000000LL);
     QVERIFY(rv.label == QString("Wikipedia Example"));
 
-    uri.setUrl(QString("CI AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?message=Wikipedia Example Address"));
-    QVERIFY(GUIUtil::parseCI AI COINURI(uri, &rv));
+    uri.setUrl(QString("CB AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?message=Wikipedia Example Address"));
+    QVERIFY(GUIUtil::parseCB AI COINURI(uri, &rv));
     QVERIFY(rv.address == QString("175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W"));
     QVERIFY(rv.label == QString());
 
-    QVERIFY(GUIUtil::parseCI AI COINURI("CI AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?message=Wikipedia Example Address", &rv));
+    QVERIFY(GUIUtil::parseCB AI COINURI("CB AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?message=Wikipedia Example Address", &rv));
     QVERIFY(rv.address == QString("175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W"));
     QVERIFY(rv.label == QString());
 
-    uri.setUrl(QString("CI AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?req-message=Wikipedia Example Address"));
-    QVERIFY(GUIUtil::parseCI AI COINURI(uri, &rv));
+    uri.setUrl(QString("CB AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?req-message=Wikipedia Example Address"));
+    QVERIFY(GUIUtil::parseCB AI COINURI(uri, &rv));
 
-    uri.setUrl(QString("CI AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=1,000&label=Wikipedia Example"));
-    QVERIFY(!GUIUtil::parseCI AI COINURI(uri, &rv));
+    uri.setUrl(QString("CB AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=1,000&label=Wikipedia Example"));
+    QVERIFY(!GUIUtil::parseCB AI COINURI(uri, &rv));
 
-    uri.setUrl(QString("CI AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=1,000.0&label=Wikipedia Example"));
-    QVERIFY(!GUIUtil::parseCI AI COINURI(uri, &rv));
+    uri.setUrl(QString("CB AI COIN:175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W?amount=1,000.0&label=Wikipedia Example"));
+    QVERIFY(!GUIUtil::parseCB AI COINURI(uri, &rv));
 }

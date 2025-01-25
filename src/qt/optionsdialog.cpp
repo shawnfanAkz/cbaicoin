@@ -1,15 +1,15 @@
-// Copyright (c) 2011-2018 The CI AI COIN Core developers
+// Copyright (c) 2011-2018 The CB AI COIN Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/CI AI COIN-config.h>
+#include <config/CB AI COIN-config.h>
 #endif
 
 #include <qt/optionsdialog.h>
 #include <qt/forms/ui_optionsdialog.h>
 
-#include <qt/CI AI COINunits.h>
+#include <qt/CB AI COINunits.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
 #include <qt/optionsmodel.h>
@@ -73,8 +73,8 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     ui->tabWidget->removeTab(ui->tabWidget->indexOf(ui->tabWindow));
 #if  defined(MAC_OS_X_VERSION_MIN_REQUIRED) && MAC_OS_X_VERSION_MIN_REQUIRED > 101100
     /* hide launch at startup option if compiled against macOS > 10.11 (removed API) */
-    ui->CI AI COINAtStartup->setVisible(false);
-    ui->verticalLayout_Main->removeWidget(ui->CI AI COINAtStartup);
+    ui->CB AI COINAtStartup->setVisible(false);
+    ui->verticalLayout_Main->removeWidget(ui->CB AI COINAtStartup);
     ui->verticalLayout_Main->removeItem(ui->horizontalSpacer_0_Main);
 #endif
 #endif
@@ -87,10 +87,10 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     /* Display elements init */
     QDir translations(":translations");
 
-    ui->CI AI COINAtStartup->setToolTip(ui->CI AI COINAtStartup->toolTip().arg(PACKAGE_NAME));
-    ui->CI AI COINAtStartup->setText(ui->CI AI COINAtStartup->text().arg(PACKAGE_NAME));
+    ui->CB AI COINAtStartup->setToolTip(ui->CB AI COINAtStartup->toolTip().arg(PACKAGE_NAME));
+    ui->CB AI COINAtStartup->setText(ui->CB AI COINAtStartup->text().arg(PACKAGE_NAME));
 
-    ui->openCI AI COINConfButton->setToolTip(ui->openCI AI COINConfButton->toolTip().arg(PACKAGE_NAME));
+    ui->openCB AI COINConfButton->setToolTip(ui->openCB AI COINConfButton->toolTip().arg(PACKAGE_NAME));
 
     ui->lang->setToolTip(ui->lang->toolTip().arg(PACKAGE_NAME));
     ui->lang->addItem(QString("(") + tr("default") + QString(")"), QVariant(""));
@@ -112,7 +112,7 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     }
     ui->thirdPartyTxUrls->setPlaceholderText("https://example.com/tx/%s");
 
-    ui->unit->setModel(new CI AI COINUnits(this));
+    ui->unit->setModel(new CB AI COINUnits(this));
 
     /* Widget-to-option mapper */
     mapper = new QDataWidgetMapper(this);
@@ -202,7 +202,7 @@ void OptionsDialog::setCurrentTab(OptionsDialog::Tab tab)
 void OptionsDialog::setMapper()
 {
     /* Main */
-    mapper->addMapping(ui->CI AI COINAtStartup, OptionsModel::StartAtStartup);
+    mapper->addMapping(ui->CB AI COINAtStartup, OptionsModel::StartAtStartup);
     mapper->addMapping(ui->threadsScriptVerif, OptionsModel::ThreadsScriptVerif);
     mapper->addMapping(ui->databaseCache, OptionsModel::DatabaseCache);
     mapper->addMapping(ui->prune, OptionsModel::Prune);
@@ -262,7 +262,7 @@ void OptionsDialog::on_resetButton_clicked()
     }
 }
 
-void OptionsDialog::on_openCI AI COINConfButton_clicked()
+void OptionsDialog::on_openCB AI COINConfButton_clicked()
 {
     /* explain the purpose of the config file */
     QMessageBox::information(this, tr("Configuration options"),
@@ -270,7 +270,7 @@ void OptionsDialog::on_openCI AI COINConfButton_clicked()
            "Additionally, any command-line options will override this configuration file."));
 
     /* show an error if there was some problem opening the file */
-    if (!GUIUtil::openCI AI COINConf())
+    if (!GUIUtil::openCB AI COINConf())
         QMessageBox::critical(this, tr("Error"), tr("The configuration file could not be opened."));
 }
 

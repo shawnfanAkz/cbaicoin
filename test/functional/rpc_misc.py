@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-# Copyright (c) 2019 The CI AI COIN Core developers
+# Copyright (c) 2019 The CB AI COIN Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test RPC misc output."""
 import xml.etree.ElementTree as ET
 
-from test_framework.test_framework import CI AI COINTestFramework
+from test_framework.test_framework import CB AI COINTestFramework
 from test_framework.util import (
     assert_raises_rpc_error,
     assert_equal,
@@ -16,7 +16,7 @@ from test_framework.util import (
 from test_framework.authproxy import JSONRPCException
 
 
-class RpcMiscTest(CI AI COINTestFramework):
+class RpcMiscTest(CB AI COINTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 

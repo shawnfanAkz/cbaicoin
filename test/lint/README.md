@@ -17,10 +17,10 @@ the commit it claims to have been updated to.
 
 To use, make sure that you have fetched the upstream repository branch in which the subtree is
 maintained:
-* for `src/secp256k1`: https://github.com/CI AI COIN-core/secp256k1.git (branch master)
-* for `src/leveldb`: https://github.com/CI AI COIN-core/leveldb.git (branch CI AI COIN-fork)
-* for `src/univalue`: https://github.com/CI AI COIN-core/univalue.git (branch master)
-* for `src/crypto/ctaes`: https://github.com/CI AI COIN-core/ctaes.git (branch master)
+* for `src/secp256k1`: https://github.com/CB AI COIN-core/secp256k1.git (branch master)
+* for `src/leveldb`: https://github.com/CB AI COIN-core/leveldb.git (branch CB AI COIN-fork)
+* for `src/univalue`: https://github.com/CB AI COIN-core/univalue.git (branch master)
+* for `src/crypto/ctaes`: https://github.com/CB AI COIN-core/ctaes.git (branch master)
 
 Usage: `git-subtree-check.sh DIR (COMMIT)`
 

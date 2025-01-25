@@ -7,11 +7,11 @@ BUILDDIR=${BUILDDIR:-$TOPDIR}
 BINDIR=${BINDIR:-$BUILDDIR/src}
 MANDIR=${MANDIR:-$TOPDIR/doc/man}
 
-BITCOIND=${BITCOIND:-$BINDIR/CI AI COINd}
-BITCOINCLI=${BITCOINCLI:-$BINDIR/CI AI COIN-cli}
-BITCOINTX=${BITCOINTX:-$BINDIR/CI AI COIN-tx}
-WALLET_TOOL=${WALLET_TOOL:-$BINDIR/CI AI COIN-wallet}
-BITCOINQT=${BITCOINQT:-$BINDIR/qt/CI AI COIN-qt}
+BITCOIND=${BITCOIND:-$BINDIR/CB AI COINd}
+BITCOINCLI=${BITCOINCLI:-$BINDIR/CB AI COIN-cli}
+BITCOINTX=${BITCOINTX:-$BINDIR/CB AI COIN-tx}
+WALLET_TOOL=${WALLET_TOOL:-$BINDIR/CB AI COIN-wallet}
+BITCOINQT=${BITCOINQT:-$BINDIR/qt/CB AI COIN-qt}
 
 [ ! -x $BITCOIND ] && echo "$BITCOIND not found or not executable." && exit 1
 
@@ -19,8 +19,8 @@ BITCOINQT=${BITCOINQT:-$BINDIR/qt/CI AI COIN-qt}
 read -r -a CICXVER <<< "$($BITCOINCLI --version | head -n1 | awk -F'[ -]' '{ print $6, $7 }')"
 
 # Create a footer file with copyright content.
-# This gets autodetected fine for CI AI COINd if --version-string is not set,
-# but has different outcomes for CI AI COIN-qt and CI AI COIN-cli.
+# This gets autodetected fine for CB AI COINd if --version-string is not set,
+# but has different outcomes for CB AI COIN-qt and CB AI COIN-cli.
 echo "[COPYRIGHT]" > footer.h2m
 $BITCOIND --version | sed -n '1!p' >> footer.h2m
 

@@ -2,14 +2,14 @@
 
 *.exe
 *.pdb
-src/CI AI COIN
-src/CI AI COINd
-src/CI AI COIN-cli
-src/CI AI COIN-tx
-src/CI AI COIN-wallet
-src/test/test_CI AI COIN
-src/test/test_CI AI COIN_fuzzy
-src/qt/test/test_CI AI COIN-qt
+src/CB AI COIN
+src/CB AI COINd
+src/CB AI COIN-cli
+src/CB AI COIN-tx
+src/CB AI COIN-wallet
+src/test/test_CB AI COIN
+src/test/test_CB AI COIN_fuzzy
+src/qt/test/test_CB AI COIN-qt
 
 # autoreconf
 Makefile.in
@@ -32,8 +32,8 @@ config.log
 config.status
 configure
 libtool
-src/config/CI AI COIN-config.h
-src/config/CI AI COIN-config.h.in
+src/config/CB AI COIN-config.h
+src/config/CB AI COIN-config.h.in
 src/config/stamp-h1
 src/obj
 share/setup.nsi
@@ -47,11 +47,11 @@ src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
 
-src/qt/CI AI COIN-qt.config
-src/qt/CI AI COIN-qt.creator
-src/qt/CI AI COIN-qt.creator.user
-src/qt/CI AI COIN-qt.files
-src/qt/CI AI COIN-qt.includes
+src/qt/CB AI COIN-qt.config
+src/qt/CB AI COIN-qt.creator
+src/qt/CB AI COIN-qt.creator.user
+src/qt/CB AI COIN-qt.files
+src/qt/CB AI COIN-qt.includes
 
 .deps
 .dirstamp
@@ -88,8 +88,8 @@ src/qt/CI AI COIN-qt.includes
 *.qm
 Makefile
 !depends/Makefile
-CI AI COIN-qt
-CI AI COIN-Qt.app
+CB AI COIN-qt
+CB AI COIN-Qt.app
 background.tiff*
 
 # Qt Creator
@@ -97,7 +97,7 @@ Makefile.am.user
 
 # Unit-tests
 Makefile.test
-CI AI COIN-qt_test
+CB AI COIN-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -110,7 +110,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_CI AI COIN.coverage/
+test_CB AI COIN.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -125,7 +125,7 @@ test/cache/*
 
 /doc/doxygen/
 
-libCI AI COINconsensus.pc
+libCB AI COINconsensus.pc
 contrib/devtools/split-debug.sh
 
 # Output from running db4 installation

@@ -1,7 +1,7 @@
-Win32, Linux, MacOSX and source releases for CI AI COIN v0.3.23 have been uploaded to
-https://sourceforge.net/projects/CI AI COIN/files/CI AI COIN/CI AI COIN-0.3.23/
+Win32, Linux, MacOSX and source releases for CB AI COIN v0.3.23 have been uploaded to
+https://sourceforge.net/projects/CB AI COIN/files/CB AI COIN/CB AI COIN-0.3.23/
 
-This is another quick bugfix release, trying to deal with the influx of new CI AI COIN users.
+This is another quick bugfix release, trying to deal with the influx of new CB AI COIN users.
 
 Main items of note:
 
