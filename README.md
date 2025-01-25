@@ -6,7 +6,7 @@ software which enables the use of this currency.
 
 **With the integration of advanced AI capabilities, CI AI COIN can predict market trends, optimize transaction routes, and enhance security protocols, providing users with a smarter and more efficient digital currency experience.**
 
-[![pump](https://pump.fun/_next/image?url=%2Flogo.png&w=32&q=75)](https://pump.fun)
+[![pump](https://pump.fun/_next/image?url=%2Flogo.png&w=32&q=75)](https://pump.fun/coin/6h4Bgg3xUUnpr7FfYC8xHAsdbCAwmgf7Ebt4sgZ6pump)
 
 License
 -------
