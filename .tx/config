@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[CI AI COIN.qt-translation-019x]
+file_filter = src/qt/locale/CI AI COIN_<lang>.ts
+source_file = src/qt/locale/CI AI COIN_en.ts
+source_lang = en

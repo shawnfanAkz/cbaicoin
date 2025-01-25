@@ -1,0 +1,33 @@
+# /etc/conf.d/CI AI COINd: config file for /etc/init.d/CI AI COINd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/CI AI COIN/CI AI COIN.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/CI AI COINd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/CI AI COINd.pid"
+
+# Where to write CI AI COINd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/CI AI COINd"
+
+# User and group to own CI AI COINd process
+#BITCOIND_USER="CI AI COIN"
+#BITCOIND_GROUP="CI AI COIN"
+
+# Path to CI AI COINd executable
+#BITCOIND_BIN="/usr/bin/CI AI COINd"
+
+# Nice value to run CI AI COINd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for CI AI COINd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=600
